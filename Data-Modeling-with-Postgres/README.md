@@ -24,7 +24,7 @@ songplay_id, start_time, user_id, level, song_id, artist_id, session_id, locatio
                 start_time, hour, day, week, month, year, weekday
 
 ### `Project Template`
-To effectively create the project in coherence we're given 6 files and most of them are in a broad and minimalistice way are template files. All we have to do 
+To effectively create the Postgres database in coherence we're given 6 files and most of them are semi-template files. All we have to do 
 fill in the needed code and run them to verify that our codes were working as designed and needed.
 
 `These six files are:`
@@ -53,3 +53,5 @@ We have to follow instructions in the `etl.ipynb notebook` to develop ETL proces
 The `etl.py` is also a template file where We have to `input/insert`, what we've completed in `etl.ipynb` file which will process the entire datasets. 
 - Remember to run `create_tables.py` before `running etl.py` to reset your tables.
 - Run test.ipynb to confirm your records were successfully inserted into each table.
+
+This database and Pipeline creation project requires complex interconnection between 6 files which inclues ( python, .py....) files, which in turn will help us to build a database to analyze music streaming data. 
