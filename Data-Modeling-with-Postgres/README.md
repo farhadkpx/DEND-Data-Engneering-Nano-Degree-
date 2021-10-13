@@ -50,6 +50,6 @@ Below are steps you can follow to complete the project:
 We have to follow instructions in the `etl.ipynb notebook` to develop ETL processes for each table. At the end of each table section, or at the end of the notebook, `run test.ipynb` to confirm that records were `successfully inserted into each table. Remember to rerun create_tables.py to reset your tables before each time you run this notebook.
 
 ### `Building ETL Pipeline:`
-We have to use what we've completed in `etl.ipynb` to complete `etl.py`, where we'll process the entire datasets. 
+The `etl.py` is also a template file where We have to `input/insert`, what we've completed in `etl.ipynb` file which will process the entire datasets. 
 - Remember to run `create_tables.py` before `running etl.py` to reset your tables.
 - Run test.ipynb to confirm your records were successfully inserted into each table.
