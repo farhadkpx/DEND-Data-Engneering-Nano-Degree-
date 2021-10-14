@@ -1,7 +1,7 @@
 
-# `Sparkify user activity Data Modeling for songplaying analysis in Postgres`
+# `Sparkify - User activity Data Modeling`
+> ##  Songplaying analysis in Postgres Database Systems
 
-> Discuss the purpose of this database in the context of the startup, Sparkify, and their analytical goals.
  
 This is the first project of `DEND program` where we'll be using the song and log datasets to create a star schema optimized for queries on song play analysis in Sparkify streaming App. I'll be using project instruction steps to write my README.md file. This includes 1 Fact table and 4 dimension tables. This project needs constant monitoring of "Restart kernel" to close the connection to the database after running templated python notebooks, which sometimes are very puzzling but a paramount necessity.
 
