@@ -10,8 +10,8 @@ This project is about how a startup named 'Sparkify' wants to analyze their user
 * All the needed table schema design and relevant files must be found on this [`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Postgres)
 
 ## `Database schema design` 
-+ Indepth column by column schema design is on `sql_queries.py` and in connected `create_tables.py` file.
-+ Here I just summarized the column levels as it is instructed with the project instruction.
+Indepth column by column schema design is on `sql_queries.py` and in connected `create_tables.py` file.
+Here I just summarized the column levels as it is instructed with the project instruction.
 
 ### `Fact Table` 
 + `1.` `songplays` - records in log data associated with song plays i.e. records with page NextSong
@@ -40,7 +40,7 @@ fill in the needed codes in on these files and run them to verify that our codes
 + `5.` `sql_queries.py:` contains all your sql queries, and is imported into the last three files above.
 
  
-### `Building Project Steps:`
+## `Building Project Steps:`
 Below are steps you can follow to complete the project:
 
 **Creating/writing Tables**
@@ -58,4 +58,4 @@ We have to follow instructions in the `etl.ipynb` notebook to develop ETL proces
 + The `etl.py` script connects to the Sparkify database, extracts and processes the log_data and song_data, and loads data into the five tables.
 + files which will process the entire datasets. 
 
-`Conclusion:` This Data Modeling with Postgres and Pipeline creation project requires complex interconnection between 6 files which inclues (python, SQL and .py) files, which in successful completion will help us to build a Postgres database to analyze users music listening patterns and more. 
+`Conclusion:` This Data Modeling with Postgres and Pipeline creation project requires complex interconnection between 6 template-files, which in successful completion will help us to build a Postgres database to analyze users music listening patterns and more. 
