@@ -7,33 +7,37 @@ This is the first project of `DEND program`, where we'll be using the song and l
 
 This project is about how a startup named 'Sparkify' wants to analyze their users song playing data in their music streaming App. They want to analyze what song users are listening to within definitive timeframe. In pursuing so we'd create a Postgres Database and an ETL pipeline to optimize queries for our song playing analysis. On building the databse I'll be designing database schema for our fact and dimension tables both in Postgres wrapped in python programming language. 
 
-* All the needed table schema design and relevant files can be found on this [github link](
-> State and justify your database schema design and ETL pipeline.
-> 
-### `Fact Table` ###
-- `1. songplays` - records in log data associated with song plays i.e. records with page NextSong
+* All the needed table schema design and relevant files must be found on this [`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Postgres)
+
+## `Database schema design` 
++ Indepth column by column schema design is on `sql_queries.py` and in connected `create_tables.py` file.
++ Here I just summarized the column levels as it is instructed with the project instruction.
+
+### `Fact Table` 
++ `1.` `songplays` - records in log data associated with song plays i.e. records with page NextSong
 songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
-### `Dimension Tables` ###
-- `2. users:`  users in the app
+### `Dimension Tables` 
++ `2.` `users:`  users in the app
                user_id, first_name, last_name, gender, level
-- `3. songs:`  songs in music database
++ `3.` `songs:`  songs in music database
                 song_id, title, artist_id, year, duration
-- `4. artists:`  artists in music database
++ `4.` `artists:`  artists in music database
                  artist_id, name, location, latitude, longitude
-- `5. time:`  timestamps of records in songplays broken down into specific units
++ `5.` `time:`  timestamps of records in songplays broken down into specific units
                 start_time, hour, day, week, month, year, weekday
 
 ### `Project Template`
-To effectively create the Postgres database in coherence we're given 6 files and most of them are semi-template files. All we have to do 
-fill in the needed code and run them to verify that our codes were working as designed and needed.
+To effectively create the Postgres database within instructed coherence we're given 6 files and most of them are semi-template files. All we have to do 
+fill in the needed codes in on these files and run them to verify that our codes were working as designed, insturcted and needed.
 
-`These six files are:`
-- `1. test.ipynb:` displays the first few rows of each table to let you check your database.
-- `2. create_tables.py:` drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
-- `3. etl.ipynb:` reads and processes a single file from song_data and log_data and loads the data into your tables. This notebook contains detailed instructions on the ETL process for each of the tables.
-- `4. etl.py:` reads and processes files from song_data and log_data and loads them into your tables. You can fill this out based on your work in the ETL notebook.
-- `5. sql_queries.py:` contains all your sql queries, and is imported into the last three files above.
+**These six files are:**
++ `1.` `test.ipynb:` displays the first few rows of each table to let you check your database.
++ `2.` `create_tables.py:` drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
++ `3.` `etl.ipynb:` reads and processes a single file from song_data and log_data and loads the data into your tables. 
+                    This notebook contains detailed instructions on the ETL process for each of the tables.
++ `4.` `etl.py:` reads and processes files from song_data and log_data and loads them into your tables. You can fill this out based on your work in the ETL notebook.
++ `5.` `sql_queries.py:` contains all your sql queries, and is imported into the last three files above.
 
  
 ### `Building Project Steps:`
