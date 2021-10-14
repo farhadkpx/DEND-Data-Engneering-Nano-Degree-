@@ -31,7 +31,7 @@ songplay_id, start_time, user_id, level, song_id, artist_id, session_id, locatio
 To effectively create the Postgres database within instructed coherence we're given 6 files and most of them are semi-template files. All we have to do 
 fill in the needed codes in on these files and run them to verify that our codes were working as designed, insturcted and needed.
 
-**These six files are:**
+**These six files(Python Notebook, py-script files) are:**
 + `1.` `test.ipynb:` displays the first few rows of each table to let you check your database.
 + `2.` `create_tables.py:` drops and creates your tables. You run this file to reset your tables before each time you run your ETL scripts.
 + `3.` `etl.ipynb:` reads and processes a single file from song_data and log_data and loads the data into your tables. 
@@ -53,9 +53,9 @@ Below are steps you can follow to complete the project:
 - Running etl.py to confirm overall file processing worked
 
 ### `Building ETL Pipeline Processes:`
-We have to follow instructions in the `etl.ipynb notebook` to develop ETL processes for each table. At the end of each table section, or at the end of the notebook, `run test.ipynb` to confirm that records were `successfully inserted into each table. Remember to rerun `create_tables.py` to reset your tables before each time you run this notebook. The `etl.py` is also a template file where We have to `input/insert`, what we've completed in `etl.ipynb` file which will process the entire datasets. 
+We have to follow instructions in the `etl.ipynb` notebook to develop ETL processes for each table. At the end of each table section, or at the end of the notebook we will `run test.ipynb` file to confirm that records were `successfully inserted` into each table. Remember to rerun `create_tables.py` to reset your tables before each time you run this notebook. 
 
-- Remember to run `create_tables.py` before `running etl.py` to reset your tables.
-- Run test.ipynb to confirm your records were successfully inserted into each table.
++ The `etl.py` script connects to the Sparkify database, extracts and processes the log_data and song_data, and loads data into the five tables.
++ files which will process the entire datasets. 
 
-This database and Pipeline creation project requires complex interconnection between 6 files which inclues ( python, .py....) files, which in turn will help us to build a database to analyze music streaming data. 
+`Conclusion:` This Data Modeling with Postgres and Pipeline creation project requires complex interconnection between 6 files which inclues (python, SQL and .py) files, which in successful completion will help us to build a Postgres database to analyze users music listening patterns and more. 
