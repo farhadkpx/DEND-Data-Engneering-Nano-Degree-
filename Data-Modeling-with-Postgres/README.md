@@ -3,10 +3,11 @@
 > ##  Songplaying analysis in Postgres Database Systems
 
  
-This is the first project of `DEND program` where we'll be using the song and log datasets to create a star schema optimized for queries on song play analysis in Sparkify streaming App. I'll be using project instruction steps to write my README.md file. This includes 1 Fact table and 4 dimension tables. This project needs constant monitoring of "Restart kernel" to close the connection to the database after running templated python notebooks, which sometimes are very puzzling but a paramount necessity.
+This is the first project of `DEND program`, where we'll be using the song and log datasets to create a star schema optimized for queries on users song playing in Sparkify streaming App. I'll be using project instruction steps to write my README.md file. This includes 1 Fact table and 4 dimension tables. This project needs constant monitoring of "Restart kernel" to close the connection to the database after running templated python notebooks, which sometimes are very puzzling but a paramount necessity.
 
-This project is about how a startup named 'Sparkify' wants to analyze their users' song playing data in their music streaming App. They want to analyze what song users' are listening to within definitive timeframe. In pursuing so we'd create a Postgres Database and an ETL pipeline to optimize queries for our song playing analysis. On building the databse I'll be designing database schema for our fact and dimension tables both in Postgres wrapped in python programming language. 
+This project is about how a startup named 'Sparkify' wants to analyze their users song playing data in their music streaming App. They want to analyze what song users are listening to within definitive timeframe. In pursuing so we'd create a Postgres Database and an ETL pipeline to optimize queries for our song playing analysis. On building the databse I'll be designing database schema for our fact and dimension tables both in Postgres wrapped in python programming language. 
 
+* All the needed table schema design and relevant files can be found on this [github link](
 > State and justify your database schema design and ETL pipeline.
 > 
 ### `Fact Table` ###
