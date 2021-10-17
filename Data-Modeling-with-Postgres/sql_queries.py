@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS songs (
     title VARCHAR(100) NOT NULL,
     artist_id VARCHAR(20) NOT NULL,
     year INTEGER NOT NULL,
-    duration FLOAT(5) NOT NULL
+    duration FLOAT NOT NULL
 ); """)
 
 artist_table_create = ("""
