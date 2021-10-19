@@ -7,7 +7,8 @@
 In this project, we'll apply what you've learned on data modeling with Apache Cassandra and complete an ETL pipeline using Python programming lanugage. To complete the project, we will need to model your data by creating tables in Apache Cassandra to run queries. We are provided with part of the ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to insert data into Apache Cassandra tables. A project template(a Jupyter notebook file) was given to us that takes care of all the imports and provides a structure for ETL pipeline we'd need to process this data.
 
 **Datasets** : For this project, we're given a working dataset: `event_data`
-> Details of all the data  can be found with this link
+> All the needed query-table schema design and relevant files must be found on this [`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Postgres)
+
 ### `Project summary directives:`
 `1.` We'll process the event_datafile_new.csv dataset to create a denormalized dataset
 
