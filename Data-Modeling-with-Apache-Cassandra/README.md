@@ -25,11 +25,16 @@ In this project, we'll apply what you've learned on data modeling with Apache Ca
 
 `3.` Include IF NOT EXISTS clauses in your CREATE statements to create tables only if the tables do not already exist. 
 
-`4.` Load the data from 'event_data.csv' file with INSERT statement for each of the tables.
+`4.` On this processes we must design our `query-table schema` with appropriate `Primary key` choices(important).
 
-`5.` Include DROP TABLE statement for each table, this way we can run drop and create tables whenever we want to reset our database and test your ETL pipeline.
+`5.` Then load the data from `event_datafile_new.csv` file with INSERT statement for each of the newly created tables.
 
-`6.` Test by running the proper select statements with the correct WHERE clause
+`6.` Test by running the proper query select statements with the correct WHERE clause as needed.
+
+`7.` At the very end of the notebook we should include DROP TABLE statement for each table.
+
+This way we can run drop and create tables whenever we want to reset our database and test your ETL pipeline.
+
 
 ## `Summary: `
 If table creation and data insertion works effectively then our query should produce answers as expected and directed.
