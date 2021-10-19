@@ -7,23 +7,24 @@
 In this project, we'll apply what we've learned on data modeling with Apache Cassandra and complete an ETL pipeline using Python programming lanugage. To complete the project, we need to model our data by creating tables in Apache Cassandra to run queries. Udacity has provided us with part of the ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to insert data into Apache Cassandra tables. A project template(a Jupyter notebook file) was given to us that takes care of all the imports and provides a structure for ETL pipeline we'd need to process this data. One this progression we need to remember carefully that with Apache Cassandra we model our database tables on the queries we want to run.
 
 **Datasets** : For this project, we're given a working dataset: `event_data`
-> All the needed query-table schema design and relevant files must be found on this [`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Postgres)
+> All the needed query-table schema design and relevant files must be found on this [`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Apache-Cassandra)
 
 ### `Project summary directives:`
-`1.` We'll process the event_datafile_new.csv dataset to create a denormalized dataset
+`1.` We'll process the event_datafile_new.csv dataset to create a denormalized dataset.
 
-`2.` We'll model the data tables keeping in mind the queries we need to run
+`2.` We'll model the data tables keeping in mind what kind of queries we need to run.
 
-`3.` A set of queries have been provided that we will need to model your data tables for
+`3.` A set of queries have been provided that we will need to model your data tables for.
 
-`4.` We'll load the data into newly created tables in Apache Cassandra to run assigned queries
+`4.` At the end we'd close the notebook-session and Cassandra cluster connection.
+
 
 ## `Project Programming Steps:`
 `1.` Write Apache Cassandra CREATE KEYSPACE and SET KEYSPACE statements.
 
-`2.` Develop your CREATE statement for each of the tables to address each question.
+`2.` Develop your CREATE statement for each of the tables to address each query.
 
-`3.` Include IF NOT EXISTS clauses in your CREATE statements to create tables only if the tables do not already exist. 
+`3.` Include IF NOT EXISTS clauses in your CREATE statements to make sure that tables do not already exist. 
 
 `4.` On this processes we must design our `query-table schema` with appropriate `Primary key` choices(important).
 
