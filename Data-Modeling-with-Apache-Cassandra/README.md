@@ -7,7 +7,7 @@
 In this project, we'll apply what we've learned on data modeling with Apache Cassandra and complete an ETL pipeline using Python programming lanugage. To complete the project, we need to model our data by creating tables in Apache Cassandra to run queries. Udacity has provided us with part of the ETL pipeline that transfers data from a set of CSV files within a directory to create a streamlined CSV file to insert data into Apache Cassandra tables. A project template(a Jupyter notebook file) was given to us that takes care of all the imports and provides a structure for ETL pipeline we'd need to process this data. One this progression we need to remember carefully that with Apache Cassandra we model our database tables on the queries we want to run.
 
 **Datasets** : For this project, we're given a working dataset: `event_data`
-> All the needed query-table schema design and relevant files must be found on this [`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Apache-Cassandra)
+> All the needed query-table schema design and relevant files must be found on this [`github-page-link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Apache-Cassandra)
 
 ### `Project summary directives:`
 `1.` We'll process the event_datafile_new.csv dataset to create a denormalized dataset.
@@ -37,7 +37,7 @@ In this project, we'll apply what we've learned on data modeling with Apache Cas
 This way we can run drop and create tables whenever we want to reset our database and test your ETL pipeline.
 
 ## `Project Query Data-Model design and brief Output summary:`
-**Note:** Here is a brief Snap-Shot of what one can expect from `Cassandra Query-Data-Model` and to see the detail coded sequence please try this [`Project_1B_ Project_Template.ipynb`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Modeling-with-Apache-Cassandra/Project_1B_%20Project_Template.ipynb)
+**Note:** Here is a brief snap-shot of what one can expect from `Cassandra Query-Data-Model`, to see the detail python code please try this link: [`Project_1B_ Project_Template.ipynb`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Modeling-with-Apache-Cassandra/Project_1B_%20Project_Template.ipynb)
 
 #### `Query 1:`  Give me the artist, song title and song's length in the music app history that was heard during  sessionId = 338, and itemInSession  = 4
 ![image](https://user-images.githubusercontent.com/16586123/138171266-00e3b7ec-7a73-419e-864e-c43795985daa.png)
