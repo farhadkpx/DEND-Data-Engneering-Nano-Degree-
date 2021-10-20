@@ -37,7 +37,8 @@ In this project, we'll apply what we've learned on data modeling with Apache Cas
 This way we can run drop and create tables whenever we want to reset our database and test your ETL pipeline.
 
 ## `Project Query Data-Model design and brief Output summary:`
-**Note:** Here is a brief Snap-Shot of what one can expect from `Cassandra Query-Data-Model` and to see the detail coded sequence please try this ['NoteBook-link']: 
+**Note:** Here is a brief Snap-Shot of what one can expect from `Cassandra Query-Data-Model` and to see the detail coded sequence please try this ['NoteBook-link'](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Modeling-with-Apache-Cassandra/Project_1B_%20Project_Template.ipynb)
+
 #### `Query 1:`  Give me the artist, song title and song's length in the music app history that was heard during  sessionId = 338, and itemInSession  = 4
 ![image](https://user-images.githubusercontent.com/16586123/138171266-00e3b7ec-7a73-419e-864e-c43795985daa.png)
 
