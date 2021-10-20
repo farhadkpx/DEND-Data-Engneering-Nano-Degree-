@@ -36,6 +36,19 @@ In this project, we'll apply what we've learned on data modeling with Apache Cas
 
 This way we can run drop and create tables whenever we want to reset our database and test your ETL pipeline.
 
+## `Project Query design and Output summary:`
+#### `Query 1:`  Give me the artist, song title and song's length in the music app history that was heard during  sessionId = 338, and itemInSession  = 4
+![image](https://user-images.githubusercontent.com/16586123/138171266-00e3b7ec-7a73-419e-864e-c43795985daa.png)
+
+![image](https://user-images.githubusercontent.com/16586123/138171634-7f15ad21-cdd8-43ed-bbf6-f50afeda21a9.png)
+
+![image](https://user-images.githubusercontent.com/16586123/138171817-cc6dcdd5-9ef4-4a21-b304-a0e93db71f02.png)
+
+![image](https://user-images.githubusercontent.com/16586123/138171897-49e460db-6d2b-4127-813d-c67713e15415.png)
+
+![image](https://user-images.githubusercontent.com/16586123/138171981-579eb5be-20cd-4981-b798-324d4795d88b.png)
+![image](https://user-images.githubusercontent.com/16586123/138172054-5840ca7a-eec0-4818-9960-1d376562ff9c.png)
+
 
 ## `Summary: `
 If table creation and data insertion works effectively then our query should produce answers as expected and directed.
