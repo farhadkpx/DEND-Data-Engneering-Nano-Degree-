@@ -37,7 +37,7 @@ In this project, we'll apply what we've learned on data modeling with Apache Cas
 This way we can run drop and create tables whenever we want to reset our database and test your ETL pipeline.
 
 ## `Project Query Data-Model design and brief Output summary:`
-**Note:** Here is a brief snap-shot of what one can expect from `Cassandra Query-Data-Model`, to see the detail python code please try this link: [`Project_1B_ Project_Template.ipynb`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Modeling-with-Apache-Cassandra/Project_1B_%20Project_Template.ipynb)
+**Reflect:** Here is the visible depiction of my data-model on `how to create tables in Apache Cassandra` and `how to run queries on that table`. Here I shared a brief snap-shot of what one can expect from `Cassandra Query-Data-Model`, to see the detail python code please try this link: [`Project_1B_ Project_Template.ipynb`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Modeling-with-Apache-Cassandra/Project_1B_%20Project_Template.ipynb)
 
 #### `Query 1:`  Give me the artist, song title and song's length in the music app history that was heard during  sessionId = 338, and itemInSession  = 4
 ![image](https://user-images.githubusercontent.com/16586123/138171266-00e3b7ec-7a73-419e-864e-c43795985daa.png)
@@ -53,5 +53,5 @@ This way we can run drop and create tables whenever we want to reset our databas
 
 
 ## `Summary: `
-If table creation and data insertion works effectively then our query should produce answers as expected and directed.
+I had to make some changes in my `Programming` and `README.md` files as suggested by the mentors of this program. I think, I liked those suggestions of change for the better presentations.
 
