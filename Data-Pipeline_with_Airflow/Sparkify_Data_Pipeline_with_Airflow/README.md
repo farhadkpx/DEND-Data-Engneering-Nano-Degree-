@@ -33,7 +33,7 @@ Two main data source are located in on Amazon s3 bucket.
 
 **`Quick view:` How the DAG's should be sequenced for this project data pipeline**
 
-![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Dag_Dependency_Steps.png)
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Dag_Dependency_Steps.png)
 
 
 ## `Operators`
