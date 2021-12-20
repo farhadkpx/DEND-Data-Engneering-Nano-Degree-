@@ -1,5 +1,5 @@
 
-### `README Analysis:`
+### `README guideline:`
 Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
 State and justify your database schema design and ETL pipeline.
 [Optional] Provide example queries and results for song play analysis.
@@ -8,7 +8,7 @@ Here's a guide on Markdown Syntax.
 Project Rubric
 Read the project rubric before and during development of your project to ensure you meet all specifications.
 
-
+The README file includes a summary of the project, how to run the Python scripts, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
 
 # Project: Sparkify Data Lake
 ### `Project Introduction`
@@ -18,8 +18,11 @@ As their data engineer, we are tasked with building an ETL pipeline that extract
 
 > We'll be able to test our database and ETL pipeline by running queries given to us by the analytics team from Sparkify and compare your results with their expected results.
 
-## `Project Description`
-In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, we will need to load data from S3, process the data into analytics tables using Py-Spark, and load them back into Amazon S3. We'll deploy this Spark process on a cluster using AWS.
+## `Project in Description`
+In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, we will need to load data from S3, transforms them(data) into five different tables using Py-Spark and write them back as partitioned-table into a parquet files in the directories on S3. We'll deploy this Spark process on a cluster using AWS.  Each table has its own folder within the directory. 
+
+> Songs table files are partitioned by year and then artist. Time table files are partitioned by year and month. Songplays table files are partitioned by year and month.
+
 
 ## `Project Datasets`
 We'll be working with two datasets that reside in S3. Here are the S3 links for each:
