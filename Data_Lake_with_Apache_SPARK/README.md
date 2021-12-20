@@ -46,15 +46,21 @@ The log files in the dataset we'll be working with are partitioned by year and m
 + log_data/2018/11/2018-11-13-events.json
 
 ### `Justify database Schema:`
-Using the song_data and log_datasets, we'll need to create a star schema optimized for queries on song play analysis. This includes these following tables. The data type schema of all the tables are unchanged from the given two data files.I only made a diverging change in "ts/start_time" column. I transformed "start_time" column into six different columns with new "time_table". This dis-integration will help us to analyse our time-data into a more segmented form.
+Using the song_data and log_datasets, we'll need to create a star schema optimized for queries on song play analysis. This break down comprises 1-Fact-table and 4-dimension tables. The data type schema of all the tables are kept unchanged from the given two data files. I only made a diverging change with the "ts/start_time" column from log_data file. I transformed "ts/start_time" column into six different columns with new "time_table". This dis-integration is designed to help us analyze our time-data into a more segmented form.
 
+`A snap of the ts-column transformation with two UDF`
+
+*explain:*
 get_timestamp = udf(lambda x: x/1000, TimestampType())
-    log_df = log_df.withColumn("TimeStamp", get_timestamp(log_df.ts))
 
+log_df = log_df.withColumn("TimeStamp", get_timestamp(log_df.ts))
+
+*explain:*
 get_datetime = udf(lambda x: datetime.fromtimestamp(x), TimestampType())
-    log_df = log_df.withColumn("start_time", get_datetime(log_df.TimeStamp))
+
+log_df = log_df.withColumn("start_time", get_datetime(log_df.TimeStamp))
     
-After these "udf" transformations we disintegrated "ts" column into start_time(TIMESTAMP) , hour(INT), day(INT), week(INT), month(INT), year(INT), weekday(STRING) column. Besides these schematic change all the other columns in five tables stayed the same as it came with.
+After these "UDF" transformations we break down "ts" column into start_time(TIMESTAMP) , hour(INT), day(INT), week(INT), month(INT), year(INT), weekday(STRING) column. Besides these schematic change all the other columns in five tables stayed the same as they came with.
 
 ### Fact Table
 1. **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent )
