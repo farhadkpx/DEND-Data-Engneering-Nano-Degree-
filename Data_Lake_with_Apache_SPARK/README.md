@@ -48,6 +48,14 @@ The log files in the dataset we'll be working with are partitioned by year and m
 ### `Justify database Schema:`
 Using the song_data and log_datasets, we'll need to create a star schema optimized for queries on song play analysis. This includes these following tables. The data type schema of all the tables are unchanged from the given two data files.I only made a diverging change in "ts/start_time" column. I transformed "start_time" column into six different columns with new "time_table". This dis-integration will help us to analyse our time-data into a more segmented form.
 
+get_timestamp = udf(lambda x: x/1000, TimestampType())
+    log_df = log_df.withColumn("TimeStamp", get_timestamp(log_df.ts))
+
+get_datetime = udf(lambda x: datetime.fromtimestamp(x), TimestampType())
+    log_df = log_df.withColumn("start_time", get_datetime(log_df.TimeStamp))
+    
+After these "udf" transformations we disintegrated "ts" column into start_time(TIMESTAMP) , hour(INT), day(INT), week(INT), month(INT), year(INT), weekday(STRING) column. Besides these schematic change all the other columns in five tables stayed the same as it came with.
+
 ### Fact Table
 1. **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent )
 
@@ -58,7 +66,7 @@ Using the song_data and log_datasets, we'll need to create a star schema optimiz
 
 `4.` **artists** - artists in music database columns ( artist_id, name, location, lattitude, longitude )
 
-`5.` **time** - timestamps of records in songplays broken down into specific units (start_time, hour, day, week, month, year, weekday )
+`5.` **time** - timestamps of records in songplays broken down into specific units (start_time, hour, day, week, month, year, weekday(string) )
 
 ### `Project Template:`
 If we want to use given the project template which comes along with the classroom then we can work on our project with a smaller dataset found in the workspace, and then move on to the bigger dataset on AWS. Alternatively, you can download the template files in the Resources tab in the classroom and work on this project on your local computer.
