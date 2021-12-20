@@ -1,4 +1,15 @@
 
+### `README Analysis:`
+Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
+State and justify your database schema design and ETL pipeline.
+[Optional] Provide example queries and results for song play analysis.
+Here's a guide on Markdown Syntax.
+
+Project Rubric
+Read the project rubric before and during development of your project to ensure you meet all specifications.
+
+
+
 # Project: Sparkify Data Lake
 ### `Project Introduction`
 An imaginary and data-simulated music streaming startup, Sparkify, has grown their user base and song database even more and want to move their data warehouse to an online data lake. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
@@ -59,13 +70,3 @@ The project template includes three files:
 + **README.md provides** - discussion on your process and decisions
 
 
-### `Document Process`
-Do the following steps in your README.md file.
-
-Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
-State and justify your database schema design and ETL pipeline.
-[Optional] Provide example queries and results for song play analysis.
-Here's a guide on Markdown Syntax.
-
-Project Rubric
-Read the project rubric before and during development of your project to ensure you meet all specifications.
