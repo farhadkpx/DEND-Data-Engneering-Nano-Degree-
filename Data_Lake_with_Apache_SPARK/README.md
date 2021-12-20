@@ -1,14 +1,15 @@
 
 ### `README guideline:`
 Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
-State and justify your database schema design and ETL pipeline.
+- State and justify your database schema design and ETL pipeline.
 [Optional] Provide example queries and results for song play analysis.
 Here's a guide on Markdown Syntax.
 
 Project Rubric
 Read the project rubric before and during development of your project to ensure you meet all specifications.
 
-The README file includes a summary of the project, how to run the Python scripts, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
+The README file includes a summary of the project, 
+- how to run the Python scripts, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
 
 # Project: Sparkify Data Lake
 ### `Project Introduction`
@@ -44,8 +45,8 @@ The log files in the dataset we'll be working with are partitioned by year and m
 
 + log_data/2018/11/2018-11-13-events.json
 
-### `Schema for Song Play Analysis`
-Using the song and log datasets, we'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
+### `Justify database Schema:`
+Using the song_data and log_datasets, we'll need to create a star schema optimized for queries on song play analysis. This includes these following tables. The data type schema of all the tables are unchanged from the given two data files.I only made a diverging change in "ts/start_time" column. I transformed "start_time" column into six different columns with new "time_table". This dis-integration will help us to analyse our time-data into a more segmented form.
 
 ### Fact Table
 1. **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent )
