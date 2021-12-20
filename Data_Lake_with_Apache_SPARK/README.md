@@ -88,3 +88,22 @@ The project template includes three files:
 + **README.md provides** - discussion on your process and decisions
 
 
+## How to run python-script files
+To run this project in local mode, create a file dl.cfg in the root of this project with the following data:
+
+KEY = "YOUR_AWS_ACCESS_KEY"
+SECRET = "YOUR_AWS_SECRET_KEY"
+
+Create an S3 Bucket named sparkify-dend where output results will be stored.
+
+Finally, run the following command:
+
+python etl.py
+
+## ETL Pipeline
+
+Load the credentials from dl.cfg
+Load the Data which are in JSON Files(Song Data and Log Data)
+After loading the JSON Files from S3 4.Use Spark process this JSON files and then generate a set of Fact and Dimension Tables
+Load back these dimensional process to S
+To run on an Jupyter Notebook powered by an EMR cluster, import the notebook found in this project.
