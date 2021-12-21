@@ -45,7 +45,7 @@ The log files in the dataset we'll be working with are partitioned by year and m
 
 + log_data/2018/11/2018-11-13-events.json
 
-### `Justify database Schema:`
+## `Justify database Star Schema:`
 Using the song_data and log_datasets, we'll need to create a star schema optimized for queries on song play analysis. This break down comprises 1-Fact-table and 4-dimension tables. The data type schema of all the tables are kept unchanged from the given two data files. I only made a diverging change with the "ts/start_time" column from log_data file. I transformed "ts/start_time" column into six different columns with new "time_table". This dis-integration is designed to help us analyze our time-data into a more segmented form.
 
 `A snap of the ts-column transformation with two UDF`
@@ -63,7 +63,7 @@ log_df = log_df.withColumn("start_time", get_datetime(log_df.TimeStamp))
 After these "UDF" transformations we break down "ts" column into start_time(TIMESTAMP) , hour(INT), day(INT), week(INT), month(INT), year(INT), weekday(STRING) column. Besides these schematic change all the other columns in five tables stayed the same as they came with.
 
 ### Fact Table
-1. **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent )
+`1.` **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent )
 
 ### Dimension Tables
 `2.` **users** - users in the app with columns ( user_id, first_name, last_name, gender, level )
@@ -72,9 +72,9 @@ After these "UDF" transformations we break down "ts" column into start_time(TIME
 
 `4.` **artists** - artists in music database columns ( artist_id, name, location, lattitude, longitude )
 
-`5.` **time** - timestamps of records in songplays broken down into specific units (start_time, hour, day, week, month, year, weekday(string) )
+`5.` **time** - start_time columns from songplays broken down into specific units (start_time, hour, day, week, month, year, weekday(string))
 
-### `Project Template:`
+### `Project Template Files:`
 If we want to use given the project template which comes along with the classroom then we can work on our project with a smaller dataset found in the workspace, and then move on to the bigger dataset on AWS. Alternatively, you can download the template files in the Resources tab in the classroom and work on this project on your local computer.
 
 The project template includes three files:
@@ -83,8 +83,6 @@ The project template includes three files:
 
 + **dl.cfg** -  contains your AWS credentials
 
-+ **sql_queries.py** - contains the queries that will be used in the etl script.
-
 + **README.md provides** - discussion on your process and decisions
 
 
@@ -92,6 +90,7 @@ The project template includes three files:
 To run this project in local mode, create a file dl.cfg in the root of this project with the following data:
 
 KEY = "YOUR_AWS_ACCESS_KEY"
+
 SECRET = "YOUR_AWS_SECRET_KEY"
 
 Create an S3 Bucket named sparkify-dend where output results will be stored.
@@ -100,10 +99,9 @@ Finally, run the following command:
 
 python etl.py
 
-## ETL Pipeline
+## ETL Pipeline Steps:
 
-Load the credentials from dl.cfg
-Load the Data which are in JSON Files(Song Data and Log Data)
-After loading the JSON Files from S3 4.Use Spark process this JSON files and then generate a set of Fact and Dimension Tables
-Load back these dimensional process to S
-To run on an Jupyter Notebook powered by an EMR cluster, import the notebook found in this project.
+- Load the credentials from dl.cfg
+- Load the Data which are in JSON Files(Song Data and Log Data)
+- After loading the JSON Files from S3 use Spark processes to generate a set of Fact and Dimension Tables
+- Load these partitioned parquet files back to S3 ready for analysis 
