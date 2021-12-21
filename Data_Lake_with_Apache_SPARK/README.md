@@ -70,15 +70,13 @@ The project template includes three files:
 
 
 ## `How to run python-script files`
-We can run "etl.py" file in local mode. If we want to run the "etl.py" online, we need to create a file dl.cfg in the root of this project with the following data:
+We can run "etl.py" file in local mode. If we want to run the "etl.py" online, we need to create a file dl.cfg in the root of this project with the following AWS-access keys. 
 
 `KEY = "YOUR_AWS_ACCESS_KEY"` ( This is our/your AWS access key )
 
 `SECRET = "YOUR_AWS_SECRET_KEY"` ( AWS secret key )
 
-Create an S3 Bucket named sparkify-dend where output results will be stored.
-
-Finally, run the following command: python etl.py
+We need to create a SPARK session to run the py-SPARK program. Then create a S3 Bucket named `"udacity-sparkify-data-udend"` where output results will be stored. Finally, run the following command: python etl.py.
 
 ## `ETL Pipeline Steps:`
 The ETL pipeline comprises with all the consolidated steps we've developed so far to run the data transformation. In sequence `Extracting data from S3`, `transforming them as needed with py-SPARK` and loading them back to S3 as partitioned-parquet file all in a automated processes.
