@@ -12,18 +12,17 @@ The README file includes a summary of the project,
 - how to run the Python scripts, and an explanation of the files in the repository. Comments are used effectively and each function has a docstring.
 
 # Project: Sparkify Data Lake
-### `Project Introduction`
+### `Introduction`
 An imaginary and data-simulated music streaming startup, Sparkify, has grown their user base and song database even more and want to move their data warehouse to an online data lake. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
 As their data engineer, we are tasked with building an ETL pipeline that extracts their data from S3, processes them using Spark, and loads the data back into S3 as a set of dimensional tables. This will allow their analytics team to continue finding insights in what songs their users are listening to.
 
 > We'll be able to test our database and ETL pipeline by running queries given to us by the analytics team from Sparkify and compare your results with their expected results.
 
-## `Project in Description`
+## `Project Description`
 In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, we will need to load data from S3, transforms them(data) into five different tables using Py-Spark and write them back as partitioned-table into a parquet files in the directories on S3. We'll deploy this Spark process on a cluster using AWS.  Each table has its own folder within the directory. 
 
 > Songs table files are partitioned by year and then artist. Time table files are partitioned by year and month. Songplays table files are partitioned by year and month.
-
 
 ## `Project Datasets`
 We'll be working with two datasets that reside in S3. Here are the S3 links for each:
@@ -80,7 +79,7 @@ The project template includes three files:
 
 
 ## How to run python-script files
-To run this project in local mode, create a file dl.cfg in the root of this project with the following data:
+We can run "etl.py" file in local mode. If we want to run the "etl.py" onlie we need to create a file dl.cfg in the root of this project with the following data:
 
 KEY = "YOUR_AWS_ACCESS_KEY"
 
@@ -88,13 +87,12 @@ SECRET = "YOUR_AWS_SECRET_KEY"
 
 Create an S3 Bucket named sparkify-dend where output results will be stored.
 
-Finally, run the following command:
-
-python etl.py
+Finally, run the following command: python etl.py
 
 ## ETL Pipeline Steps:
 
-- Load the credentials from dl.cfg
-- Load the Data which are in JSON Files(Song Data and Log Data)
-- After loading the JSON Files from S3 use Spark processes to generate a set of Fact and Dimension Tables
-- Load these partitioned parquet files back to S3 ready for analysis 
+- Load the credentials from dl.cfg file.
+- Load the Data which are in JSON Files(Song Data and Log Data).
+- Transform these files to generate a set of Fact and Dimension Tables.
+- Load these files back to S3 as partitioned parquet files for data analysis. 
+
