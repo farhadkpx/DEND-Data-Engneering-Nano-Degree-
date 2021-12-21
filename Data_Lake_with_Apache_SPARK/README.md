@@ -8,7 +8,7 @@ An imaginary and data-simulated music streaming startup, Sparkify, has grown the
 
 As their data engineer, we are tasked with building an ETL pipeline that extracts their data from S3, processes them using Spark, and loads the data back into S3 as a set of dimensional tables. This will allow their analytics team to continue finding insights in what songs their users are listening to.
 
-> We'll be able to test our database and ETL pipeline by running queries given to us by the analytics team from Sparkify and compare your results with their expected results.
+> Our transformational database and ETL pipeline should withstand test run by the data analytics team from SPARKIFY. The analytics team should be able to run queries against these tables where they would be able to compare your/our results with their expected results.
 
 ## `Project Description`
 In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, we will need to load data from S3, transforms them(data) into five different tables using Py-Spark and write them back as partitioned-table into a parquet files in the directories on S3. We'll deploy this Spark process on a cluster using AWS.  Each table has its own folder within the directory. 
@@ -46,18 +46,18 @@ log_df = log_df.withColumn("start_time", get_datetime(log_df.TimeStamp))
 After these "UDF" transformations we break down "ts" column into start_time(TIMESTAMP) , hour(INT), day(INT), week(INT), month(INT), year(INT), weekday(STRING) columns. Besides these schematic change all the other columns in five tables stayed the same as they came with.
 
 > ### Fact Table
-`1.` **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent )
+`1.` **songplays** - records in log data associated with song plays i.e. records with page NextSong with columns ( `songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent` )
 
 > ### Dimension Tables
-`2.` **users** - users in the app with columns ( user_id, first_name, last_name, gender, level )
+`2.` **users** - users in the app with columns ( `user_id, first_name, last_name, gender, level` )
 
-`3.` **songs** - songs in music database with columns ( song_id, title, artist_id, year, duration )
+`3.` **songs** - songs in music database with columns ( `song_id, title, artist_id, year, duration` )
 
-`4.` **artists** - artists in music database columns ( artist_id, name, location, lattitude, longitude )
+`4.` **artists** - artists in music database columns ( `artist_id, name, location, lattitude, longitude` )
 
-`5.` **time** - start_time columns from songplays broken down into specific units (start_time, hour, day, week, month, year, weekday(string))
+`5.` **time** - start_time columns from songplays broken down into specific units ( `start_time, hour, day, week, month, year, weekday(string)`)
 
-### `Project Template Files:`
+## `Project Template Files:`
 If we want to use given project template which comes along with the classroom then we can work on our project with a smaller dataset found in the workspace, and then move on to the bigger dataset on AWS. Alternatively, we can download the template files in the `Resources tab` in the classroom and work on this project on your local computer.
 
 The project template includes three files:
@@ -79,7 +79,7 @@ We can run "etl.py" file in local mode. If we want to run the "etl.py" online, w
 We need to create a SPARK session to run the py-SPARK program. Then create a S3 Bucket named `"udacity-sparkify-data-udend"` where output results will be stored. Finally, run the following command: python etl.py.
 
 ## `ETL Pipeline Steps:`
-The ETL pipeline comprises with all the consolidated steps we've developed so far to run the data transformation. In sequence `Extracting data from S3`, `transforming them as needed with py-SPARK` and loading them back to S3 as partitioned-parquet file all in a automated processes.
+The ETL pipeline comprises with all the consolidated steps we've developed so far to run the data transformation. In sequence `Extracting data from S3`, `transforming them as needed with py-SPARK` and `loading them back to S3 as partitioned-parquet file` all in a automated processes.
 
 `1`. Obtaining the credentials from dl.cfg file.
 
