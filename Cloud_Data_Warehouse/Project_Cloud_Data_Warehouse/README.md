@@ -33,44 +33,53 @@ log_data/2018/11/2018-11-12-events.json
 log_data/2018/11/2018-11-13-events.json
 
 ## `Justify your database schema design`
-Using the song and event datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
-I processed the info contained in the S3 bucket into staging tables that I later used to create the main database.
+We'll need to create a star schema optimized for queries on user song play behavior. The star schema will contain a fact-table(songplays) and 4-dimension tables( users, songs, artists, time tables ). The main source of data will come from log and song dataset. We'll create multiple table join and extraction of columns from these two tables to form all the necessary tables for this project.
 
-### `Staging Tables`
-staging_events: contains all the fields and rows from the logs jsons.
-staging_songs: contains all the fields and rows from the songs jsons.
-Using the songs and events staging tables, I created a star schema database optimized for queries on song play analysis, which is composed of the following tables.
+### `Staging Tables:`
+Sourced from Amazon S3 bucket without any data type or schematic change.
+
+`1.` `staging_events:` contains all the fields and rows from the logs.jsons dataset. 
+
+`2.` `staging_songs:` contains all the fields and rows from the songs.jsons dataset. 
+
+I had to create multiple joins and extraction of columns from these two tables to create the star schema. There was no data type change was in effct
+except break-down of 'timestamp' column into 6 separate columns.
 
 ### `Fact Table`
-songplays - records in event data associated with song plays i.e. records with page NextSong
-songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+`1.` `songplays` - ( records in event data associated with song plays i.e. records with page NextSong ) [ `( songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent` ]
 
-### `Dimension Tables`
-users - users in the app
-user_id, first_name, last_name, gender, level
-songs - songs in music database
-song_id, title, artist_id, year, duration
-artists - artists in music database
-artist_id, name, location, lattitude, longitude
-time - timestamps of records in songplays broken down into specific units
-start_time, hour, day, week, month, year, weekday
+### `Dimension Tables:`
+`2.` `users` - ( users in the app ) [ `user_id, first_name, last_name, gender, level` ]
+
+`3.` `songs` - ( songs in music database ) [ `song_id, title, artist_id, year, duration` ]
+
+`4.` `artists` - ( artists in music database ) [ `artist_id, name, location, lattitude, longitude` ]
+
+`5.` `time` - ( timestamps of records in songplays broken down into specific units ) [ `start_time, hour, day, week, month, year, weekday` ]
 
 ## `Project Template Files:` 
 Project template includes five files to work with this project.
 
 `1.` dwh.cfg file contains all the necessary AWS credentials and database sourcing information.
+
 `2.` sql_queries.py define and design schemas for your staging, fact and dimension tables for this project.
+
 `3.` create_tables.py implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.
+
 `4.` etl.py is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
+
 `5.` README.md file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
 
 ## `Project implementation Steps:`
 To get started with the project we can do it on the workspace in the classroom. Alternatively, we can download the template files from the “Resources tab” in the classroom and work on this project in our local computer. Files given with resource-tab/workspace with brief description here.
 
-`1.` dwh.cfg file contains all the necessary credentials and file sourcing information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
-`2.` sql_queries.py script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
-`3.` create_table.py file where we'll call “drop_table_queries” to drop tables in the beginning, if the tables already exist. This way, we can run create_tables.py whenever you want to reset your database and test your ETL pipeline.. Then we will call “create_table_queries” list to implement fact and dimension tables design for the star-schema in Redshift.
-`4.` etl.py file where we'll load data from Amazon S3 bucket into staging tables on Redshift using “copy_table_queries” list and then insert those data into the newly created tables using “insert_table_queries” list on to tables on Redshift.
+`1.`  `dwh.cfg` file contains all the necessary credentials and file sourcing information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
+
+`2.` `sql_queries.py` script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
+
+`3.` `create_table.py` file where we'll call “drop_table_queries” to drop tables in the beginning, if the tables already exist. This way, we can run create_tables.py whenever you want to reset your database and test your ETL pipeline.. Then we will call “create_table_queries” list to implement fact and dimension tables design for the star-schema in Redshift.
+
+`4.` `etl.py file` where we'll load data from Amazon S3 bucket into staging tables on Redshift using “copy_table_queries” list and then insert those data into the newly created tables using “insert_table_queries” list on to tables on Redshift.
 
 
 ## `Build ETL Pipeline(State and justify your ETL pipeline design)`
@@ -80,10 +89,14 @@ python create_tables.py
 And then trigger the pipeline execution, still on the terminal, with:
 
 Now that the pipeline executed successfully you can write another file containing your queries or work directly in the AWS web interface.
-1. Implement the logic in etl.py to load data from S3 to staging tables on Redshift.
-2. Implement the logic in etl.py to load data from staging tables to analytics tables on Redshift.
-3. Test by running etl.py after running create_tables.py and running the analytic queries on your Redshift database to compare your results with the expected results.
-4. Delete your redshift cluster when finished.
+
+`1.` Implement the logic in etl.py to load data from S3 to staging tables on Redshift.
+
+`2.` Implement the logic in etl.py to load data from staging tables to analytics tables on Redshift.
+
+`3.` Test by running etl.py after running create_tables.py and running the analytic queries on your Redshift database to compare your results with the expected results.
+
+`4`. Delete your redshift cluster when finished.
 
 ### `Document Process`
 Do the following steps in your README.md file.
