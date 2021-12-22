@@ -56,22 +56,21 @@ time - timestamps of records in songplays broken down into specific units
 start_time, hour, day, week, month, year, weekday
 
 ## `Project Template Files:` 
-Project Template includes five files to work with this project.
-1. dwh.cfg file contains all the necessary AWS credentials and database sourcing information.
-2. sql_queries.py define and design and schemas for your staging, fact and dimension tables with SQL CREATE statements for this project.
-3. create_tables.py implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.
-4. etl.py is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
-5. README.md is where we'll provide discussion on our data and file processes and decisions for this ETL pipeline.
+Project template includes five files to work with this project.
+
+`1.` dwh.cfg file contains all the necessary AWS credentials and database sourcing information.
+`2.` sql_queries.py define and design schemas for your staging, fact and dimension tables for this project.
+`3.` create_tables.py implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.
+`4.` etl.py is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
+`5.` README.md file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
 
 ## `Project implementation Steps:`
-To get started with the project we can do it on the workspace in the classroom. Alternatively, we can download the template files from the “Resources tab” in the classroom and work on this project in our local computer. 
-Files given with resource-tab/workspace with brief description here.
-1. dwh.cfg file contains all the necessary credentials and file sourcing information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
-2. sql_queries.py script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
-3. create_table.py file where we'll call “drop_table_queries” and “create_table_queries” list to implement fact and dimension tables design for the star-schema in Redshift.
-Write SQL DROP statements to drop tables in the beginning of create_tables.py if the tables already exist. This way, you can run create_tables.py whenever you want to reset your database and test your ETL pipeline.
+To get started with the project we can do it on the workspace in the classroom. Alternatively, we can download the template files from the “Resources tab” in the classroom and work on this project in our local computer. Files given with resource-tab/workspace with brief description here.
 
-4. etl.py file where we'll load data from Amazon S3 bucket into staging tables on Redshift using “copy_table_queries” list and then insert those data into the newly created tables using “insert_table_queries” list on to tables on Redshift.
+`1.` dwh.cfg file contains all the necessary credentials and file sourcing information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
+`2.` sql_queries.py script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
+`3.` create_table.py file where we'll call “drop_table_queries” to drop tables in the beginning, if the tables already exist. This way, we can run create_tables.py whenever you want to reset your database and test your ETL pipeline.. Then we will call “create_table_queries” list to implement fact and dimension tables design for the star-schema in Redshift.
+`4.` etl.py file where we'll load data from Amazon S3 bucket into staging tables on Redshift using “copy_table_queries” list and then insert those data into the newly created tables using “insert_table_queries” list on to tables on Redshift.
 
 
 ## `Build ETL Pipeline(State and justify your ETL pipeline design)`
