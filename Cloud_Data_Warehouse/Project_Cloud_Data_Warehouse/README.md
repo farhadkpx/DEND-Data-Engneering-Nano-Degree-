@@ -68,7 +68,7 @@ Project template includes five files to work with this project available on proj
 
 `4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
 
-`5.` README.md` file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
+`5.` `README.md` file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
 
 
 > ## `Project implementation Steps:`
@@ -78,7 +78,7 @@ To get started with the project we can work on it in the workspace on the classr
 
 `2.` `sql_queries.py` script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
 
-`3.` `create_table.py` file where we'll call `drop_table_queries` to drop tables in the beginning, if the tables already exist. This way, we can run `create_tables.py` whenever you want to reset your database and test our ETL pipeline. The `create_table_queries` file will implement fact and dimension tables design in reality for the star-schema in Redshift.
+`3.` `create_table.py` file where we'll loop through `drop_table_queries` list to drop tables at the beginning, if the tables already exist. This way, we can run `create_table` function whenever we want to reset your database and test our ETL pipeline. The `create_table` function will implement fact and dimension tables design with the star-schema in Redshift.
 
 `4.` `etl.py file` where we'll load data from Amazon S3 bucket into staging tables on Redshift using `copy_table_queries` list and then insert those data into the newly created tables using `insert_table_queries` list on to tables on Redshift.
 
@@ -88,7 +88,7 @@ To run this project we'll need to fill in the `dwh.cfg` file with the necessary 
 
 `1.` Implement the logic in `etl.py` to load data from S3 to staging tables on Redshift.
 
-`2`  Implement the logic with `etl.py` to insert data from staging tables into analytics(star-schema) tables on Redshift.
+`2.` Implement the logic with `etl.py` to insert data from staging tables into analytics(star-schema) tables on Redshift.
 
 `3.` Test by running `etl.py` after running `create_tables.py` and running the analytic queries on your Redshift database to compare your results with
      the expected results.
