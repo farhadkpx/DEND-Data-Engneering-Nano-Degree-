@@ -83,7 +83,7 @@ To get started with the project we can work on it in the workspace on the classr
 `4.` `etl.py file` where we'll load data from Amazon S3 bucket into staging tables on Redshift using `copy_table_queries` list and then insert those data into the newly created tables using `insert_table_queries` list on to tables on Redshift.
 
 
-## `Building ETL Pipeline(design)`
+> ## `Building ETL Pipeline(design)`
 To run this project we'll need to fill in the `dwh.cfg` file with the necessary Amazon Redshift cluster credentials, IAM_ROLE information and S3-bucket data source path. The pipeline works by querying the staging log and songs tables to extract the necessary data-informations that will populate the start-schema tables. In summary these pipeline steps are.
 
 `1.` Implement the logic in `etl.py` to load data from S3 to staging tables on Redshift.
