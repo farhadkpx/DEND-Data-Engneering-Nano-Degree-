@@ -60,21 +60,21 @@ During the design processes I didn't make any `data-type` change on the selected
 > ## `Project Template Files:` 
 Project template includes five files to work with this project available on project workspace.
 
-`1.` dwh.cfg file contains all the necessary AWS credentials and database sourcing information.
+`1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information.
 
-`2.` sql_queries.py define and design schemas for your staging, fact and dimension tables for this project.
+`2.` `sql_queries.py` define and design schemas for your staging, fact and dimension tables for this project.
 
-`3.` create_tables.py implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.
+`3.` `create_tables.py` implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.
 
-`4.` etl.py is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
+`4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
 
-`5.` README.md file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
+`5.` README.md` file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
 
 
 > ## `Project implementation Steps:`
 To get started with the project we can work on it in the workspace on the classroom. Alternatively, we can download the template files from the “Resources tab” in the classroom and work on this project in our local computer. Files given with `resource-tab/workspace` with brief description here.
 
-`1.`  `dwh.cfg` file contains all the necessary credentials and file sourcing information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
+`1.`  `dwh.cfg` file in which we'll input Redshift-Cluster inoformation, `IAM-ROLE` detail and `S3-source` information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
 
 `2.` `sql_queries.py` script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
 
