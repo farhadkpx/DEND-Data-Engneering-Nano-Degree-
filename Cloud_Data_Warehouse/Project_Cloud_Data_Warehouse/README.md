@@ -31,6 +31,7 @@ The log files in the dataset you'll be working with are partitioned by year and 
 
 `log_data/2018/11/2018-11-12-events.json` and `log_data/2018/11/2018-11-13-events.json`
 
+
 > ## `Database schema design`
 We'll need to create a star schema optimized for queries on user song-playing behavior. The star schema will contain a fact-table(songplays) and 4-dimension tables( users, songs, artists, time tables ). The main source of data will come from log and song dataset. We'll create multiple table join and extraction of columns from these two tables to form all the necessary tables for this project.
 
@@ -55,6 +56,7 @@ During the design processes I didn't make any `data-type` change on the selected
 
 `5.` `time` - ( timestamps of records in songplays broken down into specific units ) [ `start_time, hour, day, week, month, year, weekday` ]
 
+
 > ## `Project Template Files:` 
 Project template includes five files to work with this project available on project workspace.
 
@@ -67,6 +69,7 @@ Project template includes five files to work with this project available on proj
 `4.` etl.py is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
 
 `5.` README.md file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
+
 
 > ## `Project implementation Steps:`
 To get started with the project we can work on it in the workspace on the classroom. Alternatively, we can download the template files from the “Resources tab” in the classroom and work on this project in our local computer. Files given with `resource-tab/workspace` with brief description here.
@@ -93,7 +96,7 @@ To run this project we'll need to fill in the `dwh.cfg` file with the necessary 
 `4`. Delete your redshift cluster when finished.
 
 
-### `Document Process`
+### `Document Process(Revise it)`
 Do the following steps in your README.md file.
 1. Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
 2. State and justify your database schema design and ETL pipeline.
