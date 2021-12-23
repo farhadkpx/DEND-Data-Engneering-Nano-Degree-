@@ -82,19 +82,15 @@ To get started with the project we can do it on the workspace in the classroom. 
 `4.` `etl.py file` where we'll load data from Amazon S3 bucket into staging tables on Redshift using “copy_table_queries” list and then insert those data into the newly created tables using “insert_table_queries” list on to tables on Redshift.
 
 
-## `Build ETL Pipeline(State and justify your ETL pipeline design)`
-To run this project you will need to fill the dwh.cfg file with your Amazon Redshift cluster credentials. The pipeline works by querying the staging tables to extract the necessary informations that will populate the final tables. To execute the pipeline you just need to create the database by using the terminal running the command:
+## `Building ETL Pipeline(design)`
+To run this project we'll need to fill in the `dwh.cfg` file with the necessary Amazon Redshift cluster credentials, IAM_ROLE information and S3-bucket data source path. The pipeline works by querying the staging log and songs tables to extract the necessary data-informations that will populate the start-schema tables. 
 
-python create_tables.py
-And then trigger the pipeline execution, still on the terminal, with:
+`1.` Implement the logic in `etl.py` to load data from S3 to staging tables on Redshift.
 
-Now that the pipeline executed successfully you can write another file containing your queries or work directly in the AWS web interface.
+`2`  Implement the logic with `etl.py` to insert data from staging tables to analytics(star-schema) tables on Redshift.
 
-`1.` Implement the logic in etl.py to load data from S3 to staging tables on Redshift.
-
-`2.` Implement the logic in etl.py to load data from staging tables to analytics tables on Redshift.
-
-`3.` Test by running etl.py after running create_tables.py and running the analytic queries on your Redshift database to compare your results with the expected results.
+`3.` Test by running `etl.py` after running `create_tables.py` and running the analytic queries on your Redshift database to compare your results with
+     the expected results.
 
 `4`. Delete your redshift cluster when finished.
 
