@@ -59,15 +59,15 @@ During the design processes I didn't make any `data-type` change on the selected
 
 
 > ## `Project Template Files:` 
-Project template includes five files to work with this project available on project workspace.
+Project template includes five files to work with this project available on project workspace. All these files are posted in my github repository with this link[link]
 
-`1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information.
+`1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information. Due to `security-related-issues` some of the details will not be added into the github repository.
 
-`2.` `sql_queries.py` define and design schemas for your staging, fact and dimension tables for this project.
+`2.` `sql_queries.py` define and design schemas for your staging, fact and dimension tables for this project.[file-link on github]
 
 `3.` `create_tables.py` implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.
 
-`4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.
+`4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.[file-link on github]
 
 `5.` `README.md` file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
 
@@ -77,19 +77,22 @@ To get started with the project we can work on it in the workspace on the classr
 
 `1.`  `dwh.cfg` file in which we'll input Redshift-Cluster inoformation, `IAM-ROLE` detail and `S3-source` information, which connects to various aspect of AWS infrastructure to ensure that the pipeline should run effectively.
 
-`2.` `sql_queries.py` script, where we'll define all the needed dropping, creating, inserting SQL statements and 4-listings of codes all of which will be imported into two other script files as needed.
+`2.` `sql_queries.py` script, where we'll define all the needed dropping, creating, inserting SQL statements and listings of codes all of which will be imported into `create_table.py` and `etl.py` script files as needed.
 
 `3.` `create_table.py` file where we'll loop through `drop_table_queries` list to drop tables at the beginning, if the tables already exist. This way, we can run `create_table` function whenever we want to reset your database and test our ETL pipeline. The `create_table` function will implement fact and dimension tables design with the star-schema in Redshift.
 
-`4.` `etl.py file` where we'll load data from Amazon S3 bucket into staging tables on Redshift using `copy_table_queries` list and then insert those data into the newly created tables using `insert_table_queries` list on to tables on Redshift.
+`4.` `etl.py file` where we'll load data from Amazon S3 bucket into staging tables on Redshift using `copy_table_queries` list and then insert those data into the newly created tables using `insert_table_queries` list on to tables on Redshift, which is the final process of data pipeline creation.
 
 
 > ## `Building ETL Pipeline(design)`
 The pipeline works by querying the staging log and songs tables to extract the necessary data-informations that will populate the start-schema tables. In summary these pipeline steps are.
 
 `1.` Implement the logic in `sql_queries.py` the main brick-mortar design block the project databse.
+
 `2.` Test by running `create_tables.py`  file first then the `etl.py` second. Both have to run in the terminal without any errors. A successful run will make the whole data pipeline in effect.
+
 `3.` In fact ‘etl.py’ script connects to the Sparkify redshift database, loads log_data and song_data into staging tables, and transforms them into the five (star-schema) tables.
+
 ### `Example Query in effect:`
 A quick view of two query resulted from the effective data pipeline design for this project
 
