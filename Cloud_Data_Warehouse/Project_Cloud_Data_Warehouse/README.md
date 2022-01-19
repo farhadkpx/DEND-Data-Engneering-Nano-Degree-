@@ -5,7 +5,7 @@ Sparkify, a music streaming startup has grown their user base and song database 
 
 In this project, we'll apply what we've learned on data warehouses and AWS to build an ETL pipeline for a database hosted on Amazon-Redshift. As their data engineer, we’re tasked with building an ETL pipeline that extracts song-data from S3, stages them in Redshift, and transforms data into a set of fact and dimensional tables. 
 
-This transformation will help  Sparkify’s analytical team to test the database and ETL pipeline by running analytical queries. The analytics team should be able to continue finding insights in what songs their users are listening to and also able to compare our database performance with their expected results.
+This transformation will help  Sparkify’s analytical team to test the database and ETL pipeline by running analytical queries. The analytics team should be able to continue finding insights in what songs their users are listening to and also able to compare our database performance with their expected results. The details of all the files must be found here. [[ Project file link ](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse)]
 
 ## `Project Datasets`
 We'll be working with two datasets that reside in S3. Here are the S3 links for each:
