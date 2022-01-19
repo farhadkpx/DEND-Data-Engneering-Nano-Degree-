@@ -61,7 +61,7 @@ During the design processes I didn't make any `data-type` change on the selected
 > ## `Project Template Files:` 
 Project template includes five files to work with this project available on project workspace. All these files are posted in my github repository with this [[`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse)]
 
-`1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information. Due to `security-related-issues` some of the details will not be added into the github repository.
+`1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information. Due to `security-related-issues` some of the details will not be added into the github repository.[[`dwh.cfg file link`] (https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/dwh.cfg.txt)]
 
 `2.` `sql_queries.py` define and design schemas for your staging, fact and dimension tables for this project.[file-link on github]
 
