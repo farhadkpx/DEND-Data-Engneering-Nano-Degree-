@@ -63,9 +63,9 @@ Project template includes five files to work with this project available on proj
 
 `1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information. Due to `security-related-issues` some of the details will not be added into the github repository.[[`dwh.cfg file link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/dwh.cfg.txt)]
 
-`2.` `sql_queries.py` define and design schemas for your staging, fact and dimension tables for this project.[[`sql_queries.py` link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/sql_queries.py)]
+`2.` `sql_queries.py` define and design schemas for your staging, fact and dimension tables for this project.[[`sql_queries.py link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/sql_queries.py)]
 
-`3.` `create_tables.py` implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.[[create_tables.py file link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/create_tables.py)
+`3.` `create_tables.py` implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.[[create_tables.py link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/create_tables.py)
 
 `4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.[file-link on github]
 
