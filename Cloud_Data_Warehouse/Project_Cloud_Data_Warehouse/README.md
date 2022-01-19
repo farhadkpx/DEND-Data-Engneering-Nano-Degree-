@@ -1,5 +1,4 @@
 
-
 ## Project: Cloud Data Warehouse
 ### `Project Description`
 Sparkify, a music streaming startup has grown their user base and song database and want to move their data processing onto the cloud. Their data resides in Amazon S3 bucket, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
