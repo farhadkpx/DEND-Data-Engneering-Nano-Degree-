@@ -59,7 +59,7 @@ During the design processes I didn't make any `data-type` change on the selected
 
 
 > ## `Project Template Files:` 
-Project template includes five files to work with this project available on project workspace. All these files are posted in my github repository with this link[link]
+Project template includes five files to work with this project available on project workspace. All these files are posted in my github repository with this [[`github link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Modeling-with-Postgres)]
 
 `1.` `dwh.cfg` file contains all the necessary AWS credentials and database sourcing information. Due to `security-related-issues` some of the details will not be added into the github repository.
 
