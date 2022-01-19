@@ -95,16 +95,15 @@ The pipeline works by querying the staging log and songs tables to extract the n
 
 ### `Example Query in effect:`
 A quick view of two query resulted from the effective data pipeline design for this project.
-`a.` **Most listened song title and artist name and number of times a song was listened by the users.**
 
+`First.` **Most listened song title and artist name and number of times a song was listened by the users.**
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/Image_files/Song_title_Artist_name_num_time_listened.png)
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/Image_files/Output_song_title_artist_name.png)
 
-`b.` **User first_name, last_name and number of song they listened.**
-
+`Second.` **User first_name, last_name and number of song they listened.**
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/Image_files/user_name_num_song_listened.png)
 
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/Image_files/Output_users_number_song_listened.png)
 
-These views of queries are just to show, how we can use `AWS Redshift` for more efficient analytical purposes. Any silly mistakes, sorry. It's too much writing to do with.
+These views of queries are just to show, how we can use `AWS Redshift` for more efficient analytical purposes. Any silly mistakes, sorry. It's too much writing to do with. Hopefully it helps to visualize Sparkify database creation.
 
