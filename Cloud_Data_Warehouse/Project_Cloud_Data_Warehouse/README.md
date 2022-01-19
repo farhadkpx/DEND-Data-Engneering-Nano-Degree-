@@ -97,7 +97,7 @@ The pipeline works by querying the staging log and songs tables to extract the n
 A quick view of two query resulted from the effective data pipeline design for this project.
 `a.` Most listened song title and artist name and number of times a song was listened by the users
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/Image_files/Song_title_Artist_name_num_time_listened.png)
-
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/Image_files/Output_song_title_artist_name.png)
 
 `b.` User first_name, last_name and number of song they listened.
 
