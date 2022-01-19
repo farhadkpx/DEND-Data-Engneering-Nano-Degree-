@@ -96,6 +96,7 @@ The pipeline works by querying the staging log and songs tables to extract the n
 ### `Example Query in effect:`
 A quick view of two query resulted from the effective data pipeline design for this project.
 `a.` Most listened song title and artist name and number of times a song was listened by the users
+![image](https://user-images.githubusercontent.com/16586123/138171266-00e3b7ec-7a73-419e-864e-c43795985daa.png)
 
 
 `b.` User first_name, last_name and number of song they listened.
