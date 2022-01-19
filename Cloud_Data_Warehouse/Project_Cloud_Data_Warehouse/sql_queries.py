@@ -44,7 +44,7 @@ staging_events_table_create= ("""
         ts             BIGINT,
         userAgent      VARCHAR(300),
         userId         INTEGER
-    )
+    );
 """)
 
 # staging_songs are song dataset
@@ -62,10 +62,10 @@ staging_songs_table_create = ("""
         song_id          VARCHAR(50),
         title            VARCHAR(400),
         year             INTEGER
-    )
+    );
 """)
 
-#=============================================================
+#====================================== STAR SCHEMA =======================
 # songplay table ( FACT TABLE )
 # songplay schema design
 songplay_table_create = ("""
@@ -108,8 +108,8 @@ song_table_create = ("""
     )diststyle all;
 """)
 
-# artist table creation (artists in music database)
-# artist table schema
+# artists table creation (artists in music database)
+# artists table schema
 artist_table_create = ("""
     CREATE TABLE IF NOT EXISTS artists (
         artist_id    VARCHAR(50) SORTKEY,
@@ -176,6 +176,7 @@ songplay_table_insert = ("""
     ON se.song = ss.title AND se.artist = ss.artist_name AND se.length = ss.duration
     WHERE se.page = 'NextSong');   
 """)
+
 # Inserting data into users table
 # USERS TABLE
 user_table_insert = ("""
@@ -188,6 +189,7 @@ user_table_insert = ("""
     FROM staging_events
     WHERE page = 'NextSong' AND userId IS NOT NULL);
 """)
+
 # song_table_insert
 # SONGS TABLE
 song_table_insert = ("""
@@ -278,7 +280,7 @@ analytical_queries = [
      ORDER BY num_listened DESC\
      LIMIT 10;'
 ]
-# QUERY TITLE
+# QUERY TITLES
 analytical_query_titles = [
     'Number of songs each user listens to', 
     'Total hour spent by each user'
@@ -299,6 +301,7 @@ drop_table_queries = [
                       song_table_drop, 
                       artist_table_drop, 
                       time_table_drop]
+
 # CREATE TABLE QUERIES LIST
 create_table_queries = [staging_events_table_create,
                         staging_songs_table_create,
@@ -307,13 +310,14 @@ create_table_queries = [staging_events_table_create,
                         song_table_create, 
                         artist_table_create, 
                         time_table_create]
+
 # STAGING TABLES
-copy_table_order = ['staging_events', 
-                    'staging_songs']
+copy_table_order = ['staging_events', 'staging_songs']
+
 # STAGING COPIES
 copy_table_queries = [staging_events_copy, staging_songs_copy]
 
-# INSERT TABLE IN ORDER
+# INSERT TABLES IN ORDER
 insert_table_order = ['artists', 'songs', 'time', 'users', 'songplays']
 
 # INSERTION IN ORDER
