@@ -18,7 +18,6 @@ time_table_drop = "DROP TABLE IF EXISTS time;"
 
 # CREATE TABLES
 #=================================================================================
-# CREATE TABLES
 # stagin_events is the log dataset
 staging_events_table_create= ("""
     CREATE TABLE IF NOT EXISTS staging_events (
