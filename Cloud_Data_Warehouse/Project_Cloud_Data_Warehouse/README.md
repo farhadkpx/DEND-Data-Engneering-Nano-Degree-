@@ -67,7 +67,7 @@ Project template includes five files to work with this project available on proj
 
 `3.` `create_tables.py` implements the logic created in sql_queries.py file to build fact and dimension table on Redshift.[[`create_tables.py link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/create_tables.py)
 
-`4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.[`etl.py link`(https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/etl.py)]
+`4.` `etl.py` is where we'll load data from S3 into staging tables on Redshift and then insert those data into our newly created tables on Redshift.[[`etl.py link`](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Cloud_Data_Warehouse/Project_Cloud_Data_Warehouse/etl.py)]
 
 `5.` `README.md` file where we'll provide discussion in detail about programming processes and decisions for this ETL pipeline.
 
