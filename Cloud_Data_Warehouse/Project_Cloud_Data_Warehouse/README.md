@@ -94,11 +94,15 @@ The pipeline works by querying the staging log and songs tables to extract the n
 `3.` In fact ‘etl.py’ script connects to the Sparkify redshift database, loads log_data and song_data into staging tables, and transforms them into the five (star-schema) tables.
 
 ### `Example Query in effect:`
-A quick view of two query resulted from the effective data pipeline design for this project
+A quick view of two query resulted from the effective data pipeline design for this project.
+`a.` Most listened song title and artist name and number of times a song was listened by the users
 
 
-### `Document Process(Revise it)`
-Do the following steps in your README.md file.
-1. Discuss the purpose of this database in context of the startup, Sparkify, and their analytical goals.
+`b.` User first_name, last_name and number of song they listened.
+
+
+
+
+
 2. State and justify your database schema design and ETL pipeline.
-3. [Optional] Provide example queries and results for song play analysis.
+
