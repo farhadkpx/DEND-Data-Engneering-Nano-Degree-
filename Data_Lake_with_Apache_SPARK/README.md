@@ -15,6 +15,8 @@ In this project, we'll apply what we've learned on Spark and data lakes to build
 
 > Songs table files are partitioned by year and then artist. Time table files are partitioned by year and month. Songplays table files are partitioned by year and month.
 
+All the project related files must be found here with this [[Github_link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data_Lake_with_Apache_SPARK)]
+
 ## `Project Datasets`
 We'll be working with two datasets that reside in S3. Here are the S3 links for each:
 
