@@ -64,11 +64,11 @@ If we want to use given project template which comes along with the classroom th
 
 The project template includes three files:
 
-+ **etl.py** -  reads data from S3, transforms data using Spark, and writes them back to S3
++ **`etl.py`** -  reads data from S3, transforms data using Spark, and writes them back to S3
 
-+ **dl.cfg** -  contains your AWS credentials
++ **`dl.cfg`** -  contains your AWS credentials
 
-+ **README.md provides** - discussion on your process and decisions
++ **`README.md provides`** - discussion on your process and decisions
 
 
 ## `How to run python-script files`
@@ -78,7 +78,7 @@ We can run "etl.py" file in local mode. If we want to run the "etl.py" online, w
 
 `SECRET = "YOUR_AWS_SECRET_KEY"` ( AWS secret key )
 
-We need to create a SPARK session to run the py-SPARK program. Then create a S3 Bucket named `"udacity-sparkify-data-udend"` where output results will be stored. Finally, run the following command: python etl.py.
+We need to create a SPARK session to run the `py-SPARK` program. Then create a `S3 Bucket` named `"udacity-sparkify-data-udend"` where output results will be stored. Finally, run the following command: python etl.py.
 
 ## `ETL Pipeline Steps:`
 The ETL pipeline comprises with all the consolidated steps we've developed so far to run the data transformation. In sequence `Extracting data from S3`, `transforming them as needed with py-SPARK` and `loading them back to S3 as partitioned-parquet file` all in a automated processes.
@@ -87,7 +87,7 @@ The ETL pipeline comprises with all the consolidated steps we've developed so fa
 
 `2`. Loading the Data-files which are in JSON Files(Song Data and Log Data).
 
-`3` Transforming these files to generate a set of Fact and Dimension Tables.
+`3` Transforming these files with pySpark to generate a set of Fact and Dimension Tables.
 
 `4` Loading these files back to S3 as partitioned parquet files ready for data analysis. 
 
