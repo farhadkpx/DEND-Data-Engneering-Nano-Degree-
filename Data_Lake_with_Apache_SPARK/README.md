@@ -4,18 +4,18 @@
 
 # Project: Sparkify Data Lake
 ### `Introduction`
-An imaginary and data-simulated music streaming startup, Sparkify, has grown their user base and song database even more and want to move their data warehouse to an online data lake. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
+An imaginary and data-simulated music streaming startup, `Sparkify`, has grown their user base and song database even more and want to move their data warehouse to an online data lake. Their data resides in `S3`, in a directory of JSON logs on `user activity on the app`, as well as a directory with JSON metadata on the songs in their app.
 
-As their data engineer, we are tasked with building an ETL pipeline that extracts their data from S3, processes them using Spark, and loads the data back into S3 as a set of dimensional tables. This will allow their analytics team to continue finding insights in what songs their users are listening to.
+As their `data engineer`, we are tasked with `building an ETL pipeline` that `extracts their data from S3`, `processes them using Spark`, and `loads the data back into S3` as a set of dimensional tables. This will allow their analytics team to continue finding insights into what songs their users are listening to, how and when they listening to.
 
-> Our transformational database and ETL pipeline should withstand test run by the data analytics team from SPARKIFY. The analytics team should be able to run queries against these tables where they would be able to compare your/our results with their expected results.
+> Our transformational database and ETL pipeline should withstand test run by the data analytics team from `SPARKIFY`. The analytics team should be able to run queries against these tables to compare our results with their expected analytical results.
 
 ## `Project Description`
-In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on S3. To complete the project, we will need to load data from S3, transforms them(data) into five different tables using Py-Spark and write them back as partitioned-table into a parquet files in the directories on S3. We'll deploy this Spark process on a cluster using AWS.  Each table has its own folder within the directory. 
+In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on `S3`. To complete the project, we will need to `load data from S3`, `transforms them(data)` into five different tables using `Py-Spark` and write them back as `partitioned-table` into a parquet files in the directories on `S3`. Each table has its own folder within the directory. 
 
-> Songs table files are partitioned by year and then artist. Time table files are partitioned by year and month. Songplays table files are partitioned by year and month.
+> `Songs-table `files are partitioned by year and then artist. `Time-table` files are partitioned by year and month and send them back to S3 bucket as a parquet file.
 
-All the project related files must be found here with this [[Github_link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data_Lake_with_Apache_SPARK)]
+All the project related files must be found here with this [[Project_in_Github](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data_Lake_with_Apache_SPARK)]
 
 ## `Project Datasets`
 We'll be working with two datasets that reside in S3. Here are the S3 links for each:
