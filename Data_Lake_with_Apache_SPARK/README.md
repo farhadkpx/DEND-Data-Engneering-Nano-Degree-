@@ -68,7 +68,7 @@ We can run **etl.py** file in local mode or if we want to run it on the `Classro
 
 **SECRET = "YOUR_AWS_SECRET_KEY** ( AWS secret key )
 
-In addition, we need to create a SPARK session to run the `py-SPARK` language. Then create a `S3 Bucket` named `"udacity-dend/sparkify/"` where output results will be stored. Finally, run the following command on class room CLI `python etl.py`.
+In addition, we need to create a SPARK session within the 'python-environment' to run the `py-SPARK` script. We also need to create a `S3 Bucket` named `"udacity-dend/sparkify/"` where output results will be stored. Finally, run the following command on class room CLI `python etl.py`.
 
 
 ## `ETL Pipeline Steps:`
