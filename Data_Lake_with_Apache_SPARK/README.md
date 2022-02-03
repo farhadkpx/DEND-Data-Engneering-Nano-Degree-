@@ -1,16 +1,16 @@
 # Project: Sparkify Data Lake
 ### `Introduction`
-An imaginary and data-simulated music streaming startup, `Sparkify`, has grown their user base and song database even more and want to move their data warehouse to an online data lake. Their data resides in `S3`, in a directory of JSON logs on `user activity on the app`, as well as a directory with JSON metadata on the songs in their app.
+An imaginary, data-simulated music streaming startup, `Sparkify`, has grown their user base and song database even more and they want to move their data warehouse to an online data lake. Their data resides in an Amazon `S3` bucket as JSON files on `user activity on the music app`, as well as a directory with JSON metadata on the songs in their app.
 
-As their `data engineer`, we are tasked with `building an ETL pipeline` that `extracts their data from S3`, `processes them using Spark`, and `loads the data back into S3` as a set of dimensional tables. This will allow their analytics team to continue finding insights into what songs their users are listening to, how and when they listening to.
+As their `data engineer`, we are tasked with `building an ETL pipeline` that `extracts their data from S3 bucket`, `processes them using PySpark`, and `loads the transformed data back into S3` as a set of 4-dimensional tables and 1-fact table. This will allow their analytics team to continue finding insights into what songs their users are listening to, how and when they listening to.
 
 > Our transformational database and ETL pipeline should withstand test run by the data analytics team from `SPARKIFY`. The analytics team should be able to run queries against these tables to compare our results with their expected analytical results.
 
 
 ## `Project Description`
-In this project, we'll apply what we've learned on Spark and data lakes to build an ETL pipeline for a data lake hosted on `S3`. To complete the project, we will need to `load data from S3`, `transforms them(data)` into five different tables using `Py-Spark` and write them back as `partitioned-table` into a parquet files in the directories on `S3`. Each table has its own folder within the directory. 
+In this project, we'll apply what we've learned with PySpark and data lakes to build an ETL pipeline for a data lake hosted on `S3`. To complete the project, we will need to `load data from S3 bucket`, `transforms them(data)` into five different tables using `Py-Spark` and write them back as `partitioned-table` into a parquet files in the directories on `S3`. Each table has its own folder within the directory. 
 
-> `Songs-table `files are partitioned by year and then artist. `Time-table` files are partitioned by year and month and send them back to S3 bucket as a parquet file.
+> `songs_table` file is `partitioned by` `year` and then `artist_id/artist`. `time_table` and `songplays_table` files are `partitioned by` `year and month` and send them back to S3 bucket as a parquet file. There were no partition done with `artist_table` and `users_table`.
 
 All the project related files must be found here with this [[Project_in_Github](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data_Lake_with_Apache_SPARK)]
 
