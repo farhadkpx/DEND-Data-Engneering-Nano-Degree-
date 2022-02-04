@@ -58,7 +58,7 @@ The project template includes three files with click in link available to the ri
 
 + **`dl.cfg`** -  contains your AWS credentials.[[link]](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data_Lake_with_Apache_SPARK/dl.cfg)
 
-+ **`README.md provides`** - discussion on your process and decisions.[[link]]()
++ **`test_etl.ipynb file provides`** - discussion on your process and decisions.[[link]](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data_Lake_with_Apache_SPARK/test_etl.ipynb)
 
 
 ## `How to run python-script files`
