@@ -56,7 +56,7 @@ The project template includes three files with click in link available to the ri
 
 + **`etl.py`** -  reads data from S3, transforms data using Spark, and writes them back to S3.[[link]](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data_Lake_with_Apache_SPARK/etl.py)
 
-+ **`dl.cfg`** -  contains your AWS credentials.[[link]]( )
++ **`dl.cfg`** -  contains your AWS credentials.[[link]](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data_Lake_with_Apache_SPARK/dl.cfg)
 
 + **`README.md provides`** - discussion on your process and decisions.[[link]]()
 
