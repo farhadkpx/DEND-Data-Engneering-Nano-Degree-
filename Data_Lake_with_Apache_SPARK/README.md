@@ -86,5 +86,5 @@ The ETL pipeline comprises with all the consolidated steps we've developed so fa
 I did send my 5 parquet files back to workspace a folder name `Results` with five separate folder names `(songs, artists, users, time, songplays)` instead of sending them back to a Amazon S3 bucket due to time constraint. It takes extraordinary time to send those parquet files back to Amazon S3 bucket. But for clarity I kept codes available for use in my `etl.py` script.
 
 ### `README guideline:`
-Here is an example query I did run on songplays table. It is about in average how many hours a user spent on listening songs on the app.
+Here is an example query I did run on songplays table in connection with users and time table. It is about in average how many hours a user spent on listening songs on the app.
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data_Lake_with_Apache_SPARK/Avg_Hour_Spent_Listening.png)
