@@ -87,4 +87,4 @@ I did send my 5 parquet files back to workspace a folder name `Results` with fiv
 
 ### `README guideline:`
 Here is an example query I did run on songplays table. It is about in average how many hours a user spent on listening songs on the app.
-![image]()
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data_Lake_with_Apache_SPARK/Avg_Hour_Spent_Listening.png)
