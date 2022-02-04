@@ -82,6 +82,8 @@ The ETL pipeline comprises with all the consolidated steps we've developed so fa
 
 `4.` Loading these files back to S3 as partitioned parquet files ready for data analysis. 
 
+## `Sending files(time constrian)`
+I did send my 5 parquet files back to workspace a folder name `Results` with five separate folder names `(songs, artists, users, time, songplays)` instead of sending them back to a Amazon S3 bucket due to time constraint. It takes extraordinary time to send those parquet files back to Amazon S3 bucket. But for clarity I kept codes available for use in my `etl.py` script.
 
 ### `README guideline:`
 [Optional] Provide example queries and results for song play analysis.
