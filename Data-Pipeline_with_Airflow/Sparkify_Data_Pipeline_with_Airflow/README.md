@@ -35,8 +35,8 @@ These operator files are customizeable and we'll use them to build all the neces
 ### `Data Source:`
 Two main data source are located in on Amazon s3 bucket. 
 
-+ JSON files containing log events originated from the Sparkify app: : *Log data: s3://udacity-dend/log_data*
-+ JSON files containing meta information about song/artists data: *Song data: s3://udacity-dend/song_data*
++ JSON files containing log events data originated from the Sparkify app users: : **`Log data:` `s3://udacity-dend/log_data`**
++ JSON files containing meta information about song and artists data: **`Song data:` `s3://udacity-dend/song_data`**
 
 **`Quick view:` How the DAG's should be sequenced for this project data pipeline**
 
