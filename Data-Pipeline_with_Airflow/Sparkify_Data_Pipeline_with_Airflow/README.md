@@ -38,12 +38,19 @@ Two main data source are located in on Amazon s3 bucket.
 + JSON files containing log events data originated from the Sparkify app users: : **`Log data:` `s3://udacity-dend/log_data`**
 + JSON files containing meta information about song and artists data: **`Song data:` `s3://udacity-dend/song_data`**
 
-**`Quick view:` How the DAG's should be sequenced for this project data pipeline**
+### `Apache Airflow Task sequence in preview:`
 
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Dag_Dependency_Steps.png)
 
+The parametric conditions of creating DAG's
 
-## `Operators`
++ No dependency on the past runs.
++ If failed tasks are retried 3 times only.
++ Retrying DAGS will happen on every 5 minutes.
++ Catchup is turned off
++ No Email will be sent on retyring.
+
+## **Operators**
 Each operator has to follow some strict guideline to function for this project. Operators will help to stage the data, transform the data, and run checks on data-quality and creates needed data tables. AWS and Redshift connectors help to built connection with AWS and Redshift platforms. Hooks are the programming plug-ins to use with DAG. All of the operators and task run SQL statements against the Redshift database.
 
 ### `Start and End Operators`
