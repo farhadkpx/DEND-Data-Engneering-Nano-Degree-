@@ -2,9 +2,9 @@
   <img src="https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Airflow_logo_01.png"/>
 </p>
 
-## Sparkify:  Data Pipeline Project with Airflow
+## Sparkify:  Data Pipeline Project with Apache Airflow
 
-**Udacity Nanodegree Course Project (5)**
+**Udacity Nanodegree Course Project:**
 > Here is my Airflow repository: [link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow)
 
 ### `Project context:`
