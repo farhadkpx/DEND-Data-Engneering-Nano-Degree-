@@ -1,6 +1,11 @@
 # Sparkify:  Data Pipeline Project with Airflow
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Airflow_logo_01.png)
 
+**Sparkify Data Pipeline with Airflow**
+
+**Udacity Nanodegree Course Project**
+> Here is the repository: [link]()
+
 **`Project context:`**
 
 Sparkify, the music streaming company has decided that it will introduce more automation and monitoring to their data warehouse ETL pipelines. Their conclusion is the best tool to achieve this goal is to use Apache Airflow data pipeline. The pipeline should be dynamic and built from reusable operator tasks, easily monitored, and will allow easy backfills. 
