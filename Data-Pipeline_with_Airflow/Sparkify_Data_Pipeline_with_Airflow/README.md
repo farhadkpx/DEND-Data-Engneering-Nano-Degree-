@@ -50,7 +50,7 @@ The parametric bindings of DAG's
 + Catchup is turned off
 + No Email will be sent on retyring.
 
-## **`Operator functionalities: `**
+## **`Operator functions: `**
 Each operator has to follow some strict guideline to function for this project. Operators will help to stage the data, transform the data, and run checks on data-quality and creates needed data tables. AWS and Redshift connectors help to built connection with AWS and Redshift platforms. Hooks are the programming plug-ins to use with DAG. All of the operators and task run SQL statements against the Redshift database.
 
 **`Start and End Operators: `** These two operators actually do not perform any real DAG-operational task. They mark the begining and ending of the DAG operations.
@@ -61,7 +61,7 @@ Each operator has to follow some strict guideline to function for this project. 
 
 **`Data Quality Operator: `** The data quality operator is used to run checks on the data itself. The operator's main functionality is to receive one or more SQL based test cases along with the expected results and execute the tests. For each the test, the test result and expected result are checked and if there is no match, the operator raises an exception and the task is retried until it fails eventually.
 
-## `DAG's & Operator connections: ` 
+## `DAG & Operator connections: ` 
 
 + DAG `“Stage events”` and `“Stage_song”` built with the help of operator `“StageToRedshiftOperator”`. 
 + Fact table DAG `“load_songplays_table”` built with the help of `“LoadFactOperator”` operator. 
