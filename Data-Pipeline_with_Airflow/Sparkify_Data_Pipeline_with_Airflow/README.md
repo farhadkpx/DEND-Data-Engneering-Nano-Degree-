@@ -18,7 +18,7 @@ The project source data resides in Amazon S3 bucket and needs to be processed in
 ### `Project File Description: `
 We’ll build the Apache Airflow ETL data pipeline from  a data-source bucket hosted on Amazon S3. We’re given a DAG(.py) file and four  operators(.py) files and a helper(.py) files to help build the whole dynamic pipelines. These 5 files are partially coded and we're given the opportunity to customize them according to the project requirements. These files are: 
 
-`1.` `udac_example_dag.py ( DAG.py file )`
+`1.` `udac_airflow_project_dag.py ( DAG.py file )`
 
 `2.` `stage_redshift.py( StageToRedshiftOperator )`
 
