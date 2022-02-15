@@ -40,7 +40,7 @@ Two main data source are located in on Amazon s3 bucket.
 
 ### `Apache Airflow Task sequence in preview: `
 
-![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/DAG_Sequence_pipeline.png)
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Image_files/DAG_Sequence_pipeline.png)
 
 The parametric bindings of DAG's
 
@@ -77,10 +77,10 @@ I used udacity project workspace to input requried codes for the `airflow-data-p
 We can say operators are the reusable, flexible and configurable module of creating DAGS. 
 
 ### `Query on fact and dimension tables:`
-![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/most_listened_artist_Query.png)
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Image_files/most_listened_artist_Query.png)
 
 **`Most listened Artist and number of times:`**
 
-![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Output_most_listened_artists.png)
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Image_files/Output_most_listened_artists.png)
 
 **Finally**, a completely innovative experience for me to learn and grow.
