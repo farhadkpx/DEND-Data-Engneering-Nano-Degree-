@@ -6,7 +6,6 @@ from udac_airflow_project_dag import default_args
 
 
 with DAG('create_table_dag', 
-         start_date=datetime.datetime.now(),
          default_args=default_args) as dag:
     
     PostgresOperator(
