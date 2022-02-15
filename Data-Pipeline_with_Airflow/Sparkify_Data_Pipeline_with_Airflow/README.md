@@ -69,12 +69,12 @@ Each operator has to follow some strict guideline to function for this project. 
 + The last  DAG `“Run_data_quality_checks”` will be created with the help of `“DataQualityOperator”`.
 
 ### `How to run the Airflow DAG:`
-I used udacity project workspace to input requried codes for the airflow project. But we need some information, for instance
-+ We have to set up AWS Connection(user informaiton) and Redshift connection(cluster & databse creation).
+I used udacity project workspace to input requried codes for the airflow project. Additionally we needed some AWS related information, for instance
++ We had to input connection variables (user informaitons) & Redshift connection(cluster & databse creation) from AWS to Airflow.
 + In Airflow then turn the DAG execution ON.
 + View the Web UI on Graph-View and Tree-View for DAG progress.
 
-We can say operators are the reusable, flexible and configurable module of creating DAGS. Final setting will be arranging the DAGS dependency in the order required by the project.
+We can say operators are the reusable, flexible and configurable module of creating DAGS. 
 
 ### `Query on fact and dimension tables:`
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/most_listened_artist_Query.png)
@@ -83,4 +83,4 @@ We can say operators are the reusable, flexible and configurable module of creat
 
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Output_most_listened_artists.png)
 
-
+Finally, a completely innovative experience for me to learn.
