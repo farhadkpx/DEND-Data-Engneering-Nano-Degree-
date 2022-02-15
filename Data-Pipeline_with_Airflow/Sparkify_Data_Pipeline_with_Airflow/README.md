@@ -20,11 +20,11 @@ We’ll build the Apache Airflow ETL data pipeline from  a data-source bucket ho
 
 `1.` `udac_airflow_project_dag.py ( DAG.py file )`
 
-`2.` `stage_redshift.py( StageToRedshiftOperator )`
+`2.` `stage_redshift.py ( StageToRedshiftOperator )`
 
-`3.` `load_fact.py( LoadFactOperator )`
+`3.` `load_fact.py ( LoadFactOperator )`
 
-`4.` `load_dimension.py( LoadDimensionOperator )`
+`4.` `load_dimension.py ( LoadDimensionOperator )`
 
 `5.` `data_quality.py ( DataQualityOperator )`
 
