@@ -76,7 +76,7 @@ I used udacity project workspace to input requried codes for the airflow project
 
 We can say operators are the reusable, flexible and configurable module of creating DAGS. Final setting will be arranging the DAGS dependency in the order required by the project.
 
-### `Songplays star schema model`
-![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Star_Schema_Fact_Dimension.png)
+### `Query on loaded fact and dimension table:`
+![image]()
 
 
