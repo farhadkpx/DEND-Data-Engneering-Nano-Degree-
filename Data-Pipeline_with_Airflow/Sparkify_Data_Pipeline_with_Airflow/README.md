@@ -42,7 +42,7 @@ Two main data source are located in on Amazon s3 bucket.
 
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Image_files/DAG_Sequence_pipeline.png)
 
-The parametric bindings of DAG's
+**The parametric bindings of DAG's**
 
 + No dependency on the past runs.
 + If failed tasks are retried 3 times only.
