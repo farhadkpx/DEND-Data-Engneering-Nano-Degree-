@@ -83,4 +83,4 @@ We can say operators are the reusable, flexible and configurable module of creat
 
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/Data-Pipeline_with_Airflow/Sparkify_Data_Pipeline_with_Airflow/Image_files/Output_most_listened_artists.png)
 
-**Finally**, a completely innovative experience for me to learn and grow.
+**Finally**, an immersive cloud programming experience to learn and grow.
