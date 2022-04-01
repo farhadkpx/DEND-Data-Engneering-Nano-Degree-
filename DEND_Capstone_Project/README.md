@@ -49,22 +49,24 @@
  | white_population                            | integer    | White population  in city                               |   
 
 
+
+
 | Dated_Arrival_Departure        |   dimension table         |                                      |
 |------------------|------------|--------------------------------------|
 | **Column Name**     | **Data Type**  | **Description**                  |
 | Immigration_Id          | integer    | primary key yyyymmdd format          |
-| Admission_Num           |
-| Arrival_Date            | date       | yyyy-mm-dd                           |
-| Residency_Country_Code            | integer    | yyyy format Example : 2016           |
+| Admission_Num           | bigint
+| Arrival_Date            | string       | yyyy-mm-dd                           |
+| Residency_Country_Code  | integer    | yyyy format Example : 2016           |
 | Arrival_Year            | integer    | mm format Range: 1 to 12             |
-| Arrival_Month           | integer    | dd format Range: 1 to 31             |
+| Arrival_Month           | string    | dd format Range: 1 to 31             |
 | Arrival_Day             | integer    | week of year  Range: 1 to 52         |
 | Departure_Date          | string     | MMM (3 letter abb) Example: Jan, Feb |
 | Depart_Year             | integer    | day of the week (1 to 7)             |
 | Depart_Month            | string     | name of the day Example: Saturday    |
-| Depart_Day 
-| Visa_Type
-| Port_Code
+| Depart_Day              | integer    |
+| Visa_Type               | string    |
+| Port_Code               | string    |
 
 
 | dim_climate  |            |                            |
