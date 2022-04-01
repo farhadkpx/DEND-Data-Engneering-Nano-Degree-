@@ -1,24 +1,31 @@
 | fact_immigration       |                |                                                                    |
 -------------------------|----------------|--------------------------------------------------------------------|
 | **Column Name**        | **Data Type**  | **Description**                                                    |
-| immigration_id         | integer    | primary key                                                            |
-| immigration_year       | integer    | immigration year                                                       |
-| immigration_month      | integer    | immigration month                                                      |
-| citizenship_country_id | integer    | Foreign key to dim_country based on immigrant citizenship country code |
-| residency_country_id   | integer    | Foreign key to dim_country based on immigrant residency_country_code   |
-| port_id                | integer    | Foreign key to dim_ports based on immigrant arrival at US port         |
-| arrival_date_id        | integer    | Foreign key to dim_date based on arrival_date to US of immigrant       |
-| travel_mode_id         | integer    | Foreign key to dim_travel_mode based on travel_mode_code of immigrant  |
-| current_state_id       | integer    | Foreign key to dim_state based on current state_code of immigrant      |
-| departure_date_id      | integer    | Foreign key to dim_date based on departure_date from US of immigrant   |
-| immigration_age        | integer    | age of immigrant                                                       |
-| visa_cat_id            | integer    | Foreign key to dim_visa based on visa_cat_code of immigrant            |
-| match_flag             | string     | Flag to show match between arrival and departure records               |
-| birth_year             | integer    |  Birth Year                                                            |
-| gender                 | string     |  Non-immigrant sex                                                     |
-| airline_code           | string     |  Airline used to arrive in the US                                      |
-| admission_num          | big int    |  Admission Number                                                      |
-| visa_type              | string     |  class of admission admitting the non-immigrant to the US temporarily  |
+| Immigration_Id         | integer        | primary key
+| Admission_Num          | integer        | Admission Number 
+| Citizenship_Country_Code | integer      | Foreign key to dim_country based on immigrant citizenship country code |
+| Residency_Country_Code   | integer      | Foreign key to dim_country based on immigrant residency_country_code   |
+| Current_State_Code       | integer      | Foreign key to dim_state based on current state_code of immigrant      |
+| Visa_Type              | string         |  class of admission admitting the non-immigrant to the US temporarily  |
+| Visa_Code              | integer        | Foreign key to dim_visa based on visa_cat_code of immigrant            |
+| Visa_Category          | string         |
+| Travel_Mode            | integer        | Foreign key to dim_travel_mode based on travel_mode_code of immigrant  |
+| Immigration_Year       | integer        | immigration year                                                       |
+| Immigration_Month      | integer        | immigration month     
+| Port_Code              | integer        | Foreign key to dim_ports based on immigrant arrival at US port         |
+| Arrival_Date           | integer        | Foreign key to dim_date based on arrival_date to US of immigrant       |
+| Departure_Date         | integer        | Foreign key to dim_date based on departure_date from US of immigrant   |
+| Age                    | integer        | age of immigrant   
+
+| Match_Flag             | string     | Flag to show match between arrival and departure records               |
+| Birth_Year             | integer    |  Birth Year                                                            |
+| Gender                 | string     |  Non-immigrant sex                                                     |
+| Airline_Code           | string     |  Airline used to arrive in the US                                      |
+| Flight_Num             | string     | 
+| Means_of_Travel        | string     | 
+
+                                              
+
 
 
 
