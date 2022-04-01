@@ -49,18 +49,22 @@
  | white_population                            | integer    | White population  in city                               |   
 
 
-| dim_date         |            |                                      |
+| Dated_Arrival_Departure        |   dimension table         |                                      |
 |------------------|------------|--------------------------------------|
-| **Column Name**  | **Data Type**  | **Description**                  |
-| date_id          | integer    | primary key yyyymmdd format          |
-| date             | date       | yyyy-mm-dd                           |
-| year             | integer    | yyyy format Example : 2016           |
-| month            | integer    | mm format Range: 1 to 12             |
-| day              | integer    | dd format Range: 1 to 31             |
-| week             | integer    | week of year  Range: 1 to 52         |
-| month_name       | string     | MMM (3 letter abb) Example: Jan, Feb |
-| day_of_week      | integer    | day of the week (1 to 7)             |
-| day_of_week_name | string     | name of the day Example: Saturday    |
+| **Column Name**     | **Data Type**  | **Description**                  |
+| Immigration_Id          | integer    | primary key yyyymmdd format          |
+| Admission_Num           |
+| Arrival_Date            | date       | yyyy-mm-dd                           |
+| Residency_Country_Code            | integer    | yyyy format Example : 2016           |
+| Arrival_Year            | integer    | mm format Range: 1 to 12             |
+| Arrival_Month           | integer    | dd format Range: 1 to 31             |
+| Arrival_Day             | integer    | week of year  Range: 1 to 52         |
+| Departure_Date          | string     | MMM (3 letter abb) Example: Jan, Feb |
+| Depart_Year             | integer    | day of the week (1 to 7)             |
+| Depart_Month            | string     | name of the day Example: Saturday    |
+| Depart_Day 
+| Visa_Type
+| Port_Code
 
 
 | dim_climate  |            |                            |
