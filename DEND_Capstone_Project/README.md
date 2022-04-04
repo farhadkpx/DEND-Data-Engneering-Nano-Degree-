@@ -1,9 +1,9 @@
 
-| fact_immigration            |                |                                                                        |
+| fact_immigration_detail     |                |                                                                        |
 ------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| Immigration_Id              | integer        | primary key                                                            |
-| Admission_Num               | integer        | Admission Number >> foreign key ??                                     |
+| Immigration_Id              | integer        | Primary key  (fact table)                                              |
+| Admission_Num               | integer        | Foreign key to 'Dated_Arrival_Departure' table                         |
 | Citizenship_Country_Code    | integer        | Foreign key to dim_country based on immigrant citizenship country code |
 | Residency_Country_Code      | integer        | Foreign key to dim_country based on immigrant residency_country_code   |
 | Current_State_Code          | string         | Foreign key to dim_state based on current state_code of immigrant      |
@@ -14,10 +14,10 @@
 | Immigration_Year            | integer        | The year an immigrant entered the country                              |
 | Immigration_Month           | integer        | The month an immigrant entered the country                             |
 | Port_Code                   | string         | Foreign key to dim_ports based on immigrant arrival at US port         |
-| Arrival_Date           | integer             | Foreign key to dim_date based on arrival_date to US of immigrant       |
-| Departure_Date         | integer             | Foreign key to dim_date based on departure_date from US of immigrant   |
+| Arrival_Date                | string         | The arrival_date of an immigrant in USA                                |
+| Departure_Date              | string         | The departure_date of an immigrant from USA                            |
 | Age                         | integer        | Age of an immigrant                                                    |   
-| Match_Flag                  | string         | Flag-string to show match between arrival and departure immigrants records|
+| Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records|
 | Birth_Year                  | integer        | Birth Year of an immigrant                                             |
 | Gender                      | string         | Official gender of an immigrant                                        |
 | Airline_Code                | string         | Airline with which immigrants arrived in the US                        |
