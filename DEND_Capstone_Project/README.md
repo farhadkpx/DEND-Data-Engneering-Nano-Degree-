@@ -66,28 +66,22 @@
  | white_population                            | integer    | White population  in city                               |   
 
 
+-------------------------------------------------------------------------------------------------------------------------------------
+
+| **US_Cities_Temperature** |                    |     DIMENSION TABLE                                 |
+|---------------------------|--------------------|-----------------------------------------------------|
+| **Column Name**           | **Data Type**      | **Description**                                     |
+| `City`                    | string             | `primary key` (City name)                           |
+| Country                   | string             | Name of the country                                 |
+| Date_Records              | date               | Date when temperature recorded                      |
+| Year                      | string             | Year in 'yyyy' format as temperature recorded       |
+| Month_Name                | string             | Month_Name in 'MMMM' format as temperature recorded |
+| Month_Num                 | int                | Month_Num in 'MM' format as recorded                |
+| Day                       | string             | Day in 'dd' format as recorded                      |
 
 
-| dim_climate  |            |                            |
-|--------------|------------|----------------------------|
-| **Column Name**  | **Data Type**  | **Description**    |
-| climate_id   | integer    | primary key                |
-| city         | string     | city name                  |
-| country      | string     | country name               |
-| avg_temp_jan | float      | Average Temp for January   |
-| avg_temp_feb | float      | Average Temp for February  |
-| avg_temp_mar | float      | Average Temp for March     |
-| avg_temp_apr | float      | Average Temp for April     |
-| avg_temp-may | float      | Average Temp for May       |
-| avg_temp_jun | float      | Average Temp for June      |
-| avg_temp_jul | float      | Average Temp for July      |
-| avg_temp_aug | float      | Average Temp for August    |
-| avg_temp_sep | float      | Average Temp for September |
-| avg_temp_oct | float      | Average Temp for October   |
-| avg_temp_nov | float      | Average Temp for November  |
-| avg_temp_dec | float      | Average Temp for December  |
 
----------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 | **Port_locations_df**     |                |     DIMENSION TABLE                                   |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Description**                                       |
@@ -107,23 +101,9 @@
 | **State_Codes_df**        |                |    DIMENSION TABLE                                    |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                |
-| State_Codes               | string         | immigrants i94 state code                             |
+| `State_Codes`             | string         | `primary key` immigrants (i94 state code)             |
 | State_Names               | string         | immigrants i94 state name                             |
 
-
-
-| dim_visa      |           |                           |
---------------- |-----------|---------------------------|
-| **Column Name**   | **Data Type** | **Description**   |
-| visa_cat_id   | integer   | visa category id          |
-| visa_category | string    | visa category description |
-
-
-| dim_travel_mode |           |                         |
-------------------|-----------|-------------------------|
-| **Column Name**     | **Data Type** | **Description** |
-| travel_mode_id  | integer   | travel mode id          |
-| travel_mode     | string    | travel mode description |
 
 
          
