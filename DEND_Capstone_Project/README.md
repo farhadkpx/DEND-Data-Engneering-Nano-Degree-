@@ -1,38 +1,34 @@
+
 | fact_immigration            |                |                                                                        |
--------------------------     |----------------|-------------------------------------------------------------------- ---|
+------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| Immigration_Id              | integer        | primary key
-| Admission_Num               | integer        | Admission Number >> foreign key ??
+| Immigration_Id              | integer        | primary key                                                            |
+| Admission_Num               | integer        | Admission Number >> foreign key ??                                     |
 | Citizenship_Country_Code    | integer        | Foreign key to dim_country based on immigrant citizenship country code |
 | Residency_Country_Code      | integer        | Foreign key to dim_country based on immigrant residency_country_code   |
 | Current_State_Code          | string         | Foreign key to dim_state based on current state_code of immigrant      |
-| Visa_Type                   | string         | class of admission admitting the non-immigrant to the US temporarily   |
-| Visa_Code                   | integer        | Foreign key to dim_visa based on visa_cat_code of immigrant            |
-| Visa_Category               | string         |
-| Travel_Mode                 | integer        | Foreign key to dim_travel_mode based on travel_mode_code of immigrant  |
-| Immigration_Year            | integer        | immigration year                                                       |
-| Immigration_Month           | integer        | immigration month     
+| Visa_Type                   | string         | Official visa type category of immigrants assigned by the department   |
+| Visa_Code                   | integer        | The inteneded purpose of the visa was issued to an immigrant applicant |
+| Visa_Category               | string         | Definition of visa code type category                                  |
+| Travel_Mode                 | integer        | Numerical definition of immigrants choice of transporation entrance    |
+| Immigration_Year            | integer        | The year an immigrant entered the country                              |
+| Immigration_Month           | integer        | The month an immigrant entered the country                             |
 | Port_Code                   | string         | Foreign key to dim_ports based on immigrant arrival at US port         |
-| Arrival_Date           | integer        | Foreign key to dim_date based on arrival_date to US of immigrant       |
-| Departure_Date         | integer        | Foreign key to dim_date based on departure_date from US of immigrant   |
-| Age                         | integer        | age of immigrant                                                       |   
-| Match_Flag                  | string     | Flag to show match between arrival and departure records               |
-| Birth_Year                  | integer    |  Birth Year                                                            |
-| Gender                      | string     |  Non-immigrant sex                                                     |
-| Airline_Code                | string     |  Airline used to arrive in the US                                      |
-| Flight_Num                  | string     | 
-| Means_of_Travel             | string     | 
+| Arrival_Date           | integer             | Foreign key to dim_date based on arrival_date to US of immigrant       |
+| Departure_Date         | integer             | Foreign key to dim_date based on departure_date from US of immigrant   |
+| Age                         | integer        | Age of an immigrant                                                    |   
+| Match_Flag                  | string         | Flag-string to show match between arrival and departure immigrants records|
+| Birth_Year                  | integer        | Birth Year of an immigrant                                             |
+| Gender                      | string         | Official gender of an immigrant                                        |
+| Airline_Code                | string         | Airline with which immigrants arrived in the US                        |
+| Flight_Num                  | string         | The flight number of an incoming immigrants                            |
+| Means_of_Travel             | string         | The physical way an immigrant chose to enter the country               |
 
-  
-  
  
- 
- 
- 
- | dim_city                                    |            |                                                         |
- ----------------------------------------------|------------|---------------------------------------------------------|
- | **Column Name**                             | **Data Type**  | **Description**                                     |
- | city_id                                     | integer    | primary key                                             |
+ | dim_city                                    |            |                                                           |
+ ----------------------------------------------|------------|---------------------------------------------------------  |
+ | **Column Name**                             | **Data Type**  | **Description**                                     
+ | city_id                                     | integer    | primary key                                                |
  | city                                        | string     | city name                                               |
  | state_id                                    | integer    | Foreign key to dim_state                                |
  | median_age                                  | float      | median age of population of city                        |
