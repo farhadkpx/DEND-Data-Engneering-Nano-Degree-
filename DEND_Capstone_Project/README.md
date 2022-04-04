@@ -1,8 +1,8 @@
 
-| fact_immigration_detail     |                |                                                                        |
+| Fact_Immigration_Detail     |                |   FACT TABLE                                                           |
 ------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| Immigration_Id              | integer        | Primary key  (fact table)                                              |
+| `Immigration_Id`            | **integer**    | **Primary key**                                                        |
 | Admission_Num               | integer        | Foreign key to 'Dated_Arrival_Departure' table                         |
 | Citizenship_Country_Code    | integer        | Foreign key to dim_country based on immigrant citizenship country code |
 | Residency_Country_Code      | integer        | Foreign key to dim_country based on immigrant residency_country_code   |
@@ -23,6 +23,27 @@
 | Airline_Code                | string         | Airline with which immigrants arrived in the US                        |
 | Flight_Num                  | string         | The flight number of an incoming immigrants                            |
 | Means_of_Travel             | string         | The physical way an immigrant chose to enter the country               |
+
+
+
+
+| Dated_Arrival_Departure     |                |   DIMENSION TABLE                                                      |
+|----------------------------------------------|------------|-----------------------------------------------------------|
+| **Column Name**             | **Data Type**  | **Description**                                                        |
+| `Admission_Num`             | **bigint**     | **Primary key**                                                        |      
+| Arrival_Date                | string         | The Arrival_Date of an immigrant in existing string format             |
+| Residency_Country_Code      | integer        | The country code of an incoming                    immigrant           |
+| Arrival_Year                | integer        | Arrival year in the 'yyyy' format, for instance : 2016                 |
+| Arrival_Month               | string         | Arrival month in the 'MMMM' format such: January-December              |
+| Arrival_Day                 | integer        | Arrival day in the 'dd' format ranges: 1 to 31                         |
+| Departure_Date              | string         | The Departure_Date of an immigrant in existing string format           |
+| Depart_Year                 | integer        | Departure year in the 'yyyy' format, for instance : 2017               |
+| Depart_Month                | string         | Departure month in the 'MMMM' format such: January-December            |
+| Depart_Day                  | integer        | Departure day in the 'dd' format ranges: 1 to 31                       |
+| Visa_Type                   | string         | Official type of visa issued                                           |
+| Port_Code                   | string         | Port code where immigrants entered the country                         |
+
+
 
  
  | dim_city                                    |            |                                                           |
@@ -45,24 +66,6 @@
  | white_population                            | integer    | White population  in city                               |   
 
 
-
-
-| Dated_Arrival_Departure        |   dimension table         |                                      |
-|------------------|------------|--------------------------------------|
-| **Column Name**     | **Data Type**  | **Description**                  |
-| Immigration_Id          | integer    | primary key yyyymmdd format          |
-| Admission_Num           | bigint
-| Arrival_Date            | string       | yyyy-mm-dd                           |
-| Residency_Country_Code  | integer    | yyyy format Example : 2016           |
-| Arrival_Year            | integer    | mm format Range: 1 to 12             |
-| Arrival_Month           | string    | dd format Range: 1 to 31             |
-| Arrival_Day             | integer    | week of year  Range: 1 to 52         |
-| Departure_Date          | string     | MMM (3 letter abb) Example: Jan, Feb |
-| Depart_Year             | integer    | day of the week (1 to 7)             |
-| Depart_Month            | string     | name of the day Example: Saturday    |
-| Depart_Day              | integer    |
-| Visa_Type               | string    |
-| Port_Code               | string    |
 
 
 | dim_climate  |            |                            |
