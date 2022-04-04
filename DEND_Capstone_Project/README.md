@@ -87,6 +87,24 @@
 | avg_temp_nov | float      | Average Temp for November  |
 | avg_temp_dec | float      | Average Temp for December  |
 
+---------------------------------------------------------------------------------------------------------------------------------
+| **Port_locations_df**     |                |     DIMENSION TABLE                                   |
+|---------------------------|----------------|-------------------------------------------------------|
+| **Column Name**           | **Data Type**  | **Description**                                       |
+| `Port_Code`               | string         | `primary key`, immigrants (i94 port code)             |
+|  Port_City                | string         | immigrants i94 port entrance city                     |
+|  Port_State               | string         | immigrants i94 port entrance state                    |
+
+
+|  **Country_Codes_df**     |                |      DIMENSION TABLE                                  |
+|---------------------------|----------------|-------------------------------------------------------|
+| **Column Name**           | **Data Type**  | **Column Description**                                |
+| `Country_Codes`           | integer        | `primary key` (i94 country code)                      |
+|  Country_Names            | string         | immigrants  (i94 country) name                        |
+
+
+
+
 
 | dim_visa      |           |                           |
 --------------- |-----------|---------------------------|
@@ -101,19 +119,6 @@
 | travel_mode_id  | integer   | travel mode id          |
 | travel_mode     | string    | travel mode description |
 
-| dim_country  |            |                                |
-|--------------|------------|--------------------------------|
-| **Column Name**  | **Data Type**  | **Description**        |
-| country_id   | integer    | primary key (generated unique) |
-| country_code | integer    | i94 country code               |
-| country_name | string     | i94 country name               |
-
-| dim_ports   |            |                                |
-|-------------|------------|--------------------------------|
-| **Column Name** | **Data Type**  | **Description**        |
-| port_id     | integer    | primary key (generated unique) |
-| port_code   | integer    | i94 port code                  |
-| port_name   | string     | i94 port name                  |
 
          
 
