@@ -2,7 +2,7 @@
 | Fact_Immigration_Detail     |                |   FACT TABLE                                                           |
 ------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Immigration_Id`            | **integer**    | **Primary key**                                                        |
+| `Immigration_Id`            | integer        | **`Primary key`**                                                        |
 | Admission_Num               | integer        | Foreign key to 'Dated_Arrival_Departure' table                         |
 | Citizenship_Country_Code    | integer        | Foreign key to dim_country based on immigrant citizenship country code |
 | Residency_Country_Code      | integer        | Foreign key to dim_country based on immigrant residency_country_code   |
@@ -30,7 +30,7 @@
 | Dated_Arrival_Departure     |                |   DIMENSION TABLE                                                      |
 |----------------------------------------------|------------|-----------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Admission_Num`             | **bigint**     | **Primary key**                                                        |      
+| `Admission_Num`             | bigint         | **`Primary key`**                                                      |      
 | Arrival_Date                | string         | The Arrival_Date of an immigrant in existing string format             |
 | Residency_Country_Code      | integer        | The country code of an incoming                    immigrant           |
 | Arrival_Year                | integer        | Arrival year in the 'yyyy' format, for instance : 2016                 |
@@ -46,19 +46,21 @@
 
 
  
- | dim_city                                    |            |                                                           |
+ | **US_Demography_data**                      |            |      DIMENSION TABLE                                      |
  ----------------------------------------------|------------|---------------------------------------------------------  |
- | **Column Name**                             | **Data Type**  | **Description**                                     
- | city_id                                     | integer    | primary key                                                |
- | city                                        | string     | city name                                               |
- | state_id                                    | integer    | Foreign key to dim_state                                |
- | median_age                                  | float      | median age of population of city                        |
- | male_population                             | integer    | male population in city                                 |
- | female_population                           | integer    | female population in city                               |
- | total_population                            | integer    | total population in city                                |
- | number_of_veterans                          | integer    | number of veterans in city                              |
- | foreign_born                                | integer    | foreign_born population in city                         |
- | average_household_size                      | float      | Average household size in city                          |
+ | **Column Name**                             | **Data Type**  | **Description**                                       |
+ | `City`                                      | string     | **`primary key`**                                          |
+ | State                                       | string     | US State name                                              |
+ | State_Code                                  | string     | US State official code                                     |
+ | Male_Population                             | integer    | male population in US city                                 |
+ | Female_Population                           | integer    | female population in city                                  |
+ | Total_Population                            | integer    | total population in city                                   |
+ | Median_Age                                  | float      | median age of population of city                          |
+ | Number_of_Veterans                          | integer    | number of veterans in city                              |
+ | Foreign_Born                                | integer    | foreign_born population in city                         |
+ | Average_Household_Size                      | float      | Average household size in city                          |
+ | Race                                        | string     | Race of the populatin in distinct cities                |
+ | Count                                       | integer    | counting population by race                             |
  | americanindian_and_alaskannative_population | integer    | Population of AmericanIndian and AlaskanNatives in city |
  | asian_population                            | integer    | Asian population in city                                |
  | black_or_africanamerican_population         | integer    | Black or AfricanAmerican population  in city            |
@@ -71,7 +73,7 @@
 | **US_Cities_Temperature** |                    |     DIMENSION TABLE                                 |
 |---------------------------|--------------------|-----------------------------------------------------|
 | **Column Name**           | **Data Type**      | **Description**                                     |
-| `City`                    | string             | `primary key` (City name)                           |
+| `City`                    | string             | **`primary key`** (City name)                       |
 | Country                   | string             | Name of the country                                 |
 | Date_Records              | date               | Date when temperature recorded                      |
 | Year                      | string             | Year in 'yyyy' format as temperature recorded       |
@@ -85,7 +87,7 @@
 | **Port_locations_df**     |                |     DIMENSION TABLE                                   |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Description**                                       |
-| `Port_Code`               | string         | `primary key`, immigrants (i94 port code)             |
+| `Port_Code`               | string         | **`primary key`**, immigrants (i94 port code)         |
 |  Port_City                | string         | immigrants i94 port entrance city                     |
 |  Port_State               | string         | immigrants i94 port entrance state                    |
 
@@ -93,7 +95,7 @@
 | **Country_Codes_df**      |                |      DIMENSION TABLE                                  |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                |
-| `Country_Codes`           | integer        | `primary key` (i94 country code)                      |
+| `Country_Codes`           | integer        | **`primary key`** (i94 country code)                  |
 |  Country_Names            | string         | immigrants  (i94 country) name                        |
 
 
@@ -101,7 +103,7 @@
 | **State_Codes_df**        |                |    DIMENSION TABLE                                    |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                |
-| `State_Codes`             | string         | `primary key` immigrants (i94 state code)             |
+| `State_Codes`             | string         | **`primary key`** immigrants (i94 state code)         |
 | State_Names               | string         | immigrants i94 state name                             |
 
 
