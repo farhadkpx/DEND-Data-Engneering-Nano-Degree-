@@ -96,13 +96,19 @@
 |  Port_State               | string         | immigrants i94 port entrance state                    |
 
 
-|  **Country_Codes_df**     |                |      DIMENSION TABLE                                  |
+| **Country_Codes_df**      |                |      DIMENSION TABLE                                  |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                |
 | `Country_Codes`           | integer        | `primary key` (i94 country code)                      |
 |  Country_Names            | string         | immigrants  (i94 country) name                        |
 
 
+
+| **State_Codes_df**        |                |    DIMENSION TABLE                                    |
+|---------------------------|----------------|-------------------------------------------------------|
+| **Column Name**           | **Data Type**  | **Column Description**                                |
+| State_Codes               | string         | immigrants i94 state code                             |
+| State_Names               | string         | immigrants i94 state name                             |
 
 
 
@@ -122,12 +128,6 @@
 
          
 
-| dim_state       |                |                  |
-|-----------------|----------------|------------------|
-| **Column Name** | **Data Type**  | **Description**  |
-| state_id        | integer        | primary key      |
-| state_code      | string         | i94 state code   |
-| state_name      | string         | i94 state name   |
 
 
 
