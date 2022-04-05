@@ -45,28 +45,23 @@
 
 
 
----------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
  
- | **US_Demography_data**                      |            |      DIMENSION TABLE                                      |
- ----------------------------------------------|------------|---------------------------------------------------------  |
- | **Column Name**                             | **Data Type**  | **Description**                                       |
- | `City`                                      | string     | **`primary key`**                                          |
- | State                                       | string     | US State name                                              |
- | State_Code                                  | string     | US State official code                                     |
- | Male_Population                             | integer    | male population in US city                                 |
- | Female_Population                           | integer    | female population in city                                  |
- | Total_Population                            | integer    | total population in city                                   |
- | Median_Age                                  | float      | median age of population of city                          |
- | Number_of_Veterans                          | integer    | number of veterans in city                              |
- | Foreign_Born                                | integer    | foreign_born population in city                         |
- | Average_Household_Size                      | float      | Average household size in city                          |
- | Race                                        | string     | Race of the populatin in distinct cities                |
- | Count                                       | integer    | counting population by race                             |
- | americanindian_and_alaskannative_population | integer    | Population of AmericanIndian and AlaskanNatives in city |
- | asian_population                            | integer    | Asian population in city                                |
- | black_or_africanamerican_population         | integer    | Black or AfricanAmerican population  in city            |
- | hispanic_or_latino_population               | integer    | Hispanic or Latino population in city                   |
- | white_population                            | integer    | White population  in city                               |   
+ | **Immigration_Demog_Race**                  |                |      **DIMENSION TABLE**                                    |
+ ----------------------------------------------|----------------|---------------------------------------------------------|
+ | **Column Name**                             | **Data Type**  | **Description**                                         |
+ | `Immigration_Id`                            | integer        | **`primary key`**                                       |
+ | Average_Household_Size                      | float          | Average household size in US citY                       |
+ | Male_Population                             | integer        | male population in US city                              |
+ | Gender                                      | string         | Sex of the immigrants                                   |
+ | Female_Population                           | integer        | female population in US city                            |
+ | Median_Age                                  | float          | median age of population of city                        |
+ | State                                       | string         | US State name                                           |                     
+ | American Indian and Alaska Native           | long           | American Indian and Alaska Native in the city           |
+ | Asian                                       | long           | Asian populatin in US cities                            |
+ | Black or African-American                   | long           | counting Black or African-American population           |
+ | hispanic_or_latino_population               | long           | Hispanic or Latino population in the city               |
+ | white                                       | long           | White population  in US city                            |   
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
