@@ -78,6 +78,18 @@
 | Day                       | string             | Day in 'dd' format as recorded                      |
 
 
+| **Immigrant_N_Tempr** |                        |     DIMENSION TABLE                                 |
+|---------------------------|--------------------|-----------------------------------------------------|
+| **Column Name**           | **Data Type**      | **Description**                                     |
+| `Immigration_Id`          | int                | **`primary key`** (Immigrants ID)                   |
+| Citizenship_Country_Code  | int                | The country code immigrants came from               |
+| Port_State                | string             | The port state where immigrants came first          |
+| Arrival_Date              | string             | The official date of arrival of an immigrant        |
+| City                      | string             | Name of the city where the port is located          |
+| Port_Code                 | string             | Official code of the port                           |
+| Means_of_Travel           | string             | Transportation mode used by the immigrant to enter  |
+| City_Temp                 | double             | Temperature of the city, immigrant came in first    |
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 | **Port_locations_df**     |                |     DIMENSION TABLE                                   |
