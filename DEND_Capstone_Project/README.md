@@ -1,22 +1,20 @@
 
-| Fact_Immigration_Detail     |                |   FACT TABLE                                                           |
+| Fact_Immigration_Inclusive  |                |   FACT TABLE                                                           |
 ------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Immigration_Id`            | integer        | **`Primary key`**                                                        |
-| Admission_Num               | integer        | Foreign key to 'Dated_Arrival_Departure' table                         |
-| Citizenship_Country_Code    | integer        | Foreign key to dim_country based on immigrant citizenship country code |
-| Residency_Country_Code      | integer        | Foreign key to dim_country based on immigrant residency_country_code   |
-| Current_State_Code          | string         | Foreign key to dim_state based on current state_code of immigrant      |
+| `Immigration_Id`            | integer        | **`Primary key`**                                                      |
+| Admission_Num               | integer        | (FK) 'Dated_Arrival_Departure' & individual immigrants record table    |
+| Citizenship_Country_Code    | integer        | (FK) to `Country_Codes_df` table on immigrant citizenship country code |
+| Residency_Country_Code      | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code   |
+| Current_State_Code          | string         | (FK) to `State_Codes_df` based on current state_code of immigrants     |
 | Visa_Type                   | string         | Official visa type category of immigrants assigned by the department   |
-| Visa_Code                   | integer        | The inteneded purpose of the visa was issued to an immigrant applicant |
 | Visa_Category               | string         | Definition of visa code type category                                  |
-| Travel_Mode                 | integer        | Numerical definition of immigrants choice of transporation entrance    |
 | Immigration_Year            | integer        | The year an immigrant entered the country                              |
 | Immigration_Month           | integer        | The month an immigrant entered the country                             |
-| Port_Code                   | string         | Foreign key to dim_ports based on immigrant arrival at US port         |
+| Port_Code                   | string         | (FK) to `Port_locations_df` where immigrants arrived at a US port      |
 | Arrival_Date                | string         | The arrival_date of an immigrant in USA                                |
 | Departure_Date              | string         | The departure_date of an immigrant from USA                            |
-| Age                         | integer        | Age of an immigrant                                                    |   
+| Immigrants_Age              | integer        | Age of an immigrant                                                    |   
 | Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records|
 | Birth_Year                  | integer        | Birth Year of an immigrant                                             |
 | Gender                      | string         | Official gender of an immigrant                                        |
@@ -25,6 +23,18 @@
 | Means_of_Travel             | string         | The physical way an immigrant chose to enter the country               |
 
 ---------------------------------------------------------------------------------------------------------------------------------
+| Individual_Immigration_Records |                |   DIMENSION TABLE                                                   |
+------------------------------|----------------|------------------------------------------------------------------------|
+| **Column Name**             | **Data Type**  | **Description**                                                        |
+| `Admission_Num`             | integer        | **`Primary key`**                                                      |
+| Immigration_Id              | integer        | (FK) the matching primary key of `Fact-Immigration` table              |
+| Arrival_Date                | string         | The arrival_date of an immigrant in USA                                |       
+| Citizenship_Country_Code    | integer        | Foreign key to dim_country based on immigrant citizenship country code |
+| Gender                      | string         | Official gender of an immigrant                                        |
+| Immigrants_Age              | integer        | Age of an immigrant                                                    |  
+| Departure_Date              | string         | The departure_date of an immigrant from USA                            |
+| Visa_Type                   | string         | Official visa type category of immigrants assigned by the department   |
+| Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records|
 
 
 | Dated_Arrival_Departure     |                |   DIMENSION TABLE                                                      |
@@ -47,7 +57,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------
  
- | **Immigration_Demog_Race**                  |                |      **DIMENSION TABLE**                                    |
+ | **Immigration_Demog_Race**                  |                |      **DIMENSION TABLE**                                |
  ----------------------------------------------|----------------|---------------------------------------------------------|
  | **Column Name**                             | **Data Type**  | **Description**                                         |
  | `Immigration_Id`                            | integer        | **`primary key`**                                       |
@@ -56,7 +66,7 @@
  | Gender                                      | string         | Sex of the immigrants                                   |
  | Female_Population                           | integer        | female population in US city                            |
  | Median_Age                                  | float          | median age of population of city                        |
- | State                                       | string         | US State name                                           |                     
+ | State                                       | string         | US State name                                           |                 
  | American Indian and Alaska Native           | long           | American Indian and Alaska Native in the city           |
  | Asian                                       | long           | Asian populatin in US cities                            |
  | Black or African-American                   | long           | counting Black or African-American population           |
