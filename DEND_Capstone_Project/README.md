@@ -1,29 +1,27 @@
-## Udacity Data Engineer Nanodegree - Capstone Project
-------------------------------------------
-### Data Engineering Capstone Project
+## `Udacity Data Engineering Nanodegree` - `Capstone Project`
+----------------------------------------------------------
+### Farhad Md Ahmed
 
-### Farhad Ahmed
+## `Project Summary:`
+This is my Capstone project for Udacity Data Engineering Nanodegree program. Here I'd showcase my overall learning results from this course. We're given multiple(5) datasets large and medium range in size, our assigned directive is to go through the data exploration phases and extract out relevant valuable insight from these datasets. I personally think, some of these datasets are not directly relevant to our analysis(for instance ..Temperature data), but I'll try to connect out some sort of insight from these exploration.
 
-### Project Summary
-This project is my capstone submission for the Udacity Data Engineering Nanodegree. It showcases what I've learned through the program by taking large sets of data and organizing it in such a way that allows others to gain valuable insight from it.
+Our scrutiny on these dataset should help data analysts to understand immigration trend, patterns which in turn help(Govt or Policy makers) to make better decisions on immigration subsequently to help other industry like labor intensive businesses, farming, construction and many more.
 
-This project creates an analytical datawarehouse for consumption by US Government, which can be used to understand immigration patterns, and help in making policy decisions around immigration so that industries such as tourism, business and higher education sector are able to thrive successfully.
+As a data engineer my job would be exploring and developing a final clean data product ready for instant intricate data analysis.
 
-The analytical warehouse is hosted on Amazon Redshift and the pipeline implementation was done using Apache Airflow.
+### `project steps:`
 
-The project follows the follow steps:
+`Step` `1:` Scope the Project and Gather Data
 
-Step 1: Scope the Project and Gather Data
+`Step` `2:` Explore and Assess the Data
 
-Step 2: Explore and Assess the Data
+`Step` `3:` Define the Data Model
 
-Step 3: Define the Data Model
+`Step` `4:` Run ETL to Model the Data
 
-Step 4: Create the Data Model
+`Step` `5:` Complete Project Write Up
 
-Step 5: Further Questions
-
-Step 6: Some Analytics by querying the data model
+`Step` `6:` Addressing some hypthetical scenario 
 
 
 ### Step 1: Scope the Project and Gather Data
