@@ -68,45 +68,16 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 
 Here are some the findings on each data set.
 
-`I94 Immigration Data:`
-Total number of records/rows are 3096313 and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique.The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format
-The arrival date is populated for all records, Some of the records have departure dates that is before the arrival date. So I had to transform the SAS date to pyspark date format to make it intelligible.
-
-
-
-
-`World Temperature Data:`
-
-
-
-
-
-**`US-Cities-Demographics.csv` `Data quality issues`:** 
-+ Total number of records with this table was 2891 and 12 columns
-+ Only 3 columns has null values in range (13 to 16)
-+ Distinct city count 567 and state count is 49
-+ 5 distinct Races embedded with this dataset on 'Race-column'
-+ All the data column-type came with `string-format`
+`A.` **`I94 Immigration Data:` `Data quality issues`:** 
++ Total number of records/rows are 3096313 and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique.
++ The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format
++ The arrival date is populated for all records, 
++ Some of the records have departure dates that is before the arrival date. So I had to transform the SAS date to pyspark date format to make it intelligible.
 
 **`Cleaning steps:`**
-+ So I had change them to appropriate data types (int,float).
-+ There were some(5) distinct demographic race present in the race column. 
-+ I did separate them with a pivot table
 
-**`Airport Code:` `data quality issues:`**
-+ Total number of records is 55075 with 14 columns 
-+ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated
-+ There are 279 airports was closed
-+ Number of airports appear more than once in the data set
-+ Latitude and longitude are in a single column separated by commas
 
-**`Cleaning steps:`**
-+ I've removed the airport identification codes(iata_code) those are missing
-+ Excluded `iata_Codes` are came with `zero` values in it
-+ Eliminated airports those are closed and duplicated
-+ Separated longitude and latitude data for clarity
-
-**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
+`B.`**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
 + Number of records with this table: 8,599,212 and columns: 8
 + The data > date recorded since 18th century(from year `1743` to `2013`)
 + We only had 364,130 temperature data was missing out of more than 8 million
@@ -119,5 +90,33 @@ The arrival date is populated for all records, Some of the records have departur
 + I chose to limit data date access from year `2000` to available.
 + Disposed of all the null-temperature values from the table.
 + Selected temperature data only for USA.
+
+
+`C.` **`US-Cities-Demographics.csv` `Data quality issues`:** 
++ Total number of records with this table was 2891 and 12 columns
++ Only 3 columns has null values in range (13 to 16)
++ Distinct city count 567 and state count is 49
++ 5 distinct Races embedded with this dataset on 'Race-column'
++ All the data column-type came with `string-format`
+
+**`Cleaning steps:`**
++ So I had change them to appropriate data types (int,float).
++ There were some(5) distinct demographic race present in the race column. 
++ I did separate them with a pivot table
+
+`D.` **`Airport Code:` `data quality issues:`**
++ Total number of records is 55075 with 14 columns 
++ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated
++ There are 279 airports was closed
++ Number of airports appear more than once in the data set
++ Latitude and longitude are in a single column separated by commas
+
+**`Cleaning steps:`**
++ I've removed the airport identification codes(iata_code) those are missing
++ Excluded `iata_Codes` are came with `zero` values in it
++ Eliminated airports those are closed and duplicated
++ Separated longitude and latitude data for clarity
+
+
 
 
