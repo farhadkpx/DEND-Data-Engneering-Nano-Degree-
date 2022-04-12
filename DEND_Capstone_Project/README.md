@@ -81,40 +81,40 @@ The arrival date is populated for all records, Some of the records have departur
 
 
 
-`U.S. City Demographic data` `Data quality issues`: 
+**`US-Cities-Demographics.csv` `Data quality issues`:** 
 + Total number of records with this table was 2891 and 12 columns
 + Only 3 columns has null values in range (13 to 16)
 + Distinct city count 567 and state count is 49
 + 5 distinct Races embedded with this dataset on 'Race-column'
 + All the data column-type came with `string-format`
 
-`Cleaning steps:`
+**`Cleaning steps:`**
 + So I had change them to appropriate data types (int,float).
 + There were some(5) distinct demographic race present in the race column. 
 + I did separate them with a pivot table
 + which will create a clear understanding why immigrants chose to go to certain City in a state.
 
 
-`Airport Code:` `data quality issues:`
+**`Airport Code:` `data quality issues:`**
 + Total number of records is 55075 with 14 columns 
 + There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated
 + There are 279 airports was closed
 + Number of airports appear more than once in the data set
 + Latitude and longitude are in a single column separated by commas
 
-`Cleaning steps:`
+**`Cleaning steps:`**
 + I've removed the airport identification codes(iata_code) those are missing
 + Eliminating airports those are closed
 + Separating longitude and latitude data for clarity
 
-`Global Temperature Data:` `data quality issues:`
+**`Global Temperature Data:` `data quality issues:`**
 + Number of records with this table: 8,599,212 and columns: 8
 + The data > date recorded since 18th century(from year `1743` to `2013`)
 + We only had 364,130 temperature data was missing out of more than 8 million
 + We have 159 distinct countries and 3448 city
 + Columns dt, AverageTemperature, aAverageTemperatureUncertainty, Latitude, Longitude all are string data type
 
-`Cleaning steps:`
+**`Cleaning steps:`**
 + I changed the `dt` column to `date` type
 + Columns (`AverageTemperature`, `AverageTemperatureUncertainty`, `Latitude`, `Longitude`) converted to `integer` data type
 + I chose to limit data date access from year `2000` to available.
