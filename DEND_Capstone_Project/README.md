@@ -34,11 +34,13 @@ The clean data tables will be loaded into S3-bucket or in a Amazon Redshift  as 
 The immigration data comes from the [US National Tourism and Trade Office](https://www.trade.gov/national-travel-and-tourism-office). It includes information about people entering the United States with any immigrats year and month, arrival and departure dates, age and year of birth of immigrant, arrival city, port, current residence state, travel mode (air, sea), visa type etc. .....
 
 `World Temperature Data:`
-This dataset came from Kaggle. This dataset includes both world and US temperatures. You can read more about it [here].(https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data)
-
+This dataset came from Kaggle. This dataset includes both world and US temperatures. You can read more about it [here](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data).
 
 `Global and U.S. City Demographic Data:`
 The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/). It includes demographic information about US cities, with median age, total population, and specific populations (male vs female, foreign-born, different races, etc.). The data is in csv format....
+
+`Airport Code Table:`
+This is a simple table of airport detail codes and corresponding cities. It comes from [datahub](https://datahub.io/core/airport-codes#data).
 
 Country Data
 This data was provided in I94_SAS_Labels_Descriptions.SAS in the provided project and contains a mapping of country names and their I94 codes that are found in the immigration data. I used Spark to create a parquet file with this information.
