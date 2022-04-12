@@ -90,7 +90,7 @@ The arrival date is populated for all records, Some of the records have departur
 `Cleaning steps:` All the data column-type came with `string-format`. So I had change them to appropriate data types (int,float). There were some(5) distinct demographic race present in the race column. I did separate them with a pivot table, which will create a clear understanding why immigrants chose to go to certain City in a state.
 
 
-`Airport Code data quality issues:`
+`Airport Code:` `data quality issues:`
 + Total number of records is 55075 with 14 columns 
 + There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated
 + There are 279 airports was closed
@@ -102,7 +102,8 @@ The arrival date is populated for all records, Some of the records have departur
 + Eliminating airports those are closed
 + Separating longitude and latitude data for clarity
 
-Global Temperature Data
+`Global Temperature Data: ` `data quality issues:`
+
 
 More than 8 million records in the dataset
 The date on this goes back to the 18th century
