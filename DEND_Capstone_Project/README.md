@@ -103,9 +103,16 @@ The arrival date is populated for all records, Some of the records have departur
 + Separating longitude and latitude data for clarity
 
 `Global Temperature Data: ` `data quality issues:`
++ Number of records with this table: 8,599,212 and columns: 8
++ The data > date recorded since 18th century(from year `1743` to `2013`)
++ We only had 364,130 temperature data was missing out of more than 8 million
++ We have 159 distinct countries and 3448 city
++ Columns dt, AverageTemperature, aAverageTemperatureUncertainty, Latitude, Longitude all are string data type
+
+`Cleaning steps:`
++ I changed the `dt` column to `date` type
++ Columns (`AverageTemperature`, `AverageTemperatureUncertainty`, `Latitude`, `Longitude`) converted to `integer` data type
++ I chose to limit data date access from year `2010` to available.
++ Eliminated all the null-temperature values from the table.
 
 
-More than 8 million records in the dataset
-The date on this goes back to the 18th century
-For cities in the United States, the first available date is from the 18th century
-For the cities in the US, temperature data is available upto 1st September 2013.
