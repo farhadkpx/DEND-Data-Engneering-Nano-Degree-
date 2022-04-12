@@ -81,13 +81,18 @@ The arrival date is populated for all records, Some of the records have departur
 
 
 
-`U.S. City Demographic Data quality issues`: 
+`U.S. City Demographic data` `Data quality issues`: 
 + Total number of records with this table was 2891 and 12 columns
 + Only 3 columns has null values in range (13 to 16)
 + Distinct city count 567 and state count is 49
 + 5 distinct Races embedded with this dataset on 'Race-column'
++ All the data column-type came with `string-format`
 
-`Cleaning steps:` All the data column-type came with `string-format`. So I had change them to appropriate data types (int,float). There were some(5) distinct demographic race present in the race column. I did separate them with a pivot table, which will create a clear understanding why immigrants chose to go to certain City in a state.
+`Cleaning steps:`
++ So I had change them to appropriate data types (int,float).
++ There were some(5) distinct demographic race present in the race column. 
++ I did separate them with a pivot table
++ which will create a clear understanding why immigrants chose to go to certain City in a state.
 
 
 `Airport Code:` `data quality issues:`
