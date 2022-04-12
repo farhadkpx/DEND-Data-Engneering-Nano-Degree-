@@ -31,7 +31,7 @@ The clean data tables will be loaded into S3-bucket or in a Amazon Redshift  as 
 **Describing Data Sets used:**
 
 `I94 Immigration Data:`
-The immigration data comes from the (US National Tourism and Trade Office[https://www.trade.gov/national-travel-and-tourism-office]). It includes information about people entering the United States, such as immigration year and month, arrival and departure dates, age and year of birth of immigrant, arrival city, port, current residence state, travel mode (air, sea), visa type etc. Specificially, the data from April 2016 is used to showcase this project, which is over 1 million records. The data is in parquet format.
+The immigration data comes from the [US National Tourism and Trade Office](https://www.trade.gov/national-travel-and-tourism-office). It includes information about people entering the United States, such as immigration year and month, arrival and departure dates, age and year of birth of immigrant, arrival city, port, current residence state, travel mode (air, sea), visa type etc. ...
 
 U.S. City Demographic Data:
 The demographic data comes from OpenSoft. It includes demographic information about US cities, such as the median age, total population, and specific populations (male vs female, foreign-born, different races, etc.). The data is in csv format.
