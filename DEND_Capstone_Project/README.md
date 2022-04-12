@@ -34,7 +34,7 @@ The clean data tables will be loaded into S3-bucket or in a Amazon Redshift  as 
 The immigration data comes from the [US National Tourism and Trade Office](https://www.trade.gov/national-travel-and-tourism-office). It includes information about people entering the United States with any immigrats year and month, arrival and departure dates, age and year of birth of immigrant, arrival city, port, current residence state, travel mode (air, sea), visa type etc. .....
 
 `World Temperature Data:`
-This dataset came from Kaggle. This dataset includes both world and US temperatures. You can read more about it [here](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data).
+This dataset came from Kaggle. This dataset includes both world and US temperatures. You can read more about it [kaggle](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data).
 
 `Global and U.S. City Demographic Data:`
 The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/). It includes demographic information about US cities, with median age, total population, and specific populations (male vs female, foreign-born, different races, etc.). The data is in csv format....
@@ -42,19 +42,21 @@ The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explo
 `Airport Code Table:`
 This is a simple table of airport detail codes and corresponding cities. It comes from [datahub](https://datahub.io/core/airport-codes#data).
 
-Country Data
-This data was provided in I94_SAS_Labels_Descriptions.SAS in the provided project and contains a mapping of country names and their I94 codes that are found in the immigration data. I used Spark to create a parquet file with this information.
+`LABEL description file:`
+This is a SAS data type label file icludes column labels used with 'immigration' data sets. Since lot of data-columns came with the immigration dataset in a coded format, this label file will help us create an intelligible values. [data source]()
 
-Visa Codes
-This data was provided in I94_SAS_Labels_Descriptions.SAS in the provided project. This maps to the I94VISA column in the immigration table. I used Spark to create a parquet file with this information.
+We'll extract/translate out Country Code, State Code, Port City and Port Codes to match with our immigration data sets.
 
-State Code
-This data was provided in I94_SAS_Labels_Descriptions.SAS in the provided project. This maps to the I94ADDR column in the immigration table. I used Spark to create a parquet file with this information.
+`A.` `Country Code:` For instance we'll extract out country names corresponding to `i94CIT` &  `i94RES` codes that are found in the immigration data. 
 
-Travel Mode
-This data was provided in I94_SAS_Labels_Descriptions.SAS in the provided project. This maps to the I94MODE column in the immigration table. I used Spark to create a parquet file with this information.
+`B.` `State Code:` This maps the `I94ADDR column` in the immigration table.
 
-Port Code
-This data was provided in I94_SAS_Labels_Descriptions.SAS in the provided project. This maps to the I94PORT column in the immigration table. I used Spark to create a parquet file with this information.
+`C.` `Port City:` We'll find port city name in connection with `i94PORT` where the immigrants came first.
 
-Airport Code Table: This is a simple table of airport codes and corresponding cities. It comes
+`D.` `Port Code:` The port code will identify the `I94PORT` column in the immigration table. 
+
+`E.` `Visa Codes:` Visa code will decode `i94VISA` column into visa category type issued to an immigrant.
+
+`F.` `Travel Mode:` will show in what transportation mode was used by an immigrant from `I94MODE` column in the immigration table.
+
+
