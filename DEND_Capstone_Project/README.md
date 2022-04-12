@@ -36,7 +36,7 @@ The immigration data comes from the [US National Tourism and Trade Office](https
 `World Temperature Data:`
 This dataset came from Kaggle. This dataset includes both world and US temperatures. You can read more about it [kaggle](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data).
 
-`Global and U.S. City Demographic Data:`
+`U.S. City Demographic Data:`
 The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/). It includes demographic information about US cities, with median age, total population, and specific populations (male vs female, foreign-born, different races, etc.). The data is in csv format....
 
 `Airport Code Table:`
@@ -60,3 +60,51 @@ We'll extract/translate out Country Code, State Code, Port City and Port Codes t
 `F.` `Travel Mode:` will show in what transportation mode was used by an immigrant from `I94MODE` column in the immigration table.
 
 
+### `Step 2:`  Explore and Assess the Data
+ + Explore the data to identify data quality issues, like missing values, duplicate data, etc. `(Guideline)`
+ + Document steps necessary to clean the data `(Guideline)`
+
+I explored those datsets using PySpark programmnig language in Jupyter notebook[link].
+
+Here are some the findings on each data set.
+
+`I94 Immigration Data:`
+Total number of records/rows are 3096313 and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique.The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format
+The arrival date is populated for all records, Some of the records have departure dates that is before the arrival date. So I had to transform the SAS date to pyspark date format to make it intelligible.
+
+
+
+
+`World Temperature Data:`
+
+
+
+
+
+`U.S. City Demographic Data quality issues`: 
++ Total number of records with this table was 2891 and 12 columns
++ Only 3 columns has null values in range (13 to 16)
++ Distinct city count 567 and state count is 49
++ 5 distinct Races embedded with this dataset on 'Race-column'
+
+`Cleaning steps:` All the data column-type came with `string-format`. So I had change them to appropriate data types (int,float). There were some(5) distinct demographic race present in the race column. I did separate them with a pivot table, which will create a clear understanding why immigrants chose to go to certain City in a state.
+
+
+`Airport Code data quality issues:`
++ Total number of records is 55075 with 14 columns 
++ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated
++ There are 279 airports was closed
++ Number of airports appear more than once in the data set
++ Latitude and longitude are in a single column separated by commas
+
+`Cleaning steps:`
++ I've removed the airport identification codes(iata_code) those are missing
++ Eliminating airports those are closed
++ Separating longitude and latitude data for clarity
+
+Global Temperature Data
+
+More than 8 million records in the dataset
+The date on this goes back to the 18th century
+For cities in the United States, the first available date is from the 18th century
+For the cities in the US, temperature data is available upto 1st September 2013.
