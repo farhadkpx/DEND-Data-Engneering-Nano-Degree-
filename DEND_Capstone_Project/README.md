@@ -92,8 +92,6 @@ The arrival date is populated for all records, Some of the records have departur
 + So I had change them to appropriate data types (int,float).
 + There were some(5) distinct demographic race present in the race column. 
 + I did separate them with a pivot table
-+ which will create a clear understanding why immigrants chose to go to certain City in a state.
-
 
 **`Airport Code:` `data quality issues:`**
 + Total number of records is 55075 with 14 columns 
@@ -104,10 +102,11 @@ The arrival date is populated for all records, Some of the records have departur
 
 **`Cleaning steps:`**
 + I've removed the airport identification codes(iata_code) those are missing
-+ Eliminating airports those are closed
-+ Separating longitude and latitude data for clarity
++ Excluded `iata_Codes` are came with `zero` values in it
++ Eliminated airports those are closed and duplicated
++ Separated longitude and latitude data for clarity
 
-**`Global Temperature Data:` `data quality issues:`**
+**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
 + Number of records with this table: 8,599,212 and columns: 8
 + The data > date recorded since 18th century(from year `1743` to `2013`)
 + We only had 364,130 temperature data was missing out of more than 8 million
@@ -118,7 +117,7 @@ The arrival date is populated for all records, Some of the records have departur
 + I changed the `dt` column to `date` type
 + Columns (`AverageTemperature`, `AverageTemperatureUncertainty`, `Latitude`, `Longitude`) converted to `integer` data type
 + I chose to limit data date access from year `2000` to available.
-+ Eliminated all the null-temperature values from the table.
-+ Kept temperature data only for USA.
++ Disposed of all the null-temperature values from the table.
++ Selected temperature data only for USA.
 
 
