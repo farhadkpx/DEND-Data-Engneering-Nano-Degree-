@@ -60,8 +60,8 @@
  | **US_City_Demog_Race**                      |                |      **DIMENSION TABLE**                                |
  ----------------------------------------------|----------------|---------------------------------------------------------|
  | **Column Name**                             | **Data Type**  | **Description**                                         |
- | `State_Code`                                | `string`       | **`primary key`**                                       |
- | City                                        | string         | Name of the City under the state                        |
+ | `City`                                      | `string`       | **`primary key`**                                       |
+ | State_Code                                 | string         | Name of the State where City is located                 |
  | State                                       | string         | Name of the state where City is located                 |
  | Average_Household_Size                      | float          | Average household size in the US city                   |
  | Male_Population                             | integer        | Male population in US city                              |
