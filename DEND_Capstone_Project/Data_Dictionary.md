@@ -12,7 +12,7 @@
 | Immigration_Year            | integer        | The year an immigrant entered the country                              |
 | Immigration_Month           | integer        | The month an immigrant entered the country                             |
 | Port_Code                   | string         | (FK) to `Port_locations_df` where immigrants arrived at a US port      |
-| Arrival_Date                | string         | The arrival_date of an immigrant in USA                                |
+| Arrival_Date                | string         | (FK) The arrival_date of an immigrant in USA                           |
 | Departure_Date              | string         | The departure_date of an immigrant from USA                            |
 | Immigrants_Age              | integer        | Age of an immigrant                                                    |   
 | Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records|
@@ -76,16 +76,16 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-| **US_Cities_Temperature** |                    |     DIMENSION (SUPPORTIVE) TABLE                    |
+| **US_Cities_Temperature** |                    |     DIMENSION TABLE                                 |
 |---------------------------|--------------------|-----------------------------------------------------|
 | **Column Name**           | **Data Type**      | **Description**                                     |
-| `City`                    | string             | **`primary key`** (City name)                       |
-| Country                   | string             | Name of the country                                 |
-| Date_Records              | date               | Date when temperature recorded                      |
-| Year                      | string             | Year in 'yyyy' format as temperature recorded       |
-| Month_Name                | string             | Month_Name in 'MMMM' format as temperature recorded |
-| Month_Num                 | int                | Month_Num in 'MM' format as recorded                |
-| Day                       | string             | Day in 'dd' format as recorded                      |
+| `Date_Records`            | `date`             | **`primary key`** (date when temperature recorded)  |  
+| City                      | string             | City name where temperature recorded                |
+| Country                   | string             | Name of the country, City is located                |
+| Year                      | integer            | Year in 'yyyy' date format recorded                 |
+| Month_Name                | string             | Month_Name in 'MMMM' format recorded                |
+| Month_Num                 | integer            | Month_Num in 'MM' format recorded                   |
+| Day                       | integer            | Day in 'dd' format recorded                         |
 
 
 
