@@ -1,5 +1,5 @@
 ## `Udacity Data Engineering Nanodegree` - `Capstone Project`
-----------------------------------------------------------
+
 ### Farhad Md Ahmed
 
 ## `Project Summary:`
@@ -66,15 +66,20 @@ We'll extract/translate out Country Code, State Code, Port City and Port Codes t
 
 I explored those datsets using PySpark programmnig language in Jupyter notebook[link].
 
-Here are some the findings on each data set.
+#### `DATA-QUALITY` & `CLEANING:`
 
 `A.` **`I94 Immigration Data:` `Data quality issues`:** 
-+ Total number of records/rows are 3096313 and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique.
++ Total number of records/rows are 3096313.. and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique.
 + The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format
-+ The arrival date is populated for all records, 
++ The arrival date is populated for all records.... 
++ There are 8 columns all are coded with values not clear what they meant
 + Some of the records have departure dates that is before the arrival date. So I had to transform the SAS date to pyspark date format to make it intelligible.
 
 **`Cleaning steps:`**
++ Practically renamed all the columns for clarity
++ Transforming SAS date to PySpark date format
++ Created 4 different tables(...) for simplicity of analysis
++ Extensive dated segmentation of both arrival & departure columns
 
 
 `B.`**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
@@ -117,6 +122,14 @@ Here are some the findings on each data set.
 + Eliminated airports those are closed and duplicated
 + Separated longitude and latitude data for clarity
 
+`D.` **`I94_SAS_Labels_Description file:` `data quality issues:`**
++ There are 8 columns came coded with immigration file
++ All those columns are decoded with extensive regular expression issued
++ Data types came with string type
 
+**`Cleaning steps:`**
++ I had to use rigorous regular expression programming steps to clean those code
++ I used slicing, splitting, stripping & replacing functions to clean codes
++ I casted some string data type to integer type
 
 
