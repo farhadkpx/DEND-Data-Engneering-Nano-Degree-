@@ -61,8 +61,10 @@ We'll extract/translate out Country Code, State Code, Port City and Port Codes t
 
 
 ### `Step 2:`  Explore and Assess the Data
- + Explore the data to identify data quality issues, like missing values, duplicate data, etc. `(Guideline)`
- + Document steps necessary to clean the data `(Guideline)`
+--------------------------------------------------------------------------------------------------------------
+>  Explore the data to identify data quality issues, like missing values, duplicate data, etc. `(Guideline)`
+>  
+>  Document steps necessary to clean the data `(Guideline)`
 
 I explored those datsets using PySpark programmnig language in Jupyter notebook[link].
 
@@ -132,4 +134,13 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 + I used slicing, splitting, stripping & replacing functions to clean codes
 + I casted some string data type to integer type
 
+### `Step 3:` Define the Data Model
+--------------------------------------------------------------------------------------------------------------
+> Map out the conceptual data model and explain why you chose that model (`guideline`)
+> 
+> List the steps necessary to pipeline the data into the chosen data model (`guideline`)
 
+#### 3.1 Conceptual Data Model
+
+
+#### 3.2 Mapping Out Data Pipelines
