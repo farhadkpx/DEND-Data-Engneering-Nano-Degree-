@@ -152,12 +152,13 @@ For clean visual check out this [link]()
 
 #### `Step 4:` Run ETL to Model the Data
 --------------------------------------------------------------------------------------------------------------
-+ Create the data pipelines and the data model
-+ Include a data dictionary
+**4.1** Create the data pipelines and the data model
+
+**4.2** Include a data dictionary
 
 > My data dictionary for this data model is available [Here]()
 
-+ Run data quality checks to ensure the pipeline ran as expected
+**4.3** Run data quality checks to ensure the pipeline ran as expected
 
 > Data quality checks is done with codes inside the script `etl.py` file
 
