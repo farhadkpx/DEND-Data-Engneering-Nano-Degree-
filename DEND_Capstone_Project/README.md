@@ -145,7 +145,16 @@ I chose a star schema for my conceptual data model. Creating a star schema was c
 
 For clean visual check out this [link]()
 
-#### 3.2 Necessary to pipeline
+#### 3.2 Designing Data Pipelines
+`etl.py:` I created a `Data model to pipeline` with `etl.py` script file to read, transform all the relevant data files made them ready for immediately available for data analysis. After the needed data-cleaning transformation, I did sent them back to cloud data storage source as a parquet file. By following the data model any analysts can filter, join and extract out needed data and learn valuable insight.
 
+`AWS Redshift:` I chose Amazon Redshift to store and analyze data, because redshift can efficient handle large amount of analytical data...
 
-#### 3.2 Mapping Out Data Pipelines
+#### `Step 4:` Run ETL to Model the Data
+--------------------------------------------------------------------------------------------------------------
++ Create the data pipelines and the data model
++ Include a data dictionary
++ Run data quality checks to ensure the pipeline ran as expected
++ Integrity constraints on the relational database (e.g., unique key, data type, etc.)
++ Unit tests for the scripts to ensure they are doing the right thing
++ Source/count checks to ensure completeness
