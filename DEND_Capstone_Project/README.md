@@ -135,7 +135,7 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 + I casted some string data type to integer type
 
 ### `Step 3:` Define the Data Model
---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 > Map out the conceptual data model and explain why you chose that model (`guideline`)
 > 
 > List the steps necessary to pipeline the data into the chosen data model (`guideline`)
@@ -154,7 +154,15 @@ For clean visual check out this [link]()
 --------------------------------------------------------------------------------------------------------------
 + Create the data pipelines and the data model
 + Include a data dictionary
+
+> My data dictionary for this data model is available [Here]()
+
 + Run data quality checks to ensure the pipeline ran as expected
+
+> Data quality checks is done with codes inside the script `etl.py` file
+
+**Data quality checking criteria:**
+
 + Integrity constraints on the relational database (e.g., unique key, data type, etc.)
 + Unit tests for the scripts to ensure they are doing the right thing
 + Source/count checks to ensure completeness
