@@ -2,7 +2,7 @@
 | Fact_Immigration_Inclusive  |                |   FACT TABLE                                                           |
 ------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Immigration_Id`            | integer        | **`Primary key`**(FK)..                                                |
+| `Immigration_Id`            | `integer`      | **`Primary key`**(FK)..                                                |
 | Admission_Num               | bigint         | (FK) 'Dated_Arrival_Departure' & individual immigrants record table    |
 | Citizenship_Country_Code    | integer        | (FK) to `Country_Codes_df` table on immigrant citizenship country code |
 | Residency_Country_Code      | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code   |
@@ -23,10 +23,10 @@
 | Means_of_Travel             | string         | The physical way an immigrant chose to enter the country               |
 
 ---------------------------------------------------------------------------------------------------------------------------------
-| Individual_Immigration_Records |                |   DIMENSION TABLE                                                   |
+| Individual_Immigration_Records |             |   DIMENSION TABLE                                                      |
 ------------------------------|----------------|------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Admission_Num`             | bigint         | **`Primary key`**                                                      |
+| `Admission_Num`             | `bigint`       | **`Primary key`**                                                      |
 | Immigration_Id              | integer        | (FK) the matching primary key of `Fact-Immigration` table              |
 | Arrival_Date                | date           | The arrival_date of an immigrant in USA                                |       
 | Citizenship_Country_Code    | integer        | Immigrants citizenship country code                                    |
@@ -40,13 +40,13 @@
 | Dated_Arrival_Departure     |                |   DIMENSION TABLE                                                      |
 |----------------------------------------------|------------|-----------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Admission_Num`             | bigint         | **`Primary key`**                                                      |      
-| Arrival_Date                | string         | The Arrival_Date of an immigrant in existing string format             |
-| Residency_Country_Code      | integer        | The country code of an incoming                    immigrant           |
+| `Arrival_Date`              | `date`         | **`Primary key`** The Arrival_Date of an immigrant                     |
+| Admission_Num               | bigint         | (FK) in 'immigration fact table'                                       |      
+| Residency_Country_Code      | integer        | The country code of an incoming immigrant                              |
 | Arrival_Year                | integer        | Arrival year in the 'yyyy' format, for instance : 2016                 |
 | Arrival_Month               | string         | Arrival month in the 'MMMM' format such: January-December              |
 | Arrival_Day                 | integer        | Arrival day in the 'dd' format ranges: 1 to 31                         |
-| Departure_Date              | string         | The Departure_Date of an immigrant in existing string format           |
+| Departure_Date              | date           | The Departure_Date of an immigrant in existing string format           |
 | Depart_Year                 | integer        | Departure year in the 'yyyy' format, for instance : 2017               |
 | Depart_Month                | string         | Departure month in the 'MMMM' format such: January-December            |
 | Depart_Day                  | integer        | Departure day in the 'dd' format ranges: 1 to 31                       |
@@ -57,24 +57,27 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------
  
- | **Immigration_Demog_Race**                  |                |      **DIMENSION TABLE**                                |
+ | **US_City_Demog_Race**                      |                |      **DIMENSION TABLE**                                |
  ----------------------------------------------|----------------|---------------------------------------------------------|
  | **Column Name**                             | **Data Type**  | **Description**                                         |
- | `Immigration_Id`                            | integer        | **`primary key`**                                       |
- | Average_Household_Size                      | float          | Average household size in US citY                       |
- | Male_Population                             | integer        | male population in US city                              |
- | Gender                                      | string         | Sex of the immigrants                                   |
- | Female_Population                           | integer        | female population in US city                            |
- | Median_Age                                  | float          | median age of population of city                        |
- | State                                       | string         | US State name                                           |                 
- | American Indian and Alaska Native           | long           | American Indian and Alaska Native in the city           |
- | Asian                                       | long           | Asian populatin in US cities                            |
- | Black or African-American                   | long           | counting Black or African-American population           |
- | hispanic_or_latino_population               | long           | Hispanic or Latino population in the city               |
- | white                                       | long           | White population  in US city                            |   
+ | `State_Code`                                | `string`       | **`primary key`**                                       |
+ | City                                        | string         | Name of the City under the state                        |
+ | State                                       | string         | Name of the state where City is located                 |
+ | Average_Household_Size                      | float          | Average household size in the US city                   |
+ | Male_Population                             | integer        | Male population in US city                              |
+ | Female_Population                           | integer        | Female population in US city                            |
+ | Total_Population                            | integer        | Total population of the designated city                 |
+ | Median_Age                                  | float          | Median age of the city population                       |
+ | Number_of_Veterans                          | int            | The veteran population of the city                      |
+ | American Indian and Alaska Native           | int            | American Indian and Alaska Native in the city           |
+ | Asian                                       | int            | Asian populatin in US cities                            |
+ | Black or African-American                   | int            | counting Black or African-American population           |
+ | hispanic_or_latino_population               | int            | Hispanic or Latino population in the city               |
+ | white                                       | int            | White population  in US city                            |   
 
 
--------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
 
 | **US_Cities_Temperature** |                    |     DIMENSION TABLE                                 |
 |---------------------------|--------------------|-----------------------------------------------------|
@@ -94,7 +97,7 @@
 | **Port_locations_df**     |                |     DIMENSION TABLE                                   |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Description**                                       |
-| `Port_Code`               | string         | **`primary key`**, immigrants (i94 port code)         |
+| `Port_Code`               | `string`       | **`primary key`**, immigrants (i94 port code)         |
 |  Port_City                | string         | immigrants i94 port entrance city                     |
 |  Port_State               | string         | immigrants i94 port entrance state                    |
 
@@ -102,7 +105,7 @@
 | **Country_Codes_df**      |                |      DIMENSION TABLE                                  |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                |
-| `Country_Codes`           | integer        | **`primary key`** (i94 country code)                  |
+| `Country_Codes`           | `integer`      | **`primary key`** immigrants (i94 country code)       |
 |  Country_Names            | string         | immigrants  (i94 country) name                        |
 
 
@@ -110,8 +113,8 @@
 | **State_Codes_df**        |                |    DIMENSION TABLE                                    |
 |---------------------------|----------------|-------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                |
-| `State_Codes`             | string         | **`primary key`** immigrants (i94 state code)         |
-| State_Names               | string         | immigrants i94 state name                             |
+| `State_Codes`             | `string`       | **`primary key`** immigrants (i94 state code)         |
+| State_Names               | string         | immigrants (i94 state) name                           |
 
 
 
