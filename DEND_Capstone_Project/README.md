@@ -141,6 +141,11 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 > List the steps necessary to pipeline the data into the chosen data model (`guideline`)
 
 #### 3.1 Conceptual Data Model
+I chose a star schema for my conceptual data model. Creating a star schema was challenging, seeing the relationship among these tables are rather divergent. So I did sliced out 3 tables from the `immigration table` into `Fact_Immigration_Inclusive`, `individua...`, `dated arvial`. I created some dimenstin table from SAS Label table `state`, `country`, `port-city-state`. Two other dimension table `temp table` & `demography table`. 
+
+For clean visual check out this [link]()
+
+#### 3.2 Necessary to pipeline
 
 
 #### 3.2 Mapping Out Data Pipelines
