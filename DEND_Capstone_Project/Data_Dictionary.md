@@ -1,40 +1,40 @@
 
-| Fact_Immigration_Inclusive  |                |   FACT TABLE                                                           |
-------------------------------|----------------|------------------------------------------------------------------------|
-| **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Immigration_Id`            | `integer`      | **`Primary key`**(FK)..                                                |
-| Admission_Num               | bigint         | (FK) 'Dated_Arrival_Departure' & individual immigrants record table    |
-| Citizenship_Country_Code    | integer        | (FK) to `Country_Codes_df` table on immigrant citizenship country code |
-| Residency_Country_Code      | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code   |
-| Current_State_Code          | string         | (FK) to `State_Codes_df` based on current state_code of immigrants     |
-| Visa_Type                   | string         | Official visa type category of immigrants assigned by the department   |
-| Visa_Category               | string         | Definition of visa code type category                                  |
-| Immigration_Year            | integer        | The year an immigrant entered the country                              |
-| Immigration_Month           | integer        | The month an immigrant entered the country                             |
-| Port_Code                   | string         | (FK) to `Port_locations_df` where immigrants arrived at a US port      |
-| Arrival_Date                | date           | (FK) to `US_Cities_Temperature` table with `Date_Records` column       |
-| Departure_Date              | date           | The departure_date of an immigrant from USA                            |
-| Immigrants_Age              | integer        | Age of an immigrant                                                    |   
-| Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records|
-| Birth_Year                  | integer        | Birth Year of an immigrant                                             |
-| Gender                      | string         | Official gender of an immigrant                                        |
-| Airline_Code                | string         | Airline with which immigrants arrived in the US                        |
-| Flight_Num                  | string         | The flight number of an incoming immigrants                            |
-| Means_of_Travel             | string         | The physical way an immigrant chose to enter the country               |
+| Fact_Immigration_Inclusive  |                |   FACT TABLE                                                              |
+------------------------------|----------------|---------------------------------------------------------------------------|
+| **Column Name**             | **Data Type**  | **Description**                                                           |
+| `Immigration_Id`            | `integer`      | **`Primary key`**                                                         |
+| Admission_Num               | bigint         | (FK) `Dated_Arrival_Departure` & `Individual_Immigrants_Records` table    |
+| Citizenship_Country_Code    | integer        | (FK) to `Country_Codes_df` table on immigrant's citizenship country code  |
+| Residency_Country_Code      | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code      |
+| Current_State_Code          | string         | (FK) to `State_Codes_df` based on current state_code of immigrants        |
+| Visa_Type                   | string         | Official visa type category of immigrants assigned by the department      |
+| Visa_Category               | string         | Definition of visa code type category                                     |
+| Immigration_Year            | integer        | The year an immigrant entered the country                                 |
+| Immigration_Month           | integer        | The month an immigrant entered the country                                |
+| Port_Code                   | string         | (FK) to `Port_locations_df` where immigrants arrived at a US port         |
+| Arrival_Date                | date           | (FK) to `US_Cities_Temperature` table with `Date_Records` column          |
+| Departure_Date              | date           | The departure_date of an immigrant from USA                               |
+| Immigrants_Age              | integer        | Age of an immigrant                                                       |   
+| Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records   |
+| Birth_Year                  | integer        | Birth Year of an immigrant                                                |
+| Gender                      | string         | Official gender of an immigrant                                           |
+| Airline_Code                | string         | Airline code with which immigrants arrived in the US                      |
+| Flight_Num                  | string         | The Airline flight number of an incoming immigrants                       |
+| Means_of_Travel             | string         | The physical way an immigrant chose to enter the country                  |
 
 ---------------------------------------------------------------------------------------------------------------------------------
-| Individual_Immigration_Records |             |   DIMENSION TABLE                                                      |
-------------------------------|----------------|------------------------------------------------------------------------|
-| **Column Name**             | **Data Type**  | **Description**                                                        |
-| `Admission_Num`             | `bigint`       | **`Primary key`**                                                      |
-| Immigration_Id              | integer        | (FK) the matching primary key of `Fact-Immigration` table              |
-| Arrival_Date                | date           | The arrival_date of an immigrant in USA                                |       
-| Citizenship_Country_Code    | integer        | Immigrants citizenship country code                                    |
-| Gender                      | string         | Official gender of an immigrant                                        |
-| Immigrants_Age              | integer        | Age of an immigrant                                                    |  
-| Departure_Date              | date           | The departure_date of an immigrant from USA                            |
-| Visa_Type                   | string         | Official visa type category of immigrants assigned by the department   |
-| Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records|
+| Individual_Immigrants_Records |              |   DIMENSION TABLE                                                          |
+------------------------------|----------------|----------------------------------------------------------------------------|
+| **Column Name**             | **Data Type**  | **Description**                                                            |
+| `Admission_Num`             | `bigint`       | **`Primary key`**                                                          |
+| Immigration_Id              | integer        | (FK) the matching primary key of `Fact-Immigration` table                  |
+| Arrival_Date                | date           | The arrival_date of an immigrant in USA                                    |       
+| Citizenship_Country_Code    | integer        | Immigrants citizenship country code                                        |
+| Gender                      | string         | Official gender of an immigrant                                            |
+| Immigrants_Age              | integer        | Age of an immigrant                                                        |  
+| Departure_Date              | date           | The departure_date of an immigrant from USA                                |
+| Visa_Type                   | string         | Official visa type category of immigrants assigned by the department       |
+| Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records    |
 
 
 | Dated_Arrival_Departure     |                |   DIMENSION TABLE                                                      |
