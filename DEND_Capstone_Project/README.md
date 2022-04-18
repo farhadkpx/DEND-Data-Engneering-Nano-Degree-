@@ -167,3 +167,26 @@ For clean visual check out this [link]()
 + Integrity constraints on the relational database (e.g., unique key, data type, etc.)
 + Unit tests for the scripts to ensure they are doing the right thing
 + Source/count checks to ensure completeness
+
+#### `Step 5:` Complete Project Write Up
+-------------------------------------------------------------------------------------------------------------------
+What's the goal? What queries will you want to run? How would Spark or Airflow be incorporated? Why did you choose the model you chose?
+Clearly state the rationale for the choice of tools and technologies for the project.
+
+**Document the steps of the process.**
+**5.1** Propose how often the data should be updated and why.
+
+
+**5.2** Describe how you would approach the problem differently under the following scenarios:
++ If the data was increased by 100x:
+
+Under that kind of circumstances I'd run these working processes on a more powerful computing environment with AWS. For instance, I'd use Amazon Elastic MapReduce (EMR) for Pyspark and Amazon managed workflows for Apache Airflow (MWAA) for Airflow.
+
++ If the pipelines were run on a daily basis by 7am:
+
+We could use Apache Airflow to run my ETL data pipeline with the timeline preset before 7:00 AM and populate a report. Apache Airflow works with pyspark great. Combining ....
+
++ If the database needed to be accessed by 100+ people:
+
+Amazon Redshift can handle up to 500 connections securely and efficiently, in that case we could share data within across AWS user accounts. User can easily, instantly and securely query live data from a Redshift cluster with permissions.
+
