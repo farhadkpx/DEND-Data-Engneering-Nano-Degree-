@@ -75,43 +75,43 @@
  ----------------------------------------------|----------------|-----------------------------------------------------------|
  | **Column Name**                             | **Data Type**  | **Description**                                           |
  | `City`                                      | `string`       | **`primary key`**                                         |
- | State_Code                                  | string         | Name of the State where City is located                   |
- | State                                       | string         | Name of the state where City is located                 |
- | Average_Household_Size                      | float          | Average household size in the US city                   |
- | Male_Population                             | integer        | Male population in US city                              |
- | Female_Population                           | integer        | Female population in US city                            |
- | Total_Population                            | integer        | Total population of the designated city                 |
- | Median_Age                                  | float          | Median age of the city population                       |
- | Number_of_Veterans                          | int            | The veteran population of the city                      |
- | American Indian and Alaska Native           | int            | American Indian and Alaska Native in the city           |
- | Asian                                       | int            | Asian populatin in US cities                            |
- | Black or African-American                   | int            | counting Black or African-American population           |
- | hispanic_or_latino_population               | int            | Hispanic or Latino population in the city               |
- | white                                       | int            | White population  in US city                            |   
+ | State_Code                                  | string         | `(FK)` Code of the State where City is located            |
+ | State                                       | string         | Name of the state where City is located                   |
+ | Average_Household_Size                      | float          | Average household size in the US city                     |
+ | Male_Population                             | integer        | Male population in US city                                |
+ | Female_Population                           | integer        | Female population in US city                              |
+ | Total_Population                            | integer        | Total population of the designated city                   |
+ | Median_Age                                  | float          | Median age of the city population                         |
+ | Number_of_Veterans                          | int            | The number of veteran population of the city              |
+ | American Indian and Alaska Native           | int            | American Indian and Alaska Native in the city             |
+ | Asian                                       | int            | Asian populatin in US cities                              |
+ | Black or African-American                   | int            | counting Black or African-American population             |
+ | hispanic_or_latino_population               | int            | Hispanic or Latino population in the city                 |
+ | white                                       | int            | White population  in US city                              |   
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-| **Port_locations_df**     |                |     DIMENSION TABLE                                   |
-|---------------------------|----------------|-------------------------------------------------------|
-| **Column Name**           | **Data Type**  | **Description**                                       |
-| `Port_Code`               | `string`       | **`primary key`**, immigrants (i94 port code)         |
-|  Port_City                | string         | immigrants i94 port entrance city                     |
-|  Port_State               | string         | immigrants i94 port entrance state                    |
+| **Port_locations_df**     |                |     DIMENSION TABLE                                                          |
+|---------------------------|----------------|------------------------------------------------------------------------------|
+| **Column Name**           | **Data Type**  | **Description**                                                              |
+| `Port_Code`               | `string`       | **`primary key`**, immigrants (i94 port code)                                |
+|  Port_City                | `string`       | `(FK)` with Temp_table & immigrants entrance city PORT                       |
+|  Port_State               | `string`       | `(FK)` Immigration & Demography table & entrance State                       |
 
 
-| **Country_Codes_df**      |                |      DIMENSION TABLE                                  |
-|---------------------------|----------------|-------------------------------------------------------|
-| **Column Name**           | **Data Type**  | **Column Description**                                |
-| `Country_Codes`           | `integer`      | **`primary key`** immigrants (i94 country code)       |
-|  Country_Names            | string         | immigrants  (i94 country) name                        |
+| **Country_Codes_df**      |                |      DIMENSION TABLE                                                         |
+|---------------------------|----------------|------------------------------------------------------------------------------|
+| **Column Name**           | **Data Type**  | **Column Description**                                                       |
+| `Country_Codes`           | `integer`      | **`primary key`** immigrants (i94 country code)                              |
+|  Country_Names            | string         | immigrants  (i94 country) name                                               |
 
 
 
-| **State_Codes_df**        |                |    DIMENSION TABLE                                    |
-|---------------------------|----------------|-------------------------------------------------------|
-| **Column Name**           | **Data Type**  | **Column Description**                                |
-| `State_Codes`             | `string`       | **`primary key`** immigrants (i94 state code)         |
-| State_Names               | string         | immigrants (i94 state) name                           |
+| **State_Codes_df**        |                |    DIMENSION TABLE                                                           |
+|---------------------------|----------------|------------------------------------------------------------------------------|
+| **Column Name**           | **Data Type**  | **Column Description**                                                       |
+| `State_Codes`             | `string`       | **`primary key`** immigrants (i94 state code)                                |
+| State_Names               | string         | immigrants (i94 state) name                                                  |
 
 
 
