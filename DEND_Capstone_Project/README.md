@@ -156,7 +156,7 @@ For clean visual check out this [link]()
 
 **4.2** Include a data dictionary
 
-> My data dictionary for this data model is available [Here]()
+> My data dictionary for this data model is available [Here](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Data_Dictionary.md)
 
 **4.3** Run data quality checks to ensure the pipeline ran as expected
 
