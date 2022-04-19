@@ -102,29 +102,32 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 
 
 `C.` **`US-Cities-Demographics.csv` `Data quality issues`:** 
-+ Total number of records with this table was 2891 and 12 columns
-+ Only 3 columns has null values in range (13 to 16)
-+ Distinct city count 567 and state count is 49
-+ 5 distinct Races embedded with this dataset on 'Race-column'
++ Total number of records with this table was 2891 rows and 12 columns.
++ Good news, only 3 columns has null values in range (13 to 16).
 + All the data column-type came with `string-format`
++ Distinct city count 567 and state count is 49
++ 5 distinct Races are embedded with this dataset on 'Race-column'
 
 **`Cleaning steps:`**
-+ So I had change them to appropriate data types (int,float).
-+ There were some(5) distinct demographic race present in the race column. 
-+ I did separate them with a pivot table
++ So I had change columns to appropriate data types (int, float).
++ Pivoted out demographic race data into five different columns. 
++ Chose conversion of upper(City & State) columns for clarity.
 
 `D.` **`Airport Code:` `data quality issues:`**
-+ Total number of records is 55075 with 14 columns 
-+ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated
-+ There are 279 airports was closed
-+ Number of airports appear more than once in the data set
-+ Latitude and longitude are in a single column separated by commas
++ Total number of records is 55075 with 14 columns. 
++ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated.
++ We had 5 columns with large number of null values in it.
++ For instance iata_code has 45886 and local_code column has 26389 number of null values.
++ There are 279 airports was closed.
++ Number of airports appear more than once in the data set.
++ Latitude and longitude are in a single column separated by commas.
 
 **`Cleaning steps:`**
-+ I've removed the airport identification codes(iata_code) those are missing
-+ Excluded `iata_Codes` are came with `zero` values in it
-+ Eliminated airports those are closed and duplicated
-+ Separated longitude and latitude data for clarity
++ I renamed all the column to make them more menaningful.
++ I've removed the airport identification codes(iata_code) those are missing.
++ Excluded `iata_Codes` are came with `zero` values in it.
++ Eliminated airports those are closed and duplicated.
++ Separated longitude and latitude data for clarity, which increased 1 additional column.
 
 `D.` **`I94_SAS_Labels_Description file:` `data quality issues:`**
 + There are 8 columns came coded with immigration file
