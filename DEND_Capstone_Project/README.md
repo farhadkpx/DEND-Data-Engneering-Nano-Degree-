@@ -180,7 +180,7 @@ Clearly state the rationale for the choice of tools and technologies for the pro
 **5.2** Describe how you would approach the problem differently under the following scenarios:
 + If the data was increased by 100x:
 
-Under that kind of circumstances I'd run these working processes on a more powerful computing environment with AWS. For instance, I'd use Amazon Elastic MapReduce (EMR) for Pyspark and Amazon managed workflows for Apache Airflow (MWAA) for Airflow.
+Under that kind of scenario I'd run these coding processes on a more powerful computing environment with AWS. For instance, I'd use Amazon EMR (Elastic MapReduce) in a managed cluster platform that simplifies running big data frameworks as such Apache Spark. EMR can process and analyze vast amounts of data and lets user transform and move large amounts of data into and out of other AWS data stores and databases, such as Amazon Simple Storage Service (Amazon S3) and Amazon DynamoDB.
 
 + If the pipelines were run on a daily basis by 7am:
 
