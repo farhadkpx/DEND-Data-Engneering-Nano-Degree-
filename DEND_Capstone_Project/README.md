@@ -130,14 +130,16 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 + Separated longitude and latitude data for clarity, which increased 1 additional column.
 
 `D.` **`I94_SAS_Labels_Description file:` `data quality issues:`**
-+ There are 8 columns came coded with immigration file
-+ All those columns are decoded with extensive regular expression issued
-+ Data types came with string type
++ This is a single file with SAS data format came with coded label related to City, State, Port and Country codes.
++ All those columns are decoded with extensive regular expression issue.
++ Data types came with string type.
++ Each columns are mired with extensive regular expression mixed up.
 
 **`Cleaning steps:`**
-+ I had to use rigorous regular expression programming steps to clean those code
-+ I used slicing, splitting, stripping & replacing functions to clean codes
-+ I casted some string data type to integer type
++ I had to use rigorous regular expression programming steps to clean those code.
++ I used slicing, splitting, stripping & replacing functions to clean codes.
++ I cast some string data type to integer type.
++ Eventually I came up with 3 different data-label columns(Port,Country,State).
 
 ### `Step 3:` Define the Data Model
 ---------------------------------------------------------------------------------------------------------------------
