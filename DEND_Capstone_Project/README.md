@@ -71,17 +71,18 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 #### `DATA-QUALITY` & `CLEANING:`
 
 `A.` **`I94 Immigration Data:` `Data quality issues`:** 
-+ Total number of records/rows are 3096313.. and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique.
++ Total number of records/rows are 3096313.. and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique without any duplicated ID-columns.
 + The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format
-+ The arrival date is populated for all records.... 
-+ There are 8 columns all are coded with values not clear what they meant
-+ Some of the records have departure dates that is before the arrival date. So I had to transform the SAS date to pyspark date format to make it intelligible.
++ The arrival & departure dates for all records are in string format not date?
++ There are 7 columns (DTADFILE, VISAPOST, OCCUP, ENTDEPA, ENTDEPD, ENTDEPU, DTADDTO) all are coded with values not clear what they meant?
++ Some of the records have departure dates that is before the arrival date?
 
 **`Cleaning steps:`**
-+ Practically renamed all the columns for clarity
-+ Transforming SAS date to PySpark date format
-+ Created 4 different tables(...) for simplicity of analysis
-+ Extensive dated segmentation of both arrival & departure columns
++ Practically I renamed all the columns for clear understanding of the columns-table.
++ Transformed (arrival & departure) SAS dates to PySpark date format.
++ Created 4 different tables(visa category..mode of travel..&)for simplicity of data analysis.
++ Developed extensive dated segmentation of both arrival & departure date columns.
++ Eliminated all unnecessary(7) columns from the table.
 
 
 `B.`**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
