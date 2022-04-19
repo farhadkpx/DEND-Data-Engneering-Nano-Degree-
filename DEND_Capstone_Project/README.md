@@ -86,18 +86,19 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 
 
 `B.`**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
-+ Number of records with this table: 8,599,212 and columns: 8
-+ The data > date recorded since 18th century(from year `1743` to `2013`)
-+ We only had 364,130 temperature data was missing out of more than 8 million
-+ We have 159 distinct countries and 3448 city
-+ Columns dt, AverageTemperature, aAverageTemperatureUncertainty, Latitude, Longitude all are string data type
++ Number of records with this table: 8,599,212 rows and 8 columns (huge data set).
++ The data > `date` recorded since 18th century(from year `1743` to `2013`)..(wide range issues).
++ We had 364,130 row temperature values were missing out of more than 8 million.
++ We have 159 distinct countries and 3448 city (wide scope of areas).
++ All column values are given string-data type.
 
 **`Cleaning steps:`**
-+ I changed the `dt` column to `date` type
-+ Columns (`AverageTemperature`, `AverageTemperatureUncertainty`, `Latitude`, `Longitude`) converted to `integer` data type
-+ I chose to limit data date access from year `2000` to available.
++ I changed the `dt` column to `date` type.
++ Converted `AverageTemperature`, `AverageTemperatureUncertainty` to float-data-type.
++ Converted Year, Day, Month_Num to int and Month_Name to string data type.
++ I chose to limit date access from year `2000` to available.
 + Disposed of all the null-temperature values from the table.
-+ Selected temperature data only for USA.
++ Scoped my analytic temperature data limited to USA only.
 
 
 `C.` **`US-Cities-Demographics.csv` `Data quality issues`:** 
