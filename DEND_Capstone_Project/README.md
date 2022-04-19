@@ -150,7 +150,7 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 #### 3.1 Conceptual Data Model
 I chose a star schema for my conceptual data model. Creating a star schema was challenging, seeing the relationship among these tables are rather divergent. So I did sliced out 3 tables from the `immigration table` into `Fact_Immigration_Inclusive`, `individua...`, `dated arvial`. I created some dimenstin table from SAS Label table `state`, `country`, `port-city-state`. Two other dimension table `temp table` & `demography table`. 
 
-For clean visual check out this [link]()
+For clean visual check out this [Data_Model](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Immigration_Fact_ER%20-%20Database%20ER%20diagram.png)
 
 #### 3.2 Designing Data Pipelines
 `etl.py:` I created a `Data model to pipeline` with `etl.py` script file to read, transform all the relevant data files made them ready for immediately available for data analysis. After the needed data-cleaning transformation, I did sent them back to cloud data storage source as a parquet file. By following the data model any analysts can filter, join and extract out needed data and learn valuable insight.
