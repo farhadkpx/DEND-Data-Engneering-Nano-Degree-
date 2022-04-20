@@ -206,3 +206,10 @@ We can use Apache Airflow with set timeline (in this case around 6:00 am) with e
 
 Amazon Redshift can handle up to 500 connections securely and efficiently with live data sharing within across AWS user accounts. User can easily, instantly and securely query live data from a Redshift cluster with permissions. So we can move this database to Redshift with confidence to handle this kind of needed request. The cost structure should be explored as needed.
 
+----------------------------------------------------------------------------------------
+Future Improvements
+There are several incompletions within these data sets. We will need to collect more data to get a more complete SSOT database.
+
+Immigration data set is based at 2016 but temperature data set only get to 2013 which is not enough for us to see the temperature change at 2016.
+
+Missing state and city in label description file. This makes it hard to join immigration tables and demography tables.
