@@ -193,7 +193,8 @@ Under that kind of scenario I'd run these coding processes on a more powerful co
 
 + If the pipelines were run on a daily basis by 7am:
 
-We could use Apache Airflow to run my ETL data pipeline with the timeline preset before 7:00 AM and populate a report. Apache Airflow works with pyspark great. Combining ....
+We can use Apache Airflow with set timeline (in this case around 6:00 am) with each DAG to run the whole ETL data pipeline on  hourly, daily basis or as needed. Apache Airflow does compatible integration with Python and AWS programming working environment. Also we can use Service Level Agreement (SLA) of sending emails in the event a task exceeds its expected time frame from the start of the DAG execution using time delta. These entries can be utilized for monitoring the performance of both the Airflow DAGs.
+
 
 + If the database needed to be accessed by 100+ people:
 
