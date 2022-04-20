@@ -163,40 +163,46 @@ For clear visual understanding check out the data model interconnection here: [D
 --------------------------------------------------------------------------------------------------------------
 **4.1** Create the data pipelines and the data model
 
+The detail step by step processes of the data-model creation steps can be found here with Jupyter notebook [Final_Capstone_Project_Data_Analysis
+]()
+
 **4.2** Include a data dictionary
 
 > My data dictionary for this data model is available [Here](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Data_Dictionary.md)
 
 **4.3** Run data quality checks to ensure the pipeline ran as expected
 
-> Data quality checks is done with codes inside the script `etl.py` file
+**Data quality checking criteria:**...
++ Ensuring no empty table after running the ETL data pipeline.
++ Data model clearly connects the dimension table with fact table.....
++ Check here.....[Data quality]()
++ Integrity constraints on the relational database (e.g., unique key, data type, etc.)...
 
-**Data quality checking criteria:**
 
-+ Integrity constraints on the relational database (e.g., unique key, data type, etc.)
-+ Unit tests for the scripts to ensure they are doing the right thing
-+ Source/count checks to ensure completeness
-
-#### `Step 5:` Complete Project Write Up
+#### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
 What's the goal? What queries will you want to run? How would Spark or Airflow be incorporated? Why did you choose the model you chose?
 Clearly state the rationale for the choice of tools and technologies for the project.
 
 **Document the steps of the process.**
-**5.1** Propose how often the data should be updated and why.
 
+**5.1: Propose how often the data should be updated and why.**
++ The I94 `immigration data` and `temperature data` is updated on a monthly basis officially. These data update should follow that guideline.
++ `Demography data` can be updated semi-annually since it's a time conusming maturing process.
++ We can follow the official guideline in collection, distribution and updating all the datasets.
 
-**5.2** Describe how you would approach the problem differently under the following scenarios:
-+ If the data was increased by 100x:
+**5.2: Describe how you would approach the problem differently under the following scenarios:**
+
+**A. If the data was increased by 100x:**
 
 Under that kind of scenario I'd run these coding processes on a more powerful computing environment with AWS. For instance, I'd use Amazon EMR (Elastic MapReduce) in a managed cluster platform that simplifies running big data frameworks as such Apache Spark. EMR can process and analyze vast amounts of data and lets user transform and move large amounts of data into and out of other AWS data stores and databases, such as Amazon Simple Storage Service (Amazon S3) and Amazon DynamoDB.
 
-+ If the pipelines were run on a daily basis by 7am:
+**B. If the pipelines were run on a daily basis by 7am:**
 
 We can use Apache Airflow with set timeline (in this case around 6:00 am) with each DAG to run the whole ETL data pipeline on  hourly, daily basis or as needed. Apache Airflow does compatible integration with Python and AWS programming working environment. Also we can use Service Level Agreement (SLA) of sending emails in the event a task exceeds its expected time frame from the start of the DAG execution using time delta. These entries can be utilized for monitoring the performance of both the Airflow DAGs.
 
 
-+ If the database needed to be accessed by 100+ people:
+**C. If the database needed to be accessed by 100+ people:**
 
 Amazon Redshift can handle up to 500 connections securely and efficiently with live data sharing within across AWS user accounts. User can easily, instantly and securely query live data from a Redshift cluster with permissions. So we can move this database to Redshift with confidence to handle this kind of needed request. The cost structure should be explored as needed.
 
