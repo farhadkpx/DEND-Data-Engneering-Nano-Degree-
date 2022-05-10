@@ -4,11 +4,11 @@
 | **Column Name**             | **Data Type**  | **Description**                                                           |
 | `Immigration_Id`            | `integer`      | **`Primary key`**                                                         |
 | Admission_Num               | bigint         | (FK) `Dated_Arrival_Departure` & `Individual_Immigrants_Records` table    |
-| Citizenship_Country_Code    | integer        | (FK) to `Country_Codes_df` table on immigrant's citizenship country code  |
-| Residency_Country_Code      | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code      |
-| Current_State_Code          | string         | (FK) to `State_Codes_df` based on current state_code of immigrants        |
+| Citizenship_Country         | integer        | (FK) to `Country_Codes_df` table on immigrant's citizenship country code  |
+| Residency_Country           | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code      |
+| Current_State               | string         | (FK) to `State_Codes_df` based on current state_code of immigrants        |
 | Visa_Type                   | string         | Official visa type category of immigrants assigned by the department      |
-| Visa_Category               | string         | Definition of visa code type category                                     |
+| Visa_Purpose                | string         | What reason visa was issued to an immigrants or toursts                   |
 | Immigration_Year            | integer        | The year an immigrant entered the country                                 |
 | Immigration_Month           | integer        | The month an immigrant entered the country                                |
 | Port_Code                   | string         | `(FK)` to `Port_locations_df` where immigrants arrived at a US port       |
@@ -26,10 +26,10 @@
 | Individual_Immigrants_Records |              |   DIMENSION TABLE                                                          |
 ------------------------------|----------------|----------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                            |
-| `Admission_Num`             | `bigint`       | **`Primary key`**                                                          |
+| `Entry_Num`                 | `bigint`       | **`Primary key`**                                                          |
 | Immigration_Id              | integer        | `(FK)` the matching primary key of `Fact-Immigration` table                |
 | Arrival_Date                | date           | The arrival_date of an immigrant in USA                                    |       
-| Citizenship_Country_Code    | integer        | Immigrants citizenship country code                                        |
+| Citizenship_Country         | integer        | Immigrants citizenship country code                                        |
 | Gender                      | string         | Official gender of an immigrant                                            |
 | Immigrants_Age              | integer        | Age of an immigrant                                                        |  
 | Departure_Date              | date           | The departure_date of an immigrant from USA                                |
@@ -40,9 +40,9 @@
 | Dated_Arrival_Departure     |                |   DIMENSION TABLE                                                          |
 |-----------------------------|----------------|----------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                            |
-| `Arrival_Date`              | `date`         | **`Primary key`** The Arrival_Date of an immigrant                         |
+| `Entry_Date`                | `date`         | **`Primary key`** The Arrival_Date of an immigrant                         |
 | Admission_Num               | bigint         | `(FK)` in 'immigration fact' table                                         |      
-| Citizenship_Country_Code    | integer        | The country code of an incoming immigrant                                  |
+| Citizenship_Country         | integer        | The country code of an incoming immigrant                                  |
 | Arrival_Year                | integer        | Arrival year in the 'yyyy' format, for instance : 2016                     |
 | Arrival_Month               | string         | Arrival month in the 'MMMM' format such: January-December                  |
 | Arrival_Day                 | integer        | Arrival day in the 'dd' format ranges: 1 to 31                             |
@@ -58,20 +58,21 @@
 ------------------------------------------------------------------------------------------------------------------------------------
 
 
-| **US_Cities_Temperature** |                    |     DIMENSION TABLE                                                      |
+| **dim_US_Cities_Tempr**   |                    |     DIMENSION TABLE                                                      |
 |---------------------------|--------------------|--------------------------------------------------------------------------|
 | **Column Name**           | **Data Type**      | **Description**                                                          |
 | `Date_Records`            | `date`             | **`primary key`** (date when temperature recorded)                       |  
-| Avg_Temp                  | float              | The recorded average temperature of a City on a specific date            |                                  
-| City                      | string             | `(FK)` City name where temperature recorded                              |
+| Avg_Temp                  | float              | The recorded average temperature of a City on a specific date            |                           
+| US_City                   | string             | `(FK)` City name where temperature recorded                              |
 | Country                   | string             | Name of the country, City is located                                     |
 | Year                      | integer            | Year in 'yyyy' date format recorded                                      |
 | Month_Name                | string             | Month_Name in 'MMMM' format recorded                                     |
 | Month_Num                 | integer            | Month_Num in 'MM' format recorded                                        |
 | Day                       | integer            | Day in 'dd' format recorded                                              |
-
+| US_Port                   | string             | Port code where the city is located                                      |
+| Port_State                | string             | State code where US Port & City is located                               |
  
- | **US_City_Demog_Race**                      |                |      **DIMENSION TABLE**                                  |
+ | **dim_US_City_Demog_Race**                  |                |      **DIMENSION TABLE**                                  |
  ----------------------------------------------|----------------|-----------------------------------------------------------|
  | **Column Name**                             | **Data Type**  | **Description**                                           |
  | `City`                                      | `string`       | **`primary key`**                                         |
@@ -87,7 +88,9 @@
  | Asian                                       | int            | Asian populatin in US cities                              |
  | Black or African-American                   | int            | counting Black or African-American population             |
  | hispanic_or_latino_population               | int            | Hispanic or Latino population in the city                 |
- | white                                       | int            | White population  in US city                              |   
+ | white                                       | int            | White population  in US city                              |  
+ | US_Port                                     | string         | Port code where the city is located                       |
+ | Port_State                                  | string         | State code where US Port & City is located                |
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
