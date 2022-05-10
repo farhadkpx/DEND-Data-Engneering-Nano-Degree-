@@ -3,16 +3,16 @@
 ------------------------------|----------------|---------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                           |
 | `Immigration_Id`            | `integer`      | **`Primary key`**  Immigrants unique identifier                           |
-| Admission_Num               | bigint         | (FK) to `Individual_Immigrants_Records` table & others                    |
-| Citizenship_Country         | integer        | (FK) to `Country_Codes_df` table on immigrant's citizenship country code  |
-| Residency_Country           | integer        | (FK) to `Country_Codes_df` table on immigrant residency_country_code      |
-| Current_State               | string         | (FK) to `State_Codes_df` based on current state_code of immigrants        |
+| `Admission_Num`             | `bigint`       | (FK) to `Individual_Immigrants_Records` table & `dated_arrival` table     |
+| `Citizenship_Country`       | `integer`      | (FK) to `Country_Codes_df` table on immigrant's citizenship country code  |
+| `Residency_Country`         | `integer`      | (FK) to `Country_Codes_df` table on immigrant residency_country_code      |
+| `Current_State`             | `string`       | (FK) to `State_Codes_df` based on current immigrants current state code   |
 | Visa_Type                   | string         | Official visa type category of immigrants assigned by the department      |
 | Visa_Purpose                | string         | What reason visa was issued to an immigrants or toursts                   |
 | Immigration_Year            | integer        | The year an immigrant entered the country                                 |
 | Immigration_Month           | integer        | The month an immigrant entered the country                                |
-| Port_Code                   | string         | `(FK)` to `Port_locations`, `US_City_Temp`, `US_Demog_Race` tables        |
-| Arrival_Date                | date           | `(FK)` to `dim_dated_arrival_departure` table as `Entry_Date`             |
+| `Port_Code`                 | `string`       | `(FK)` to `Port_locations`, `US_City_Temp`, `US_Demog_Race` tables        |
+| `Arrival_Date`              | `date`         | `(FK)` to `dim_dated_arrival_departure` table as `Entry_Date`             |
 | Departure_Date              | date           | The departure_date of an immigrant from USA                               |
 | Immigrants_Age              | integer        | Age of an immigrant                                                       |   
 | Match_Flag                  | string         | FlagString to show match of an immigrants arrival and departure records   |
@@ -29,8 +29,8 @@
 ------------------------------|----------------|----------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                            |
 | `Entry_Num`                 | `bigint`       | **`Primary key`** The official unique admission number of an immigrant     |
-| Immigration_Id              | integer        | `(FK)` the matching primary key of `Fact-Immigration` table                |
-| Arrival_Date                | date           | The arrival_date of an immigrant in USA                                    |       
+| `Immigration_Id`            | integer        | `(FK)` the matching primary key of `Fact-Immigration` table                |
+| `Arrival_Date`              | `date`         | The arrival_date of an immigrant in USA                                    |       
 | Citizenship_Country         | integer        | Immigrants citizenship country code                                        |
 | Gender                      | string         | Official gender of an immigrant                                            |
 | Immigrants_Age              | integer        | Age of an immigrant                                                        |  
@@ -43,7 +43,7 @@
 |-----------------------------|----------------|----------------------------------------------------------------------------|
 | **Column Name**             | **Data Type**  | **Description**                                                            |
 | `Entry_Date`                | `date`         | **`Primary key`** The Arrival_Date of an immigrant                         |
-| Admission_Num               | bigint         | `(FK)` in `fact immigration_table`                                         |      
+| `Admission_Num`             | `bigint`       | `(FK)` in `fact immigration_table`                                         |      
 | Citizenship_Country         | integer        | The country code of an incoming immigrant                                  |
 | Arrival_Year                | integer        | Arrival year in the 'yyyy' format, for instance : 2016                     |
 | Arrival_Month               | string         | Arrival month in the 'MMMM' format such: January-December                  |
@@ -53,7 +53,7 @@
 | Depart_Month                | string         | Departure month in the 'MMMM' format such: January-December                |
 | Depart_Day                  | integer        | Departure day in the 'dd' format ranges: 1 to 31                           |
 | Visa_Type                   | string         | Official type of visa issued                                               |
-| Port_Code                   | string         | Port code where immigrants entered the country                             |
+| `Port_Code`                 | `string`       | Port code with Fact_Immigrantion table                                     |
 
 
 
@@ -72,11 +72,12 @@
 | Day                       | integer            | Day in 'dd' format recorded                                              |
 | `US_Port`                 | string             | **`primary key`** Port code where the immigrant entered in USA           |
 | Port_State                | string             | State code where US Port & City is located                               |
- 
+
+
  | **dim_US_City_Demog_Race**                  |                |      **DIMENSION TABLE**                                  |
  ----------------------------------------------|----------------|-----------------------------------------------------------|
  | **Column Name**                             | **Data Type**  | **Description**                                           |
- | Demog_City                                  | string         | **`primary key`** The city where demography was recorded  |
+ | `Demog_City`                                | `string`       | The city where demography data was recorded               |
  | State_Name                                  | string         | Name of the state where City is located                   |
  | Average_Household_Size                      | float          | Average household size in the US city                     |
  | Male_Population                             | integer        | Male population in US city                                |
@@ -88,9 +89,9 @@
  | Asian_Population                            | int            | Asian populatin in US cities                              |
  | Black_or_African_American                   | int            | counting Black or African-American population             |
  | hispanic_or_latino_population               | int            | Hispanic or Latino population in the city                 |
- | white                                       | int            | White population  in US city                              |  
- | `US_Port`                                   | `string`       | **`primary key`** Immigranst arrival Port codelocated     |
- | Port_State                                  | string         | State code where US Port & City is located                |
+ | white_Population                            | int            | White population  in US city                              |  
+ | `US_Port`                                   | `string`       | **`primary key`** Immigranst arrival Port code            |
+ | `Port_State`                                | `string`       | State code where US Port & City is located                |
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -102,12 +103,11 @@
 |  Port_State               | `string`       | `(FK)` Immigration & Demography table & entrance State                       |
 
 
-| **Country_Codes_df**      |                |      **DIMENSION TABLE**                                                         |
+| **Country_Codes_df**      |                |      **DIMENSION TABLE**                                                     |
 |---------------------------|----------------|------------------------------------------------------------------------------|
 | **Column Name**           | **Data Type**  | **Column Description**                                                       |
 | `Country_Codes`           | `integer`      | **`primary key`** immigrants (i94 country code)                              |
-|  Country_Names            | string         | immigrants  (i94 country) name                                               |
-
+|  Country_Names            | string         | immigrants  (i94 country) names                                              |
 
 
 | **State_Codes_df**        |                |    DIMENSION TABLE                                                           |
