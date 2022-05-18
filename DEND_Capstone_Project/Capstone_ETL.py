@@ -22,47 +22,6 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 
-#====================================================================================================
-#.............................KentHsu............CLOUD ISSUES
-
-# AWS configuration
-#config = configparser.ConfigParser()
-#config.read('capstone.cfg', encoding='utf-8-sig')
-
-#os.environ['AWS_ACCESS_KEY_ID']=config['AWS']['AWS_ACCESS_KEY_ID']
-#os.environ['AWS_SECRET_ACCESS_KEY']=config['AWS']['AWS_SECRET_ACCESS_KEY']
-#SOURCE_S3_BUCKET = config['S3']['SOURCE_S3_BUCKET']
-#DEST_S3_BUCKET = config['S3']['DEST_S3_BUCKET']
-
-#=====================================Rlyer==============================================
-#get config data by reading from dl.cfg
-#config = configparser.ConfigParser()
-#config.read('/home/workspace/dl.cfg')
-
-#os.environ['AWS_ACCESS_KEY_ID']=config.get('AWS','AWS_ACCESS_KEY_ID')
-#os.environ['AWS_SECRET_ACCESS_KEY']=config.get('AWS','AWS_SECRET_ACCESS_KEY')
-#os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
-
-#os.environ["PATH"] = "/opt/conda/bin:/opt/spark-2.4.3-bin-hadoop2.7/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-8-openjdk-amd64/bin"
-
-#os.environ["SPARK_HOME"] = "/opt/spark-2.4.3-bin-hadoop2.7"
-#os.environ["HADOOP_HOME"] = "/opt/spark-2.4.3-bin-hadoop2.7"
-
-#create the spark session
-#def create_spark_session():
-#    """Return a SparkSession object."""
-    
-#    spark = SparkSession \
-#        .builder \
-#        .config("spark.jars.repositories", "https://repos.spark-packages.org/") \
-#        .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:2.7.0,saurfang:spark-sas7bdat:2.0.0-s_2.11") \
-#        .config("spark.hadoop.fs.s3a.multiobjectdelete.enable","false") \
-#        .enableHiveSupport() \
-#        .getOrCreate()
-#    spark.conf.set("mapreduce.fileoutputcommitter.algorithm.version", "2")
-#    return spark
-
-
 #=============================CREATING SPARK SESSION==================================================
 # create the spark session
 #def create_spark_session():
@@ -72,6 +31,7 @@ logger.setLevel(logging.INFO)
 #        .enableHiveSupport().getOrCreate()
 #    return spark
 #---------------------------------------------------------------------
+
 logging.info("Start creating Spark session: ")
 def create_spark_session():
     spark = SparkSession \
