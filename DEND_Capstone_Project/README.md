@@ -161,7 +161,7 @@ For clear visual understanding check out the data model interconnection here: [D
 
 `Apache Airflow:` I chose Apache Airflow to complete this data pipeline because of its ease of use, has ready-to-use operators that can be used to integrate Airflow with S3 and Redshift. It's graphical UI can be used to monitor and manage work flows. It is easy to check the status of tasks and to schedule the tasks.........
 
-#### `Step 4:` Run ETL to Model the Data
+### `Step 4:` Run ETL to Model the Data
 --------------------------------------------------------------------------------------------------------------
 **4.1** Create the data pipelines and the data model
 
@@ -183,7 +183,7 @@ The detail step by step processes of the data-model creation steps can be found 
 **Apache Airflow pipeline GUI:**
 Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loading those files back to fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment.
 
-#### `Step 5:` Project Write Up with feasibility questions:
+### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
 What's the goal? What queries will you want to run? How would Spark or Airflow be incorporated? Why did you choose the model you chose?
 Clearly state the rationale for the choice of tools and technologies for the project.
@@ -197,23 +197,28 @@ Clearly state the rationale for the choice of tools and technologies for the pro
 
 **5.2: Describe how you would approach the problem differently under the following scenarios:**
 
-**A. If the data was increased by 100x:**
+**A. `If the data was increased by 100x:`**
 
 Under that kind of scenario I'd run these coding processes on a more powerful computing environment with AWS. For instance, I'd use Amazon EMR (Elastic MapReduce) in a managed cluster platform that simplifies running big data frameworks as such Apache Spark. EMR can process and analyze vast amounts of data and lets user transform and move large amounts of data into and out of other AWS data stores and databases, such as Amazon Simple Storage Service (Amazon S3) and Amazon DynamoDB.
 
-**B. If the pipelines were run on a daily basis by 7am:**
+**B. `If the pipelines were run on a daily basis by 7am:`**
 
 We can use Apache Airflow with set timeline (in this case around 6:00 am) with each DAG to run the whole ETL data pipeline on  hourly, daily basis or as needed. Apache Airflow does compatible integration with Python and AWS programming working environment. Also we can use Service Level Agreement (SLA) of sending emails in the event a task exceeds its expected time frame from the start of the DAG execution using time delta. These entries can be utilized for monitoring the performance of both the Airflow DAGs.
 
 
-**C. If the database needed to be accessed by 100+ people:**
+**C. `If the database needed to be accessed by 100+ people:`**
 
 Amazon Redshift can handle up to 500 connections securely and efficiently with live data sharing within across AWS user accounts. User can easily, instantly and securely query live data from a Redshift cluster with permissions. So we can move this database to Redshift with confidence to handle this kind of needed request. The cost structure should be explored as needed.
 
+### `Step 6:` Analytical query purview:
+
+Here I will share some query and their visual results I peroformed with my notebook and Apache Airflow...?
+
+
 ----------------------------------------------------------------------------------------
-Future Improvements
-There are several incompletions within these data sets. We will need to collect more data to get a more complete SSOT database.
+#### Future Improvements:
 
-Immigration data set is based at 2016 but temperature data set only get to 2013 which is not enough for us to see the temperature change at 2016.
++ Immigration data set is based at 2016 but temperature data set only get to 2013 which is not enough for us to see the temperature change at 2016.
 
-Missing state and city in label description file. This makes it hard to join immigration tables and demography tables.
++ Missing state and city in label description file. This makes it hard to join immigration tables and demography tables.
++ We could have a table with immigrants work...?
