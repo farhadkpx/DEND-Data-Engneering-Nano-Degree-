@@ -180,8 +180,8 @@ The detail step by step processes of the data-model creation steps can be found 
 + Check here.....[Data quality]()..?
 + Integrity constraints on the relational database (e.g., unique key, data type, etc.)...?
 
-**Apache Airflow pipeline GUI:**...?
-Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loads those files to fact and dimension tables. The data quality checks are also taken care of here. This is a completer automated data pipeline processes done in the cloud environment.
+**Apache Airflow pipeline GUI:**
+Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loading those files back to fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment.
 
 #### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
