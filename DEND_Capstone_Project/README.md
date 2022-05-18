@@ -150,14 +150,16 @@ I explored those datsets using PySpark programmnig language in Jupyter notebook[
 #### 3.1 Conceptual Data Model
 I chose a star schema data model for my conceptual data model. Creating a star schema was challenging, seeing the relationship among these tables are rather divergent and disparate. So I did sliced out 3 dimension tables from the `Immigration table` table into `Fact_Immigration_Inclusive`, `Individual_Immigrants_Records` and `Dated_Arrival_Departure` tables. I created 3 dimension tables from `I94_SAS_Labels_Descriptiontable` table into `US_Port_Code_df`, `Country_Code_df`, `US_State_Code` tables. 
 
-Finally, I created 2 other dimension table `US_City_Temp` & `US_City_Demog_Race` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious but convergence among Fact and dimension tables are efficient while they can be connected indirectly and carefully. So I added multiple query with my [link]() notebook how this star-schema model is efficient.....
+Finally, I created 2 other dimension table `US_City_Temp` & `US_City_Demog_Race` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious but convergence among Fact and dimension tables are efficient while they can be connected indirectly and carefully. So I added multiple query with my [link]() notebook how this star-schema model is efficient.....?
 
 For clear visual understanding check out the data model interconnection here: [Data_Model](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Star_Diagram_Dictionary/Immigration_Fact_ER_Star_Schema_Diagram.png)
 
 #### 3.2 Designing Data Pipelines
 `etl.py:` I created a `Data model to pipeline` with `etl.py` script file to read, transform all the relevant data files made them ready for immediately available for data analysis. After the needed data-cleaning transformation, I did sent them back to cloud data storage source as a parquet file. By following the data model any analysts can filter, join and extract out needed data and learn valuable insight.
 
-`AWS Redshift:` I chose Amazon Redshift to store and analyze data, because redshift can efficient handle large amount of analytical data...
+`AWS Redshift:` I chose Amazon Redshift to store and analyze data, because redshift can efficient handle large amount of analytical data...?
+
+`Apache Airflow:` I chose Apache Airflow to complete this data pipeline because of its ease of use, has ready-to-use operators that can be used to integrate Airflow with S3 and Redshift. It's graphical UI can be used to monitor and manage work flows. It is easy to check the status of tasks and to schedule the tasks.........
 
 #### `Step 4:` Run ETL to Model the Data
 --------------------------------------------------------------------------------------------------------------
@@ -174,10 +176,12 @@ The detail step by step processes of the data-model creation steps can be found 
 
 **Data quality checking criteria:**...
 + Ensuring no empty table after running the ETL data pipeline.
-+ Data model clearly connects the dimension table with fact table.....
-+ Check here.....[Data quality]()
-+ Integrity constraints on the relational database (e.g., unique key, data type, etc.)...
++ Data model clearly connects the dimension table with fact table.....?
++ Check here.....[Data quality]()..?
++ Integrity constraints on the relational database (e.g., unique key, data type, etc.)...?
 
+**Apache Airflow pipeline GUI:**...?
+Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loads those files to fact and dimension tables. The data quality checks are also taken care of here. This is a completer automated data pipeline processes done in the cloud environment.
 
 #### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
