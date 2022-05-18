@@ -152,7 +152,7 @@ I chose a star schema data model for my conceptual data model. Creating a star s
 
 Finally, I created 2 other dimension table `US_City_Temp` & `US_City_Demog_Race` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious but convergence among Fact and dimension tables are efficient while they can be connected indirectly and carefully. So I added multiple query with my [link]() notebook how this star-schema model is efficient.....
 
-For clear visual understanding check out the data model interconnection here: [Data_Model](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Immigration_Fact_ER%20-%20Database%20ER%20diagram.png)
+For clear visual understanding check out the data model interconnection here: [Data_Model](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Star_Diagram_Dictionary/Immigration_Fact_ER_Star_Schema_Diagram.png)
 
 #### 3.2 Designing Data Pipelines
 `etl.py:` I created a `Data model to pipeline` with `etl.py` script file to read, transform all the relevant data files made them ready for immediately available for data analysis. After the needed data-cleaning transformation, I did sent them back to cloud data storage source as a parquet file. By following the data model any analysts can filter, join and extract out needed data and learn valuable insight.
