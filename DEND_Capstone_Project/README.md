@@ -60,12 +60,10 @@ We'll extract out Country Code, State Code, Port City and Port Codes from this t
 
 
 ### `Step 2:`  Explore and Assess the Data
---------------------------------------------------------------------------------------------------------------
->  Explore the data to identify data quality issues, like missing values, duplicate data, etc. `(Guideline)`
->  
->  Document steps necessary to clean the data `(Guideline)`
+--------------------------------------------------------------------------------------------------------------------------------------
+All 5 tables needed some level of data cleaning. These data quality issues are mostly ensued from missing data values, duplicate data, mismatch data type, null values etc. Here I'll explain in limited detail what kind of data cleaning was done with these tables.
 
-I explored those datsets using PySpark programmnig language in Jupyter notebook[link].
+I used `PySpark` in reading, exploring and cleaning data tables in my Jupyter notebook[link].
 
 #### `DATA-QUALITY` & `CLEANING:`
 
