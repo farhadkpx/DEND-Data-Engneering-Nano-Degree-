@@ -42,9 +42,9 @@ The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explo
 This table contains information about US airports with their details as such airport type, location and GPS coordinates. It comes from [datahub](https://datahub.io/core/airport-codes#data), which is a in csv file format.
 
 `LABEL description file:`
-This is a SAS data label file define column labels corresponds to 'immigration' data sets mostly. Since lot of data-columns came with the immigration dataset in a coded format, this label file will help us create an intelligible meaning. [data source]()
+This is a SAS data label file decodes column labels corresponds to some 'immigration' data columns. Since lot of data-columns with the immigration dataset came in a coded format, this label file will help us create an intelligible face to those columns. [data source](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/DEND_Capstone_Project/Data_Tables)
 
-We'll extract/translate out Country Code, State Code, Port City and Port Codes to match with our immigration data sets.
+We'll extract out Country Code, State Code, Port City and Port Codes from this table to match with our immigration data sets.
 
 `A.` `Country Code:` For instance we'll extract out country names corresponding to `i94CIT` &  `i94RES` codes that are found in the immigration data. 
 
