@@ -21,29 +21,28 @@ As a data engineer my job with this project is to develope a final clean data pr
 
 `Step` `5:` **Addressing some hypthetical scenario**
 
-`Step` `6:` **Analytical query dispaly**
+`Step` `6:` **Analytical query display**
 
 
 ### `Step 1:` Scope the Project and Gather Data
-With this project I'll create multiple clean data sets ready for immediate analysis to quickly gather insights from the data sets.
-The clean data tables will be loaded into S3-bucket or in a Amazon Redshift  as parquet files using PySpark programming language. Those file will then be loaded into Amazon Redshift ......>> using pipeline created using Airflow.
+I'll create multiple clean data sets with this project those should be ready for immediate analysis to quickly gather insights from the data sets. The clean data tables will be loaded through a data pipeline into S3-bucket or in a Amazon Redshift  as parquet files using PySpark. On this progression, I'd also use an Apache Airflow processes to automate my data pipeline. 
 
 **Describing Data Sets used:**
 
 `I94 Immigration Data:`
-The immigration data comes from the [US National Tourism and Trade Office](https://www.trade.gov/national-travel-and-tourism-office). It includes information about people entering the United States with any immigrats year and month, arrival and departure dates, age and year of birth of immigrant, arrival city, port, current residence state, travel mode (air, sea), visa type etc. .....
+The immigration data comes from the [US National Tourism and Trade Office](https://www.trade.gov/national-travel-and-tourism-office). It includes detail information about immigrants entering into United States as such year and month, arrival and departure dates, age and year of birth of immigrant, arrival city, port, current residence state, travel mode (air, sea), visa type etc.
 
 `World Temperature Data:`
-This dataset came from Kaggle. This dataset includes both world and US temperatures. You can read more about it [kaggle](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data).
+This dataset came from Kaggle. This dataset includes both world and US City temperatures. You can read more about it from [kaggle](https://www.kaggle.com/datasets/berkeleyearth/climate-change-earth-surface-temperature-data).
 
-`U.S. City Demographic Data:`
-The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/). It includes demographic information about US cities, with median age, total population, and specific populations (male vs female, foreign-born, different races, etc.). The data is in csv format....
+`World City Demographic Data:`
+The demographic data comes from [OpenSoft](https://public.opendatasoft.com/explore/dataset/us-cities-demographics/export/). It includes demographic information about world and US cities, with median age, total population, and specific populations (male vs female, foreign-born, different races columns) which is in csv format.
 
 `Airport Code Table:`
-This is a simple table of airport detail codes and corresponding cities. It comes from [datahub](https://datahub.io/core/airport-codes#data).
+This table contains information about US airports with their details as such airport type, location and GPS coordinates. It comes from [datahub](https://datahub.io/core/airport-codes#data), which is a in csv file format.
 
 `LABEL description file:`
-This is a SAS data type label file icludes column labels used with 'immigration' data sets. Since lot of data-columns came with the immigration dataset in a coded format, this label file will help us create an intelligible values. [data source]()
+This is a SAS data label file define column labels corresponds to 'immigration' data sets mostly. Since lot of data-columns came with the immigration dataset in a coded format, this label file will help us create an intelligible meaning. [data source]()
 
 We'll extract/translate out Country Code, State Code, Port City and Port Codes to match with our immigration data sets.
 
