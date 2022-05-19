@@ -67,43 +67,42 @@ I used `PySpark` in reading, exploring and cleaning data tables in my Jupyter [n
 
 #### `DATA-QUALITY` & `CLEANING:`
 
-`A.` **`I94 Immigration Data:` `Data quality issues`:** 
-+ Total number of records/rows are 3096313.. and the number of distinct immigration_id's (cicid) was also 3096313 which suggests that the column cicid is unique without any duplicated ID-columns.
-+ The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format
+`A.` **`I94 Immigration Data:`  `Data quality issues`:** 
++ Total number of records/rows are 3096313.. and the number of distinct immigration_id's (cicid) was also.. 3096313 which suggests that the column `cicid` is unique without any duplicated ID-columns.
++ The data spans arrival dates in the month of April for the year 2016. The dates provided are SAS dates format...
 + The arrival & departure dates for all records are in string format not date?
 + There are 7 columns (DTADFILE, VISAPOST, OCCUP, ENTDEPA, ENTDEPD, ENTDEPU, DTADDTO) all are coded with values not clear what they meant?
-+ Some of the records have departure dates that is before the arrival date?
 
 **`Cleaning steps:`**
-+ Practically I renamed all the columns for clear understanding of the columns-table.
-+ Transformed (arrival & departure) SAS dates to PySpark date format.
-+ Created 4 different tables(visa category..mode of travel..&)for simplicity of data analysis.
++ Practically I renamed all the columns for clear understanding of the columns-tables.
++ Transformed (arrival & departure) columns from SAS dates to Python date format.
++ Created with assignment 2 different tables(visa category, mode of travel) for reducing data ambiguity.
 + Developed extensive dated segmentation of both arrival & departure date columns.
-+ Eliminated all unnecessary(7) columns from the table.
++ Eliminated all unnecessary(7) columns from the immigration table.
 
 
 `B.`**`GlobalLandTemperaturesByCity.csv:` `data quality issues:`**
 + Number of records with this table: 8,599,212 rows and 8 columns (huge data set).
-+ The data > `date` recorded since 18th century(from year `1743` to `2013`)..(wide range issues).
-+ We had 364,130 row temperature values were missing out of more than 8 million.
-+ We have 159 distinct countries and 3448 city (wide scope of areas).
-+ All column values are given string-data type.
++ The `date` column recorded since 18th century(from year `1743` to `2013`)..(wide range issues).
++ We had 364,130 row temperature values were missing out of more than 8 million rows of data.
++ We have 159 distinct countries and 3448 city (wide scope of locaitons).
++ All column values are given string-data type?
 
 **`Cleaning steps:`**
 + I changed the `dt` column to `date` type.
 + Converted `AverageTemperature`, `AverageTemperatureUncertainty` to float-data-type.
-+ Converted Year, Day, Month_Num to int and Month_Name to string data type.
++ Converted Year, Day, Month_Num to `int` and Month_Name to `string` data type.
 + I chose to limit date access from year `2000` to available.
-+ Disposed of all the null-temperature values from the table.
++ Disposed of all the null-temperature rows from the table. Since temperature table without any value doesn't make any sense?
 + Scoped my analytic temperature data limited to USA only.
 
 
 `C.` **`US-Cities-Demographics.csv` `Data quality issues`:** 
 + Total number of records with this table was 2891 rows and 12 columns.
 + Good news, only 3 columns has null values in range (13 to 16).
-+ All the data column-type came with `string-format`
-+ Distinct city count 567 and state count is 49
-+ 5 distinct Races are embedded with this dataset on 'Race-column'
++ All the data column-type came with `string-format`?
++ Distinct city count 567 and state count is 49.
++ 5 distinct Races are embedded with this dataset on 'Race-column'.
 
 **`Cleaning steps:`**
 + So I had change columns to appropriate data types (int, float).
@@ -112,12 +111,12 @@ I used `PySpark` in reading, exploring and cleaning data tables in my Jupyter [n
 
 `D.` **`Airport Code:` `data quality issues:`**
 + Total number of records is 55075 with 14 columns. 
-+ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) populated.
++ There were only 9189 records have the [iata code](https://airportcodes.io/en/iata-codes/#:~:text=What%20are%20IATA%20codes%3F%20An%20IATA%20code%2C%20consisting,Airport%20has%20the%20%22LHR%22%20as%20the%20IATA%20code.?msclkid=513518aabaac11ec81151a8894006df3) value in it.
 + We had 5 columns with large number of null values in it.
-+ For instance iata_code has 45886 and local_code column has 26389 number of null values.
-+ There are 279 airports was closed.
++ For instance `iata_code has 45886` and `local_code column has 26389` number of `null values`.
++ There are `279 airports` was closed.
 + Number of airports appear more than once in the data set.
-+ Latitude and longitude are in a single column separated by commas.
++ `Latitude` and `longitude` are in a single column separated by commas.
 
 **`Cleaning steps:`**
 + I renamed all the column to make them more menaningful.
@@ -126,17 +125,17 @@ I used `PySpark` in reading, exploring and cleaning data tables in my Jupyter [n
 + Eliminated airports those are closed and duplicated.
 + Separated longitude and latitude data for clarity, which increased 1 additional column.
 
-`D.` **`I94_SAS_Labels_Description file:` `data quality issues:`**
+`E.` **`I94_SAS_Labels_Description file:`  `data quality issues:`**
 + This is a single file with SAS data format came with coded label related to City, State, Port and Country codes.
-+ All those columns are decoded with extensive regular expression issue.
++ All those columns are embroiled with extensive regular expression issues.
 + Data types came with string type.
 + Each columns are mired with extensive regular expression mixed up.
 
 **`Cleaning steps:`**
-+ I had to use rigorous regular expression programming steps to clean those code.
++ I had to use rigorous regular expression programming steps to clean those rows.
 + I used slicing, splitting, stripping & replacing functions to clean codes.
 + I cast some string data type to integer type.
-+ Eventually I came up with 3 different data-label columns(Port,Country,State).
++ Eventually I came up with 3 different data-label columns(Port, Country, State).
 
 ### `Step 3:` Define the Data Model
 ---------------------------------------------------------------------------------------------------------------------
