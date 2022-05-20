@@ -180,16 +180,20 @@ Airfow takes care of reading files from Amazon S3 bucket, populating them into s
 
 ### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
-+ Clearly state the rationale for the choice of tools and technologies for the project.**
+**5.1: Clearly state the rationale for the choice of tools and technologies for the project.**
 
-**5.1: Propose how often the data table should be updated and why.**
++ I used PySpark which is a powerful python based tool to process large amount of data efficiently.
++ Amazon S3 is a highly scalable, secured data storage in the cloud and can be accessed from anywhere in the world. It is very easy to store and retrieve data from S3 storage.
++ I used Apache Airflow to automate, execute, monitor data pipeline tasks as efficiently as needed. 
+
+**5.2: Propose how often the data table should be updated and why.**
 
 + The I94 `immigration data` and `temperature data` is updated on a monthly basis officially. These data update should follow that guideline.
 + `Demography data` can be updated semi-annually since it's a time conusming, expensive and needs maturing processes.
 + `Temperature data` must be updated daily, because without temperature the data table is useless.
 + `Airport table` can be updated with official guideline.
 
-**5.2: Describe how you would approach the problem differently under the following scenarios:**
+**5.3: Describe how you would approach the problem differently under the following scenarios:**
 
 **A. `If the data was increased by 100x:`**
 
