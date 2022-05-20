@@ -161,8 +161,8 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 **4.1** Create the data pipelines and the data model
 
-The detail step by step processes of the data-model creation steps can be found here with Jupyter notebook [Final_Capstone_Project_Data_Analysis
-]()
+The detail step by step processes of the data-model creation is available here with my Jupyter notebook [Final_Capstone_Project_Data_Analysis
+](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Final_Capstone_Project_Data_Analysis.ipynb)
 
 **4.2** Include a data dictionary
 
