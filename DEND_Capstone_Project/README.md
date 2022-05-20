@@ -152,11 +152,9 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 
 
 #### 3.2 Designing Data Pipelines
-`etl.py:` I created a `Data model to pipeline` with `etl.py` script file to read, transform all the relevant data files made them ready for immediately available for data analysis. After the needed data-cleaning transformation, I did sent them back to cloud data storage source as a parquet file. By following the data model any analysts can filter, join and extract out needed data and learn valuable insight.
+`etl.py:` I created my first `Data model to pipeline` with `etl.py` script file to read, explore, transform all the relevant data files and made them immediately available for data analysis. After the needed data-cleaning transformation, I did sent them back to cloud data storage source as a parquet file. By following the data model an analyst can filter, join and extract out needed data and learn valuable insight from them.
 
-`AWS Redshift:` I chose Amazon Redshift to store and analyze data, because redshift can efficient handle large amount of analytical data...?
-
-`Apache Airflow:` I chose Apache Airflow to complete this data pipeline because of its ease of use, has ready-to-use operators that can be used to integrate Airflow with S3 and Redshift. It's graphical UI can be used to monitor and manage work flows. It is easy to check the status of tasks and to schedule the tasks.........
+`Apache Airflow:` I also used Apache Airflow to automate this data pipeline because of its ease of use; it has ready-to-use operators that can be used to integrate Airflow with Amazon S3-bucket. One of the cool thing of Airflow is it's graphical UI which can be used to monitor and manage data pipeline in real time task flows. To automate the data pipeline processes we can schedule all the task in certain frame and use SLA for efficient follow up management.
 
 ### `Step 4:` Run ETL to Model the Data
 --------------------------------------------------------------------------------------------------------------
