@@ -17,7 +17,7 @@ As a data engineer my job with this project is to develope a final clean data pr
 
 `Step` `3:` **Define the Data Model**
 
-`Step` `4:` **Run ETL to Model the Data**
+`Step` `4:` **Run ETL pipeline to Model the Data**
 
 `Step` `5:` **Addressing some hypthetical scenario**
 
@@ -157,8 +157,8 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 
 `Apache Airflow:` I also used Apache Airflow to automate this data pipeline because of its ease of use; it has ready-to-use operators that can be used to integrate Airflow with Amazon S3-bucket. One of the cool thing of Airflow is it's graphical UI which can be used to monitor and manage data pipeline in real time task flows. To automate the data pipeline processes we can schedule all the task in certain frame and use SLA for efficient follow up management.
 
-### `Step 4:` Run ETL to Model the Data
---------------------------------------------------------------------------------------------------------------
+### `Step 4:` Run ETL pipeline to Model the Data
+---------------------------------------------------------------------------------------------------------------------------------------------------
 **4.1** Create the data pipelines and the data model
 
 The detail step by step processes of the data-model creation steps can be found here with Jupyter notebook [Final_Capstone_Project_Data_Analysis
