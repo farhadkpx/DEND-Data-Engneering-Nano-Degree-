@@ -25,6 +25,7 @@ As a data engineer my job with this project is to develope a final clean data pr
 
 
 ### `Step 1:` Scope the Project and Gather Data
+--------------------------------------------------------------------------------------------------------------------------------------
 I'll create multiple clean data sets with this project those should be ready for immediate analysis to quickly gather insights from the data sets. The clean data tables will be loaded through a data pipeline into S3-bucket or in a Amazon Redshift  as parquet files using PySpark. On this progression, I'd also use an Apache Airflow processes to automate my data pipeline. 
 
 **Describing Data Sets used:**
@@ -210,7 +211,7 @@ Amazon Redshift can handle up to 500 connections securely and efficiently with l
 
 
 ### `Step 6:` Analytical query purview:
-
+--------------------------------------------------------------------------------------------------------------------------------------
 Here I will share some query and their visual results I peroformed with my notebook and Apache Airflow...?
 
 #### `Query 1:` "Immigrants Visa Type, Visa Purpose, Number of Immigrants & Staying days: ")
