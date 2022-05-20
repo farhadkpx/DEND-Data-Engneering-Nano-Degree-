@@ -139,14 +139,16 @@ I used `PySpark` in reading, exploring and cleaning data tables in my Jupyter [n
 
 ### `Step 3:` Define the Data Model
 ---------------------------------------------------------------------------------------------------------------------
-> Map out the conceptual data model and explain why you chose that model (`guideline`)
-> 
-> List the steps necessary to pipeline the data into the chosen data model (`guideline`)
++ **Map out the conceptual data model and explain why you chose that model.**
+
+I chose to build a star-schema data model for creating and developing my data pipeline. The apparent inadequate correlation among my fact('immigration table') and all the dimension tables made it difficult to create a star schema model. To limit number of joins among fact & dimension table, I tried to make the dimension tables more independent while they can be connected to fact table with foreign keys rather easily. So most of my dimension tables are more self sustaining and explanatory, which will limit the need for joins between tables to explore out meaningful analytical values from them.
+
++ **List the steps necessary to pipeline the data into the chosen data model.**
 
 #### 3.1 Conceptual Data Model
-I chose a star schema data model for my conceptual data model. Creating a star schema was challenging, seeing the relationship among these tables are rather divergent and disparate. So I did sliced out 3 dimension tables from the `Immigration table` table into `Fact_Immigration_Inclusive`, `Individual_Immigrants_Records` and `Dated_Arrival_Departure` tables. I created 3 dimension tables from `I94_SAS_Labels_Descriptiontable` table into `US_Port_Code_df`, `Country_Code_df`, `US_State_Code` tables. 
+I chose a star schema data model for my conceptual data model. Creating a star schema was challenging, seeing the relationship among these tables are rather divergent and disparate. So I did sliced out 3 tables from the `Immigration table` table into `Fact_Immigration_Table (fact table)`, `Individual_Immigrants_Records(dim)` and `Dated_Arrival_Departure (dim)` tables. I created 3 dimension tables from `I94_SAS_Labels_Descriptiontable` table into `US_Port_Code_df (dim)`, `Country_Code_df (dim)`, `US_State_Code (dim)` tables. 
 
-Finally, I created 2 other dimension table `US_City_Temp` & `US_City_Demog_Race` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious but convergence among Fact and dimension tables are efficient while they can be connected indirectly and carefully. So I added multiple query with my [link]() notebook how this star-schema model is efficient.....?
+Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog_Race (dim)` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious but convergence among Fact and dimension tables are efficient while they can be connected indirectly and carefully. So I added multiple query with my [link]() notebook how this star-schema model is efficient.....?
 
 For clear visual understanding check out the data model interconnection here: [Data_Model](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Star_Diagram_Dictionary/Immigration_Fact_ER_Star_Schema_Diagram.png)
 
