@@ -175,8 +175,8 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 + Data model should clearly connects each of the dimension table with fact table via a foreign key?
 + Integrity constraints on the relational database (e.g., unique key, data type, etc.)...?
 
-**Apache Airflow pipeline GUI:**
-Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loading those files back to fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment. The detail of Airflow codes are available here [Aiflow pipeline]()
+**4.4: Apache Airflow pipeline web UI:**
+> My Airfow DAG's takes care of reading data files from Amazon S3 bucket, copying them into empty staging tables, after some transformations of the data-tables load those files back to empty fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment. Airflow makes the data pipeline testable, maintainable and visual. The detail of Airflow codes are available here [Aiflow pipeline]()
 
 ### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
