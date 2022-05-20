@@ -180,15 +180,14 @@ Airfow takes care of reading files from Amazon S3 bucket, populating them into s
 
 ### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
-What's the goal? What queries will you want to run? How would Spark or Airflow be incorporated? Why did you choose the model you chose?
-Clearly state the rationale for the choice of tools and technologies for the project.
++ Clearly state the rationale for the choice of tools and technologies for the project.**
 
-**Document the steps of the process.**
+**5.1: Propose how often the data table should be updated and why.**
 
-**5.1: Propose how often the data should be updated and why.**
 + The I94 `immigration data` and `temperature data` is updated on a monthly basis officially. These data update should follow that guideline.
-+ `Demography data` can be updated semi-annually since it's a time conusming maturing process.
-+ We can follow the official guideline in collection, distribution and updating all the datasets.
++ `Demography data` can be updated semi-annually since it's a time conusming, expensive and needs maturing processes.
++ `Temperature data` must be updated daily, because without temperature the data table is useless.
++ `Airport table` can be updated with official guideline.
 
 **5.2: Describe how you would approach the problem differently under the following scenarios:**
 
@@ -198,12 +197,13 @@ Under that kind of scenario I'd run these coding processes on a more powerful co
 
 **B. `If the pipelines were run on a daily basis by 7am:`**
 
-We can use Apache Airflow with set timeline (in this case around 6:00 am) with each DAG to run the whole ETL data pipeline on  hourly, daily basis or as needed. Apache Airflow does compatible integration with Python and AWS programming working environment. Also we can use Service Level Agreement (SLA) of sending emails in the event a task exceeds its expected time frame from the start of the DAG execution using time delta. These entries can be utilized for monitoring the performance of both the Airflow DAGs.
+Apache Airflow does compatible integration with Python and AWS programming working environment. We can use Apache Airflow with set timeline (in this case around 6:00 am) with each DAG to run the whole ETL data pipeline on  hourly, daily basis or as needed. Also we can use `Service Level Agreement (SLA)` of sending emails in the event a task exceeds its expected time frame from the start of the DAG execution using time delta. Both of these features can be utilized for monitoring the performance of Airflow DAGs.
 
 
 **C. `If the database needed to be accessed by 100+ people:`**
 
 Amazon Redshift can handle up to 500 connections securely and efficiently with live data sharing within across AWS user accounts. User can easily, instantly and securely query live data from a Redshift cluster with permissions. So we can move this database to Redshift with confidence to handle this kind of needed request. The cost structure should be explored as needed.
+
 
 ### `Step 6:` Analytical query purview:
 
