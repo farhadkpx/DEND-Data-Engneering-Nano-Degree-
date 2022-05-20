@@ -161,23 +161,22 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 **4.1** Create the data pipelines and the data model
 
-The detail step by step processes of the data-model creation is available here with my Jupyter notebook [Final_Capstone_Project_Data_Analysis
+> The detail step by step processes of the data-model creation is available here with my Jupyter notebook [Final_Capstone_Project_Data_Analysis
 ](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Final_Capstone_Project_Data_Analysis.ipynb)
 
 **4.2** Include a data dictionary
 
-> My data dictionary for this data model is available [Here](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Data_Dictionary.md)
+> My data dictionary for this data model is available [Data Dictionary](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Data_Dictionary.md)
 
 **4.3** Run data quality checks to ensure the pipeline ran as expected
 
-**Data quality checking criteria:**...
+**Data quality checking criteria:**...?
 + Ensuring no empty table after running the ETL data pipeline.
-+ Data model clearly connects the dimension table with fact table.....?
-+ Check here.....[Data quality]()..?
++ Data model should clearly connects each of the dimension table with fact table via a foreign key?
 + Integrity constraints on the relational database (e.g., unique key, data type, etc.)...?
 
 **Apache Airflow pipeline GUI:**
-Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loading those files back to fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment.
+Airfow takes care of reading files from Amazon S3 bucket, populating them into staging tables, transforming the data-tables and loading those files back to fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment. The detail of Airflow codes are available here [Aiflow pipeline]()
 
 ### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
