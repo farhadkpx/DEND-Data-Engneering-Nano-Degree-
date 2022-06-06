@@ -9,7 +9,7 @@ class DataQualityOperator(BaseOperator):
     @apply_defaults
     def __init__(self,
                  redshift_conn_id = "",
-                 data_quality_checks = "",...?
+                 data_quality_checks = "" #,...?
                  tables = "",
                  *args, **kwargs):
         
@@ -31,9 +31,9 @@ class DataQualityOperator(BaseOperator):
         # looping through 'data quality checks
         for check in self.data_quality_checks:
             sql_check = check.get('check_sql')...?
-            exp_result = check.get('expected_result')...?
+            exp_result = check.get('expected_result')   #...?
             # saving any null value with the primary key
-            num_records = redshift.get_records(sql_check)[0]..?
+            num_records = redshift.get_records(sql_check)[0] # ..?
             # comparing expected result and sql result
             if num_records[0] != exp_result:
                  error_count += 1
