@@ -26,7 +26,7 @@ class StageToRedshiftOperator(BaseOperator):
         
         self.s3_bucket = s3_bucket
         self.s3_key = s3_key        
-        s3_path = (f"s3://{self.s3_bucket}/{self.s3_key}") /?
+        s3_path = (f"s3://{self.s3_bucket}/{self.s3_key}") # /?
         
         # self.s3_key = self.s3_key.format(**context) /?
 #----------------------------------------------------------------------------        
@@ -67,7 +67,7 @@ class StageToRedshiftOperator(BaseOperator):
             f"Copying data from {self.s3_path} to Redshift {self.destination_table} table"
         )
         
-        redshift.run(self.copy_query(credentials))../?
+        redshift.run(self.copy_query(credentials)) #../?
         
         #.....>>>   redshift.run(self.build_cmd(credentials))../?
         # redshift.run(f"Copying data {self.destination_table} from {self.s3_source_path} with  
