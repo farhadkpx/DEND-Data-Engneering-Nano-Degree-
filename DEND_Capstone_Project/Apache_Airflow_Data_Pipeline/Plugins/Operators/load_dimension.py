@@ -13,8 +13,8 @@ class LoadDimensionOperator(BaseOperator):
                  sql_query = "",
                  columns_sql = "",
                  
-                 truncate = False,...?
-                 delete = "False",....??
+                 truncate = False,   #...?
+                 delete = "False",   #....??
                  *args, **kwargs):
         
         # initializing class constructors
