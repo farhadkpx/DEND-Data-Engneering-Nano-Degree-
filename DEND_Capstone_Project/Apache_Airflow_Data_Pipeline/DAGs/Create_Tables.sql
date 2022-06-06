@@ -12,7 +12,7 @@ CREATE TABLE  IF NOT EXISTS public.dim_Country_Codes (
 	Country_Codes int4 NOT NULL,
 	Country_Names varchar(25),
     CONSTRAINT pkey_Country_Codes PRIMARY KEY (Country_Codes)
-   #--> CONSTRAINT dim_Country_Codes_pkey PRIMARY KEY (Country_Codes)
+  
 );
 
 #---------------STAGING & DIMENSION STATE CODES-----------------------------
@@ -26,7 +26,7 @@ CREATE TABLE  IF NOT EXISTS public.dim_State_Codes (
 	State_Codes varchar(25) NOT NULL,
 	State_Names varchar(25),
     CONSTRAINT pkey_State_Codes PRIMARY KEY (State_Codes)
-    #---> CONSTRAINT dim_State_Codes_pkey PRIMARY KEY (State_Codes)
+  
 );
 
 
@@ -45,11 +45,11 @@ CREATE TABLE  IF NOT EXISTS public.dim_Port_Locations (
     CONSTRAINT pkey_Port_Codes PRIMARY KEY (Port_Codes)
 );
 
-====================== CITY TEMPERATURE ========== STAGING & DIMENSION ==============================
+#====================== CITY TEMPERATURE ========== STAGING & DIMENSION ==============================
 
-#------Should I create a Yearly world city temperature staging table...?
 
-----------------US CITY TEMPERATURE-----------------------------------
+
+#----------------US CITY TEMPERATURE-----------------------------------
 CREATE TABLE IF NOT EXISTS public.Staging_US_City_Temperature (
 	Date_Records    date NOT NULL,
 	US_City         varchar(50),
@@ -76,14 +76,14 @@ CREATE TABLE IF NOT EXISTS public.dim_US_City_Temperature (
     US_Port          varchar(15) NOT NULL,
     Port_State       varchar(25),
 	CONSTRAINT pkey_US_Port PRIMARY KEY (US_Port)
-    #---> CONSTRAINT dim_US_City_Temperature_pkey PRIMARY KEY (US_Port)
+    
 );
 
-#------Should I create a Yearly or Monthly Yearly city temperature staging table...?
 
-================= DEMOGRAPHY ========== STAGING & DIMENSION ===================================
 
--------------------------- STAGING ----------------------------------------
+#================= DEMOGRAPHY ========== STAGING & DIMENSION ===================================
+
+#-------------------------- STAGING ----------------------------------------
 CREATE TABLE IF NOT EXISTS public.Staging_US_City_Demog_Race (
     Demog_City                varchar(50) NOT NULL,
     State_Name                varchar(25),
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS public.Staging_US_City_Demog_Race (
     Port_State                varchar(50)
 );
 
-------------------------DIMENSION-----------------------------------
+#------------------------DIMENSION-----------------------------------
 CREATE TABLE IF NOT EXISTS public.dim_US_City_Demog_Race (
     Demog_City                varchar(50) NOT NULL,
     State_Name                varchar(25),
@@ -122,11 +122,11 @@ CREATE TABLE IF NOT EXISTS public.dim_US_City_Demog_Race (
     US_Port                   varchar(50),
     Port_State                varchar(50),                                
     CONSTRAINT  pkey_US_Port PRIMARY KEY (US_Port)
-    #---> CONSTRAINT dim_US_City_Demog_Race_pkey PRIMARY KEY (US_Port)
+   
 );
     
-=========================== IMMIGRAITON DETAILS ================== STAGING & DIMENSION ===================
---------------Fact_Immigration_Inclusive---------------------------
+#=========================== IMMIGRAITON DETAILS ================== STAGING & DIMENSION ===================
+#--------------Fact_Immigration_Inclusive---------------------------
 
     CREATE TABLE IF NOT EXISTS  public.Staging_Fact_Immigration_Table (
 	 Immigration_Id              int8 NOT NULL,
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS  public.Fact_Immigration_Table (
      Means_of_Travel             varchar(20),
      Visa_Purpose                varchar(25),
      CONSTRAINT pkey_Immigration_Id  PRIMARY KEY(Immigration_Id)
-    #---> CONSTRAINT Fact_Immigration_Table_pkey PRIMARY KEY(Immigration_Id)
+   
 );    
     
 #---------------Individual_Immigrants_Records ---------------- STAGING & DIMENSION -------------
@@ -234,91 +234,4 @@ CREATE TABLE IF NOT EXISTS public.dim_Dated_Arrival_Departure(
      Port_Code                     varchar(10),
      CONSTRAINT pkey_Entry_Date  PRIMARY KEY(Entry_Date)
     
-
-
-    
-    
-=================================================================================================================
-CREATE TABLE IF NOT EXISTS public.songplays (
-	playid varchar(32) NOT NULL,
-	start_time timestamp NOT NULL,
-	userid int4 NOT NULL,
-	"level" varchar(256),
-	songid varchar(256),
-	artistid varchar(256),
-	sessionid int4,
-	location varchar(256),
-	user_agent varchar(256),
-	CONSTRAINT songplays_pkey PRIMARY KEY (playid)
-);
-
-CREATE TABLE IF NOT EXISTS  public.songs (
-	songid varchar(256) NOT NULL,
-	title varchar(256),
-	artistid varchar(256),
-	"year" int4,
-	duration numeric(18,0),
-	CONSTRAINT songs_pkey PRIMARY KEY (songid)
-);
-
-CREATE TABLE IF NOT EXISTS  public.staging_events (
-	artist varchar(256),
-	auth varchar(256),
-	firstname varchar(256),
-	gender varchar(256),
-	iteminsession int4,
-	lastname varchar(256),
-	length numeric(18,0),
-	"level" varchar(256),
-	location varchar(256),
-	"method" varchar(256),
-	page varchar(256),
-	registration numeric(18,0),
-	sessionid int4,
-	song varchar(256),
-	status int4,
-	ts int8,
-	useragent varchar(256),
-	userid int4
-);
-
-CREATE TABLE IF NOT EXISTS  public.staging_songs (
-	num_songs int4,
-	artist_id varchar(256),
-	artist_name varchar(256),
-	artist_latitude numeric(18,0),
-	artist_longitude numeric(18,0),
-	artist_location varchar(256),
-	song_id varchar(256),
-	title varchar(256),
-	duration numeric(18,0),
-	"year" int4
-);
-
-CREATE TABLE IF NOT EXISTS  public."time" (
-	start_time timestamp NOT NULL,
-	"hour" int4,
-	"day" int4,
-	week int4,
-	"month" varchar(256),
-	"year" int4,
-	weekday varchar(256),
-	CONSTRAINT time_pkey PRIMARY KEY (start_time)
-);
-
-CREATE TABLE IF NOT EXISTS  public.users (
-	userid int4 NOT NULL,
-	first_name varchar(256),
-	last_name varchar(256),
-	gender varchar(256),
-	"level" varchar(256),
-	CONSTRAINT users_pkey PRIMARY KEY (userid)
-);
-
-
-
-
-
-
-
 
