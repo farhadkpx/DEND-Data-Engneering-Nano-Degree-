@@ -14,7 +14,7 @@ class LoadFactOperator(BaseOperator):
                  sql_query = "",
                  sql_columns = "",
                  
-                 delete = "False",.../?
+                 delete = "False", #.../?
                  *args, **kwargs):
         
         # initializing constructors
@@ -25,7 +25,7 @@ class LoadFactOperator(BaseOperator):
         self.sql_query = sql_query
         self.sql_columns = sql_columns 
         
-        self.delete = delete../??
+        self.delete = delete  #../??
 
     def execute(self, context):
         """
