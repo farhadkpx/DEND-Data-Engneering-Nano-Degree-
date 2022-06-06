@@ -46,9 +46,6 @@ CREATE TABLE  IF NOT EXISTS public.dim_Port_Locations (
 );
 
 #====================== CITY TEMPERATURE ========== STAGING & DIMENSION ==============================
-
-
-
 #----------------US CITY TEMPERATURE-----------------------------------
 CREATE TABLE IF NOT EXISTS public.Staging_US_City_Temperature (
 	Date_Records    date NOT NULL,
