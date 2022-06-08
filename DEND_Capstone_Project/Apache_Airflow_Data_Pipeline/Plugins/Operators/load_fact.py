@@ -36,9 +36,12 @@ class LoadFactOperator(BaseOperator):
         
         if self.delete:
             self.log.info("Clearing data from fact table")
-            redshift.run("DELETE FROM {}".format(self.destination_table))                                                     #redshift.run(f"DELETE FROM {self.destination_table}")..?   
+            redshift.run("DELETE FROM {}".format(self.destination_table))                                                     
+            #redshift.run(f"DELETE FROM {self.destination_table}")..?   
         sql_query = (f"\nINSERT INTO {self.destination_table} {self.sql_columns} {self.sql_query}")
-#------------------------------------------------------------------------------------------------------------             #redshift.run(f"INSERT INTO {self.destination_table} {self.sql_columns} {selft.sql_query}")       
+#------------------------------------------------------------------------------------------------------------             
+
+        #redshift.run(f"INSERT INTO {self.destination_table} {self.sql_columns} {selft.sql_query}")       
         #redshift.run(f"INSERT INTO {self.destination_table} {self.columns} {selft.sql_query}")
         #redshift.run("Insert into {} {} {}".format(self.destination_table, self.columns, self.sql_query)")
         # redshift.run(f"INSERT INTO {self.table} {self.sql_query}")
