@@ -26,7 +26,7 @@ class SqlQueries:
 
     
 #-------------------------- US_Cities_Temperature ------------------------------
-     dim_US_City_Temperature_insert = ("""
+    dim_US_City_Temperature_insert = ("""
           SELECT
                 Date_Records,
                 US_City,
@@ -45,7 +45,7 @@ class SqlQueries:
 """)
 
 #-------------------US_City_Demog_Race-------------------------------
-     dim_US_City_Demog_Race_insert = ("""
+    dim_US_City_Demog_Race_insert = ("""
          SELECT
                Demog_City,
                State_Name,
@@ -69,41 +69,41 @@ class SqlQueries:
 """)
 
 #----------------------------Fact_Immigration_Inclusive---------------------
-       Fact_Immigration_Table_insert = ("""
-                      SELECT
-                            Immigration_Id,
-                            Immigrants_Age,
-                            Citizenship_Country,
-                            Residency_Country,
-                            Current_State,
-                            Visa_Type,
-                            Immigration_Year,
-                            Immigration_Month,
-                            Port_Code,
-                            Arrival_Date,
-                            Departure_Date, 
-                            Match_Flag, 
-                            Birth_Year, 
-                            Gender,  
-                            Airline_Code,  
-                            Admission_Num,
-                            Flight_Num,  
-                            Means_of_Travel,
-                            Visa_Purpose
-                      FROM  Staging_Fact_Immigration_Table im
-                      LEFT JOIN  dim_Country_Codes AS cc  ON  im.Citizenship_Country = cc.Country_Codes
-                      LEFT JOIN  dim_Country_Codes AS cr  ON  im.Residency_Country = cr.Country_Codes
-                      LEFT JOIN  dim_State_Codes AS st    ON  im.Current_State = st.State_Codes
-                      LEFT JOIN  dim_Port_Locations AS pl ON  im.Current_State = pl.Port_States
-                      LEFT JOIN  dim_Port_Locations AS pc ON  im.Port_Code = pc.Port_Codes
-                      LEFT JOIN  dim_Individual_Immigrants_Records ir  ON  im.Admission_Num = ir.Entry_Num
-                      LEFT JOIN  dim_Dated_Arrival_Departure dt  ON im.Arrival_Date = dt.Entry_Date
-                      LEFT JOIN  dim_US_City_Temperature uc ON im.Port_Code = uc.US_Port
-                      LEFT JOIN  dim_US_City_Demog_Race  ur ON im.Port_Code = ur.US_Port
-""")
+    Fact_Immigration_Table_insert = ( """
+              SELECT
+                     Immigration_Id,
+                     Immigrants_Age,
+                     Citizenship_Country,
+                     Residency_Country,
+                     Current_State,
+                     Visa_Type,
+                     Immigration_Year,
+                     Immigration_Month,
+                     Port_Code,
+                     Arrival_Date,
+                     Departure_Date, 
+                     Match_Flag, 
+                     Birth_Year, 
+                     Gender,  
+                     Airline_Code,  
+                     Admission_Num,
+                     Flight_Num,  
+                     Means_of_Travel,
+                     Visa_Purpose
+                FROM  Staging_Fact_Immigration_Table im
+                LEFT JOIN  dim_Country_Codes AS cc  ON  im.Citizenship_Country = cc.Country_Codes
+                LEFT JOIN  dim_Country_Codes AS cr  ON  im.Residency_Country = cr.Country_Codes
+                LEFT JOIN  dim_State_Codes AS st    ON  im.Current_State = st.State_Codes
+                LEFT JOIN  dim_Port_Locations AS pl ON  im.Current_State = pl.Port_States
+                LEFT JOIN  dim_Port_Locations AS pc ON  im.Port_Code = pc.Port_Codes
+                LEFT JOIN  dim_Individual_Immigrants_Records ir  ON  im.Admission_Num = ir.Entry_Num
+                LEFT JOIN  dim_Dated_Arrival_Departure dt  ON im.Arrival_Date = dt.Entry_Date
+                LEFT JOIN  dim_US_City_Temperature uc ON im.Port_Code = uc.US_Port
+                LEFT JOIN  dim_US_City_Demog_Race  ur ON im.Port_Code = ur.US_Por
+                """)
     
 #----------------------Individual_Immigrants_Records---------------------------
-        dim_Individual_Immigrants_Records_insert = ("""
+    dim_Individual_Immigrants_Records_insert = ("""
             SELECT
                  Entry_Num,
                  Immigration_Id,
@@ -116,10 +116,10 @@ class SqlQueries:
                  Match_Flag
            FROM  Staging_Individual_Immigrants_Records ir
            INNER JOIN Fact_Immigration_Table ft ON ir.Entry_Num = ft.Admission_Num
-""")
+           """)
     
 #--------------------Dated_Arrival_Departure------------------------------
-     dim_Dated_Arrival_Departure_insert = (""" 
+    dim_Dated_Arrival_Departure_insert = (""" 
            SELECT
                  Entry_Date,
                  Admission_Num,
