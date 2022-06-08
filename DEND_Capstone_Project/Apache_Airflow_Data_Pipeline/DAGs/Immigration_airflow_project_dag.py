@@ -49,7 +49,7 @@ start_operator = DummyOperator(task_id='Begin_execution',  dag=dag)
 Clearing_Staging_Tables_Task = PostgresOperator(
     task_id="Clearing_Staging_Tables_Before_Insertion",
     dag = dag,
-    postgres_conn_id = "redshfit",
+    postgres_conn_id = "redshift",
     sql = "Clearing_Staging_Tables.sql"
 )
 
