@@ -14,7 +14,7 @@ class LoadFactOperator(BaseOperator):
                  sql_query = "",
                  sql_columns = "",
                  
-                 delete = "False", #.../?
+                 delete = "False", 
                  *args, **kwargs):
         
         # initializing constructors
@@ -25,7 +25,7 @@ class LoadFactOperator(BaseOperator):
         self.sql_query = sql_query
         self.sql_columns = sql_columns 
         
-        self.delete = delete  #../??
+        self.delete = delete  
 
     def execute(self, context):
         """
@@ -34,7 +34,7 @@ class LoadFactOperator(BaseOperator):
         self.log.info("Creating connection to Redshift to start Load_Fact_Operator")
         redshift = PostgresHook(postgres_conn_id = self.redshift_conn_id)
         
-        if self.delete:...??
+        if self.delete:
             self.log.info("Clearing data from fact table")
             redshift.run("DELETE FROM {}".format(self.destination_table))                                                     #redshift.run(f"DELETE FROM {self.destination_table}")..?   
         sql_query = (f"\nINSERT INTO {self.destination_table} {self.sql_columns} {self.sql_query}")
