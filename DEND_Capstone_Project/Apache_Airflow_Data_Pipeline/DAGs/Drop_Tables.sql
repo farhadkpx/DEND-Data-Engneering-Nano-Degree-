@@ -14,9 +14,6 @@ DROP TABLE IF EXISTS public.Staging_Country_Codes;
 
 DROP TABLE IF EXISTS public.Staging_State_Codes;
 
-#==========================================================================
-
-
 DROP TABLE IF EXISTS public.Fact_Immigration_Table;
 
 DROP TABLE IF EXISTS public.dim_Individual_Immigrants_Records;
