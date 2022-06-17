@@ -178,6 +178,8 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 **4.4: Apache Airflow pipeline web UI:**
 > My Airfow DAG's takes care of reading data files from Amazon S3 bucket, copying them into empty staging tables, after some transformations of the data-tables load those files back to empty fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment. Airflow makes the data pipeline testable, maintainable and visual. The detail of Airflow codes are available here [Aiflow pipeline](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/DEND_Capstone_Project/Apache_Airflow_Data_Pipeline)
 
+My Air flow data pipeline:![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Apache_Airflow_Data_Pipeline/Airflow_Tasks_Flow.png)
+
 ### `Step 5:` Project Write Up with feasibility questions:
 -------------------------------------------------------------------------------------------------------------------
 **5.1: Clearly state the rationale for the choice of tools and technologies for the project.**
