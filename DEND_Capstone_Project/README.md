@@ -213,7 +213,7 @@ Amazon Redshift can handle up to 500 connections securely and efficiently with l
 
 ### `Step 6:` Analytical query purview:
 --------------------------------------------------------------------------------------------------------------------------------------
-Here I will share some query and their visual results I peroformed with my notebook and Apache Airflow...?
+Here I will share some query and their visual results I peroformed with my notebook and on Amazon redshift cloud stage.
 
 #### `Query 1:` "US City, State, Total Immigrants, Total Foreign Born, Median Age & Total Population: ")
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/demography_immigrants.png)
@@ -232,5 +232,6 @@ Here I will share some query and their visual results I peroformed with my noteb
 
 + Immigration data set is based at 2016 but temperature data set only get to 2013 which is not enough for us to see the temperature change at 2016.
 
-+ Missing state and city in label description file. This makes it hard to join immigration tables and demography tables.
-+ We could have a table with immigrants work...?
++ I wish I could work with the given volumne of data in a better computing environment. It's costly to work large volumes of data even with cloud space?
+
++ Finding more relevant data tables in cosorted with my immigration table would be great. 
