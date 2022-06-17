@@ -225,7 +225,7 @@ Here I will share some query and their visual results I peroformed with my noteb
 #### `Query 4: Immigrants choice city demography >> Total number of immigrant, Foreign-Born & population in US-City-State`
 
 #### `Query 5: Immigrants who didn't leave the country stayed which City`
-
+Answer to these queries can be found here:[Project Notebook]()
 ----------------------------------------------------------------------------------------
 #### Future Improvements:
 
