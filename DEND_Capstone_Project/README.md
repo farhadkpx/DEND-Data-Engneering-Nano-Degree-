@@ -215,7 +215,7 @@ Amazon Redshift can handle up to 500 connections securely and efficiently with l
 --------------------------------------------------------------------------------------------------------------------------------------
 Here I will share some query and their visual results I peroformed with my notebook and Apache Airflow...?
 
-#### `Query 1:` "Immigrants Visa Type, Visa Purpose, Number of Immigrants & Staying days: ")
+#### `Query 1:` "US City, State, Total Immigrants, Total Foreign Born, Median Age & Total Population: ")
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/demography_immigrants.png)
 
 #### `Query 2:` "Number of Immigrants by countries: "
@@ -224,11 +224,9 @@ Here I will share some query and their visual results I peroformed with my noteb
 
 #### `Query 3: Finding immigrant's choice of States to move or visit to?`
 
-#### `Query 4: Immigrants choice city demography >> Total number of immigrant, Foreign-Born & population in US-City-State`
+#### `Query 4: Immigrants who didn't leave the country stayed which City`......
 
-#### `Query 5: Immigrants who didn't leave the country stayed which City`
-
-Inquire in my Capstone Project[Notebook]()....?
++ In my [Notebook]()
 ----------------------------------------------------------------------------------------
 #### Future Improvements:
 
