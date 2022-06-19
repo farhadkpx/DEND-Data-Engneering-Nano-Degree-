@@ -5,9 +5,9 @@
 ## `Project Summary:`
 This is my Capstone project for Udacity `Data Engineering Nanodegree program`. Here I'd showcase my overall learning consequence from this course. We're given five datasets large and medium range in size, our assigned directive is to go through the data exploration phases and extract out relevant valuable insight from these datasets. I personally think, some of these datasets are not directly relevant to my  'immigration pattern' analysis(for instance ..Temperature data). The overall confluence of my analysis is to develope a fact(`immigration-table`) and dimension table connected correlations to build a star-schema data pipleline model.
 
-Our scrutiny on these dataset should help data analysts to understand immigration trends and patterns which in turn will help(Govt or Policy makers) to make better decisions on immigration policy, subsequently to help other industry like labor intensive businesses, farming, tourism, construction and many more.
+Our scrutiny on these dataset should help data analysts to understand immigration trends and patterns which in turn will help(Govt or Policy makers) to make better decisions on immigration policy, subsequently to help other industry like labor intensive businesses, farming, tourism, construction and many more.As a data engineer my job with this project is to develope a final clean data product ready for instant intricate data analysis.
 
-As a data engineer my job with this project is to develope a final clean data product ready for instant intricate data analysis.
+All the relevant files(codes, snapshots etc..) for this project is available with this [link](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/DEND_Capstone_Project)
 
 ### `project steps:`
 
