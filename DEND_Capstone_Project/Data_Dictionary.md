@@ -63,14 +63,14 @@
 |---------------------------|--------------------|--------------------------------------------------------------------------|
 | **Column Name**           | **Data Type**      | **Description**                                                          |
 | `Date_Records`            | `date`             | Official date when temperature was recorded                              |  
-| Avg_Temp                  | float              | The recorded average temperature of a City on a specific date            |                           
+| Avg_Temp                  | float              | The recorded average temperature of a City on a specific date            |                       
 | `US_City`                 | `string`           | City name where temperature was recorded                                 |
 | Country                   | string             | Name of the country, City is located                                     |
 | Year                      | integer            | Year in 'yyyy' date format recorded                                      |
 | Month_Name                | string             | Month_Name in 'MMMM' format recorded                                     |
 | Month_Num                 | integer            | Month_Num in 'MM' format recorded                                        |
 | Day                       | integer            | Day in 'dd' format recorded                                              |
-| `US_Port`                 | `string`           | **`primary key`** Port code where the immigrant entered in USA           |
+| `City_Port`               | `string`           | **`primary key`** Port code where the immigrant entered in USA           |
 | `Port_State`              | `string`           | State code where US Port & City is located                               |
 
 
@@ -90,7 +90,7 @@
  | Black_or_African_American                   | int            | counting Black or African-American population             |
  | hispanic_or_latino_population               | int            | Hispanic or Latino population in the city                 |
  | white_Population                            | int            | White population  in US city                              |  
- | `US_Port`                                   | `string`       | **`primary key`** Immigrants arrival Port code            |
+ | `Demog_Port`                                | `string`       | **`primary key`** Immigrants arrival Port code            |
  | `Port_State`                                | `string`       | State code where US Port & City is located                |
 
 
