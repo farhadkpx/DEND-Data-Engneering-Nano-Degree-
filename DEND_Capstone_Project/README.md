@@ -170,10 +170,10 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 
 **4.3** Run data quality checks to ensure the pipeline ran as expected
 
-**Data quality checking criteria:**...?
+**Data quality checking criteria:**
 + Ensuring no empty table after running the ETL data pipeline.
-+ Data model should clearly connects each of the dimension table with fact table via a foreign key?
-+ Integrity constraints on the relational database (e.g., unique key, data type, etc.)...?
++ Data model should clearly connects each of the dimension table with fact table via a foreign key.
++ Integrity constraints on the relational database (e.g., unique key, data type, etc.)...not pursued.
 
 **4.4: Apache Airflow pipeline web UI:**
 > My Airfow DAG's takes care of reading data files from Amazon S3 bucket, copying them into empty staging tables, after some transformations of the data-tables load those files back to empty fact and dimension tables. The data quality checks are done with a DAG task. This is a completely automated data pipeline processes done in the cloud environment. Airflow makes the data pipeline testable, maintainable and visual. The detail of Airflow codes are available here [Aiflow pipeline](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/tree/main/DEND_Capstone_Project/Apache_Airflow_Data_Pipeline)
@@ -230,8 +230,10 @@ Here I will share some query and their visual results I peroformed with my noteb
 ----------------------------------------------------------------------------------------
 #### Future Improvements:
 
-+ Immigration data set is based at 2016 but temperature data set only get to 2013 which is not enough for us to see the temperature change at 2016.
++ Immigration data set is based at 2016 but temperature data set only get up to 2013 which is not enough for us to see the temperature change at 2016.
 
-+ I wish I could work with the given volumne of data in a better computing environment. It's costly to work large volumes of data even with cloud space?
++ I wish I could work with the given volumne of data in a powerful computing environment. It's costly to work large volumes of data even with cloud space?
 
-+ Finding more relevant data tables in cosorted with my immigration table would be great. 
++ Finding more relevant data tables in cosorted with my immigration table would be great...
+
+That's all for now...
