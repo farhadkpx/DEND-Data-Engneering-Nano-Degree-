@@ -30,4 +30,3 @@ DROP TABLE IF EXISTS public.dim_Country_Codes;
 
 DROP TABLE IF EXISTS public.dim_State_Codes;
 
-
