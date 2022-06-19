@@ -149,7 +149,7 @@ I chose to build a star-schema data model for creating and developing my data pi
 #### 3.1 Conceptual Data Model
 I chose a star schema data model for my conceptual data model. Creating a star schema was challenging, seeing the relationship among these tables are rather divergent and disparate. So I did sliced out 3 tables from the `Immigration table` table into `Fact_Immigration_Table (fact table)`, `Individual_Immigrants_Records(dim)` and `Dated_Arrival_Departure (dim)` tables. I created 3 dimension tables from `I94_SAS_Labels_Descriptiontable` table into `US_Port_Code_df (dim)`, `Country_Code_df (dim)`, `US_State_Code (dim)` tables. 
 
-Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog_Race (dim)` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious with this ER diagram [Star-Schema](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Star_Diagram_Dictionary/Immigration_Fact_ER_Star_Schema_Diagram.png). I think according to my data model design for typical query we only need 2/3 joins to find out a result.
+Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog_Race (dim)` tables. So after all these development I have had 6 dimension table and 1 Fact table. The visual correlation among these tables are obvious with this ER diagram [Star-Schema](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Star_Diagram_Dictionary/Immigration_Fact_ER%20-%20ER%20diagram.jpeg). I think according to my data model design for typical query we only need 2/3 joins to find out a result.
 
 
 #### 3.2 Designing Data Pipelines
