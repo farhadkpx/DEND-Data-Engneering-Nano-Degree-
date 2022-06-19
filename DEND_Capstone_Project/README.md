@@ -226,7 +226,7 @@ Here I will share some query and their visual results I peroformed with my noteb
 
 #### `Query 4: Immigrants who didn't leave the country stayed which City`......
 
-+ In my [Notebook](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Capstone_Project_Notebook.ipynb)
++ Available in my [Jupyter Notebook](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Capstone_Project_Notebook.ipynb)
 ----------------------------------------------------------------------------------------
 #### Future Improvements:
 
