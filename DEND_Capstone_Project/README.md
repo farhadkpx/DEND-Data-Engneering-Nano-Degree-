@@ -219,7 +219,7 @@ Here I will share some query and their visual results I peroformed with my noteb
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/demography_immigrants.png)
 
 #### `Query 2:` "Number of Immigrants by countries: "
-![image](https://user-images.githubusercontent.com/16586123/174203162-27d2c7ad-cd9e-40c7-9a9e-0953043e1481.png)
+![image]()
 
 #### `Query 3: Demography and Immigrants with Amazon Redshift:`
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/immigrant_n_demography.png)
