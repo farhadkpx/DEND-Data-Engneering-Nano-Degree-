@@ -226,7 +226,6 @@ Here I will share some query and their visual results I peroformed with my noteb
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Image_files/temperature_city.png)
 
 
-
 #### `Query 4: Finding immigrant's choice of States to move or visit to?`
 
 #### `Query 5: Immigrants who didn't leave the country stayed which City`......
@@ -241,4 +240,4 @@ Here I will share some query and their visual results I peroformed with my noteb
 
 + Finding more relevant data tables in cosorted with my immigration table would be great...
 
-That's all for now...
+If you came this far, I'd say Thank you for at least browsing to this end. Sorry for any unwarranted silly errors?
