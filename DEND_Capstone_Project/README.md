@@ -222,7 +222,7 @@ Here I will share some query and their visual results I peroformed with my noteb
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Image_files/Immigrants_Country.png)
 
 #### `Query 3: Demography and Immigrants with Amazon Redshift:`
-![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/immigrant_n_demography.png)
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Image_files/immigrant_n_demography.png)
 
 
 #### `Query 4: Finding immigrant's choice of States to move or visit to?`
