@@ -166,7 +166,7 @@ Finally, I created 2 other dimension table `US_City_Temp (dim)` & `US_City_Demog
 
 **4.2** Include a data dictionary
 
-> My data dictionary for this data model is available [Data Dictionary](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Data_Dictionary.md)
+> My data dictionary for this data model is available [Data Dictionary](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Star_Diagram_Dictionary/Capstone_Data_Dictionary.md)
 
 **4.3** Run data quality checks to ensure the pipeline ran as expected
 
