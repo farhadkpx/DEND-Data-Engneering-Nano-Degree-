@@ -221,10 +221,13 @@ Here I will share some query and their visual results I peroformed with my noteb
 #### `Query 2:` "Number of Immigrants by countries: "
 ![image](https://user-images.githubusercontent.com/16586123/174203162-27d2c7ad-cd9e-40c7-9a9e-0953043e1481.png)
 
+#### `Query 3: Demography and Immigrants with Amazon Redshift:`
+![image]()
 
-#### `Query 3: Finding immigrant's choice of States to move or visit to?`
 
-#### `Query 4: Immigrants who didn't leave the country stayed which City`......
+#### `Query 4: Finding immigrant's choice of States to move or visit to?`
+
+#### `Query 5: Immigrants who didn't leave the country stayed which City`......
 
 + Available in my [Jupyter Notebook](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Capstone_Project_Notebook.ipynb)
 ----------------------------------------------------------------------------------------
