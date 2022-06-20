@@ -222,7 +222,7 @@ Here I will share some query and their visual results I peroformed with my noteb
 ![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Image_files/Immigrants_Country.png)
 
 #### `Query 3: Immigrant and City temperature with Amazon Redshift:`
-![image]()
+![image](https://github.com/farhadkpx/DEND-Data-Engneering-Nano-Degree-/blob/main/DEND_Capstone_Project/Image_files/Immigrant_temperature.png)
 ![image]()
 
 
